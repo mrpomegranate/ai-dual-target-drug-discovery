@@ -1,0 +1,5 @@
+# Activate explicitly with: docker compose -f compose.yaml -f compose.dev.yaml ...
+services:
+  audit:
+    volumes:
+      - ./ml/src:/app/ml/src:ro

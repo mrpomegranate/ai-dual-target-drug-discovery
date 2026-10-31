@@ -1,0 +1,97 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+site/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Frontend build and test output
+coverage/
+.vite/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Machine learning outputs
+*.ckpt
+*.pt
+*.pth
+*.onnx
+*.pkl
+*.joblib
+mlruns/
+mlartifacts/
+mlflow.db
+
+# Generated datasets and artifacts
+/data/raw/*
+!/data/raw/README*
+/data/interim/*
+!/data/interim/README*
+/data/processed/*
+!/data/processed/README*
+/data/splits/*
+!/data/splits/README*
+/artifacts/*
+!/artifacts/README*
+!/artifacts/models/
+/artifacts/models/*
+!/artifacts/models/README*
+!/artifacts/figures/
+/artifacts/figures/*
+!/artifacts/figures/README*
+!/artifacts/generated_molecules/
+/artifacts/generated_molecules/*
+!/artifacts/generated_molecules/README*
+
+# Audit outputs
+/reports/audits/*.parquet
+
+# Editors and IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp

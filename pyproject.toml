@@ -1,0 +1,28 @@
+
+[project]
+name = "ai-dual-target-drug-discovery"
+version = "0.1.0"
+requires-python = ">=3.12,<3.13"
+
+dependencies = [
+    "numpy>=2.2,<3",
+    "pandas>=2.2,<3",
+    "pyarrow>=20,<26",
+    "rdkit>=2025.3,<2027",
+]
+
+[project.scripts]
+dual-target = "dual_target.cli:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3,<10",
+    "ruff>=0.12,<1",
+]
+
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["ml/src/dual_target"]

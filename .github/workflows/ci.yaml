@@ -1,0 +1,26 @@
+name: M0 Python checks
+on:
+  push:
+  pull_request:
+jobs:
+  python-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.13.6"
+      - name: Install Python 3.12
+        run: uv python install 3.12
+      - name: Verify lockfile and install
+        run: uv sync --locked
+      - name: Run tests
+        run: uv run --locked pytest
+      - name: Run linter
+        run: uv run --locked ruff check ml/src ml/tests
+      - name: Validate CLI
+        run: uv run --locked dual-target doctor
+      - name: Validate Compose configuration
+        run: |
+          docker compose config --quiet
+          docker compose -f compose.yaml -f compose.dev.yaml config --quiet
