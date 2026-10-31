@@ -1,0 +1,188 @@
+{
+  "stage": "M1.6_construct_name_and_study_provenance_diagnostic_not_curated_labels",
+  "generated_utc": "2026-10-31T22:03:08.539922+00:00",
+  "source_csv": "bindingdb_egfr_her2_observations.csv",
+  "source_csv_sha256": "5579aa3d6d4ceb66f0b23cb3803e1978c54c212206e33e50cd0658ebcd6b52e3",
+  "observations": 35210,
+  "all_construct_categories": {
+    "plain_name": 25733,
+    "substitutions_only": 4524,
+    "mixed_construct": 2080,
+    "other_construct": 2873,
+    "unclassified_nonbase": 0
+  },
+  "groups": [
+    {
+      "target": "EGFR",
+      "source": "ChEMBL",
+      "observations": 13316,
+      "construct_categories": {
+        "plain_name": 13316,
+        "substitutions_only": 0,
+        "mixed_construct": 0,
+        "other_construct": 0,
+        "unclassified_nonbase": 0
+      },
+      "name_notations": {
+        "none": 13316,
+        "square_brackets": 0,
+        "parentheses": 0,
+        "other": 0
+      },
+      "provenance_resolved_rows": 13316,
+      "provenance_missing_rows": 0,
+      "distinct_provenance_groups": 1059
+    },
+    {
+      "target": "EGFR",
+      "source": "Curated from the literature by BindingDB",
+      "observations": 1286,
+      "construct_categories": {
+        "plain_name": 1217,
+        "substitutions_only": 0,
+        "mixed_construct": 15,
+        "other_construct": 54,
+        "unclassified_nonbase": 0
+      },
+      "name_notations": {
+        "none": 1217,
+        "square_brackets": 69,
+        "parentheses": 0,
+        "other": 0
+      },
+      "provenance_resolved_rows": 1286,
+      "provenance_missing_rows": 0,
+      "distinct_provenance_groups": 63
+    },
+    {
+      "target": "EGFR",
+      "source": "US Patent",
+      "observations": 14274,
+      "construct_categories": {
+        "plain_name": 6452,
+        "substitutions_only": 4066,
+        "mixed_construct": 1812,
+        "other_construct": 1944,
+        "unclassified_nonbase": 0
+      },
+      "name_notations": {
+        "none": 6452,
+        "square_brackets": 7722,
+        "parentheses": 100,
+        "other": 0
+      },
+      "provenance_resolved_rows": 14274,
+      "provenance_missing_rows": 0,
+      "distinct_provenance_groups": 145
+    },
+    {
+      "target": "EGFR",
+      "source": "WIPO",
+      "observations": 339,
+      "construct_categories": {
+        "plain_name": 12,
+        "substitutions_only": 48,
+        "mixed_construct": 253,
+        "other_construct": 26,
+        "unclassified_nonbase": 0
+      },
+      "name_notations": {
+        "none": 12,
+        "square_brackets": 327,
+        "parentheses": 0,
+        "other": 0
+      },
+      "provenance_resolved_rows": 339,
+      "provenance_missing_rows": 0,
+      "distinct_provenance_groups": 2
+    },
+    {
+      "target": "HER2",
+      "source": "ChEMBL",
+      "observations": 2479,
+      "construct_categories": {
+        "plain_name": 2477,
+        "substitutions_only": 2,
+        "mixed_construct": 0,
+        "other_construct": 0,
+        "unclassified_nonbase": 0
+      },
+      "name_notations": {
+        "none": 2477,
+        "square_brackets": 2,
+        "parentheses": 0,
+        "other": 0
+      },
+      "provenance_resolved_rows": 2479,
+      "provenance_missing_rows": 0,
+      "distinct_provenance_groups": 308
+    },
+    {
+      "target": "HER2",
+      "source": "Curated from the literature by BindingDB",
+      "observations": 152,
+      "construct_categories": {
+        "plain_name": 152,
+        "substitutions_only": 0,
+        "mixed_construct": 0,
+        "other_construct": 0,
+        "unclassified_nonbase": 0
+      },
+      "name_notations": {
+        "none": 152,
+        "square_brackets": 0,
+        "parentheses": 0,
+        "other": 0
+      },
+      "provenance_resolved_rows": 152,
+      "provenance_missing_rows": 0,
+      "distinct_provenance_groups": 11
+    },
+    {
+      "target": "HER2",
+      "source": "US Patent",
+      "observations": 3364,
+      "construct_categories": {
+        "plain_name": 2107,
+        "substitutions_only": 408,
+        "mixed_construct": 0,
+        "other_construct": 849,
+        "unclassified_nonbase": 0
+      },
+      "name_notations": {
+        "none": 2107,
+        "square_brackets": 1257,
+        "parentheses": 0,
+        "other": 0
+      },
+      "provenance_resolved_rows": 3364,
+      "provenance_missing_rows": 0,
+      "distinct_provenance_groups": 42
+    }
+  ],
+  "reported_inchikey_overlap": {
+    "both_targets_all_constructs": 2400,
+    "caveat": "Source-reported InChIKey overlap, not paired curated labels; constructs, exact/censored assays and repeat measurements not reconciled.",
+    "per_target": {
+      "EGFR": {
+        "reported_distinct_inchikeys": 15347,
+        "inchikeys_with_multiple_construct_categories": 2188,
+        "inchikeys_with_multiple_target_names": 2567
+      },
+      "HER2": {
+        "reported_distinct_inchikeys": 4184,
+        "inchikeys_with_multiple_construct_categories": 443,
+        "inchikeys_with_multiple_target_names": 474
+      }
+    }
+  },
+  "limitations": [
+    "Plain target name does not establish wild-type protein or full-length construct.",
+    "Mutation signatures are parsed from target names, not verified against sequences.",
+    "Parenthetical EGFR mutations are recognized; unsupported names are flagged.",
+    "Construct categories are distinct even when source-reported InChIKeys match.",
+    "Publication/PMID/patent are provenance proxies, not laboratory identifiers.",
+    "Different assay protocols, selection, and experimental error are not yet adjusted.",
+    "No observations are removed, merged, imputed, or used as final labels."
+  ]
+}

@@ -16,6 +16,7 @@ dual-target = "dual_target.cli:main"
 
 [dependency-groups]
 dev = [
+    "matplotlib>=3.11.2",
     "pytest>=8.3,<10",
     "ruff>=0.12,<1",
 ]

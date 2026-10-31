@@ -1,0 +1,5100 @@
+{
+  "source_zip_filename": "BindingDB_All_202610_tsv.zip",
+  "zip_size_bytes": 594284548,
+  "member_name": "BindingDB_All.tsv",
+  "member_uncompressed_bytes": 9004582822,
+  "member_crc32_hex": "40765311",
+  "header_sha256": "c8257ee5d10da9a315ac42711845e9397fe92e3b42eee1651af526314054f863",
+  "header_column_count": 640,
+  "duplicate_column_names": [],
+  "empty_header_positions_1_based": [],
+  "columns": [
+    {
+      "index_1_based": 1,
+      "name": "BindingDB Reactant_set_id"
+    },
+    {
+      "index_1_based": 2,
+      "name": "Ligand SMILES"
+    },
+    {
+      "index_1_based": 3,
+      "name": "Ligand InChI"
+    },
+    {
+      "index_1_based": 4,
+      "name": "Ligand InChI Key"
+    },
+    {
+      "index_1_based": 5,
+      "name": "BindingDB MonomerID"
+    },
+    {
+      "index_1_based": 6,
+      "name": "BindingDB Ligand Name"
+    },
+    {
+      "index_1_based": 7,
+      "name": "Target Name"
+    },
+    {
+      "index_1_based": 8,
+      "name": "Target Source Organism According to Curator or DataSource"
+    },
+    {
+      "index_1_based": 9,
+      "name": "Ki (nM)"
+    },
+    {
+      "index_1_based": 10,
+      "name": "IC50 (nM)"
+    },
+    {
+      "index_1_based": 11,
+      "name": "Kd (nM)"
+    },
+    {
+      "index_1_based": 12,
+      "name": "EC50 (nM)"
+    },
+    {
+      "index_1_based": 13,
+      "name": "kon (M-1-s-1)"
+    },
+    {
+      "index_1_based": 14,
+      "name": "koff (s-1)"
+    },
+    {
+      "index_1_based": 15,
+      "name": "pH"
+    },
+    {
+      "index_1_based": 16,
+      "name": "Temp (C)"
+    },
+    {
+      "index_1_based": 17,
+      "name": "Curation/DataSource"
+    },
+    {
+      "index_1_based": 18,
+      "name": "Article DOI"
+    },
+    {
+      "index_1_based": 19,
+      "name": "BindingDB Entry DOI"
+    },
+    {
+      "index_1_based": 20,
+      "name": "PMID"
+    },
+    {
+      "index_1_based": 21,
+      "name": "PubChem AID"
+    },
+    {
+      "index_1_based": 22,
+      "name": "Patent Number"
+    },
+    {
+      "index_1_based": 23,
+      "name": "Authors"
+    },
+    {
+      "index_1_based": 24,
+      "name": "Date of publication"
+    },
+    {
+      "index_1_based": 25,
+      "name": "Date in BindingDB"
+    },
+    {
+      "index_1_based": 26,
+      "name": "Institution"
+    },
+    {
+      "index_1_based": 27,
+      "name": "Link to Ligand in BindingDB"
+    },
+    {
+      "index_1_based": 28,
+      "name": "Link to Target in BindingDB"
+    },
+    {
+      "index_1_based": 29,
+      "name": "Link to Ligand-Target Pair in BindingDB"
+    },
+    {
+      "index_1_based": 30,
+      "name": "Ligand HET ID in PDB"
+    },
+    {
+      "index_1_based": 31,
+      "name": "PDB ID(s) for Ligand-Target Complex"
+    },
+    {
+      "index_1_based": 32,
+      "name": "PubChem CID"
+    },
+    {
+      "index_1_based": 33,
+      "name": "PubChem SID"
+    },
+    {
+      "index_1_based": 34,
+      "name": "ChEBI ID of Ligand"
+    },
+    {
+      "index_1_based": 35,
+      "name": "ChEMBL ID of Ligand"
+    },
+    {
+      "index_1_based": 36,
+      "name": "DrugBank ID of Ligand"
+    },
+    {
+      "index_1_based": 37,
+      "name": "IUPHAR_GRAC ID of Ligand"
+    },
+    {
+      "index_1_based": 38,
+      "name": "KEGG ID of Ligand"
+    },
+    {
+      "index_1_based": 39,
+      "name": "ZINC ID of Ligand"
+    },
+    {
+      "index_1_based": 40,
+      "name": "Number of Protein Chains in Target (>1 implies a multichain complex)"
+    },
+    {
+      "index_1_based": 41,
+      "name": "BindingDB Target Chain Sequence 1"
+    },
+    {
+      "index_1_based": 42,
+      "name": "PDB ID(s) of Target Chain 1"
+    },
+    {
+      "index_1_based": 43,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 1"
+    },
+    {
+      "index_1_based": 44,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 1"
+    },
+    {
+      "index_1_based": 45,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 1"
+    },
+    {
+      "index_1_based": 46,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 1"
+    },
+    {
+      "index_1_based": 47,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 1"
+    },
+    {
+      "index_1_based": 48,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 1"
+    },
+    {
+      "index_1_based": 49,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 1"
+    },
+    {
+      "index_1_based": 50,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 1"
+    },
+    {
+      "index_1_based": 51,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 1"
+    },
+    {
+      "index_1_based": 52,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 1"
+    },
+    {
+      "index_1_based": 53,
+      "name": "BindingDB Target Chain Sequence 2"
+    },
+    {
+      "index_1_based": 54,
+      "name": "PDB ID(s) of Target Chain 2"
+    },
+    {
+      "index_1_based": 55,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 2"
+    },
+    {
+      "index_1_based": 56,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 2"
+    },
+    {
+      "index_1_based": 57,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 2"
+    },
+    {
+      "index_1_based": 58,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 2"
+    },
+    {
+      "index_1_based": 59,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 2"
+    },
+    {
+      "index_1_based": 60,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 2"
+    },
+    {
+      "index_1_based": 61,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 2"
+    },
+    {
+      "index_1_based": 62,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 2"
+    },
+    {
+      "index_1_based": 63,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 2"
+    },
+    {
+      "index_1_based": 64,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 2"
+    },
+    {
+      "index_1_based": 65,
+      "name": "BindingDB Target Chain Sequence 3"
+    },
+    {
+      "index_1_based": 66,
+      "name": "PDB ID(s) of Target Chain 3"
+    },
+    {
+      "index_1_based": 67,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 3"
+    },
+    {
+      "index_1_based": 68,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 3"
+    },
+    {
+      "index_1_based": 69,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 3"
+    },
+    {
+      "index_1_based": 70,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 3"
+    },
+    {
+      "index_1_based": 71,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 3"
+    },
+    {
+      "index_1_based": 72,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 3"
+    },
+    {
+      "index_1_based": 73,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 3"
+    },
+    {
+      "index_1_based": 74,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 3"
+    },
+    {
+      "index_1_based": 75,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 3"
+    },
+    {
+      "index_1_based": 76,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 3"
+    },
+    {
+      "index_1_based": 77,
+      "name": "BindingDB Target Chain Sequence 4"
+    },
+    {
+      "index_1_based": 78,
+      "name": "PDB ID(s) of Target Chain 4"
+    },
+    {
+      "index_1_based": 79,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 4"
+    },
+    {
+      "index_1_based": 80,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 4"
+    },
+    {
+      "index_1_based": 81,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 4"
+    },
+    {
+      "index_1_based": 82,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 4"
+    },
+    {
+      "index_1_based": 83,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 4"
+    },
+    {
+      "index_1_based": 84,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 4"
+    },
+    {
+      "index_1_based": 85,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 4"
+    },
+    {
+      "index_1_based": 86,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 4"
+    },
+    {
+      "index_1_based": 87,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 4"
+    },
+    {
+      "index_1_based": 88,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 4"
+    },
+    {
+      "index_1_based": 89,
+      "name": "BindingDB Target Chain Sequence 5"
+    },
+    {
+      "index_1_based": 90,
+      "name": "PDB ID(s) of Target Chain 5"
+    },
+    {
+      "index_1_based": 91,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 5"
+    },
+    {
+      "index_1_based": 92,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 5"
+    },
+    {
+      "index_1_based": 93,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 5"
+    },
+    {
+      "index_1_based": 94,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 5"
+    },
+    {
+      "index_1_based": 95,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 5"
+    },
+    {
+      "index_1_based": 96,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 5"
+    },
+    {
+      "index_1_based": 97,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 5"
+    },
+    {
+      "index_1_based": 98,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 5"
+    },
+    {
+      "index_1_based": 99,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 5"
+    },
+    {
+      "index_1_based": 100,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 5"
+    },
+    {
+      "index_1_based": 101,
+      "name": "BindingDB Target Chain Sequence 6"
+    },
+    {
+      "index_1_based": 102,
+      "name": "PDB ID(s) of Target Chain 6"
+    },
+    {
+      "index_1_based": 103,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 6"
+    },
+    {
+      "index_1_based": 104,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 6"
+    },
+    {
+      "index_1_based": 105,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 6"
+    },
+    {
+      "index_1_based": 106,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 6"
+    },
+    {
+      "index_1_based": 107,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 6"
+    },
+    {
+      "index_1_based": 108,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 6"
+    },
+    {
+      "index_1_based": 109,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 6"
+    },
+    {
+      "index_1_based": 110,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 6"
+    },
+    {
+      "index_1_based": 111,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 6"
+    },
+    {
+      "index_1_based": 112,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 6"
+    },
+    {
+      "index_1_based": 113,
+      "name": "BindingDB Target Chain Sequence 7"
+    },
+    {
+      "index_1_based": 114,
+      "name": "PDB ID(s) of Target Chain 7"
+    },
+    {
+      "index_1_based": 115,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 7"
+    },
+    {
+      "index_1_based": 116,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 7"
+    },
+    {
+      "index_1_based": 117,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 7"
+    },
+    {
+      "index_1_based": 118,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 7"
+    },
+    {
+      "index_1_based": 119,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 7"
+    },
+    {
+      "index_1_based": 120,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 7"
+    },
+    {
+      "index_1_based": 121,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 7"
+    },
+    {
+      "index_1_based": 122,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 7"
+    },
+    {
+      "index_1_based": 123,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 7"
+    },
+    {
+      "index_1_based": 124,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 7"
+    },
+    {
+      "index_1_based": 125,
+      "name": "BindingDB Target Chain Sequence 8"
+    },
+    {
+      "index_1_based": 126,
+      "name": "PDB ID(s) of Target Chain 8"
+    },
+    {
+      "index_1_based": 127,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 8"
+    },
+    {
+      "index_1_based": 128,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 8"
+    },
+    {
+      "index_1_based": 129,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 8"
+    },
+    {
+      "index_1_based": 130,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 8"
+    },
+    {
+      "index_1_based": 131,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 8"
+    },
+    {
+      "index_1_based": 132,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 8"
+    },
+    {
+      "index_1_based": 133,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 8"
+    },
+    {
+      "index_1_based": 134,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 8"
+    },
+    {
+      "index_1_based": 135,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 8"
+    },
+    {
+      "index_1_based": 136,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 8"
+    },
+    {
+      "index_1_based": 137,
+      "name": "BindingDB Target Chain Sequence 9"
+    },
+    {
+      "index_1_based": 138,
+      "name": "PDB ID(s) of Target Chain 9"
+    },
+    {
+      "index_1_based": 139,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 9"
+    },
+    {
+      "index_1_based": 140,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 9"
+    },
+    {
+      "index_1_based": 141,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 9"
+    },
+    {
+      "index_1_based": 142,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 9"
+    },
+    {
+      "index_1_based": 143,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 9"
+    },
+    {
+      "index_1_based": 144,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 9"
+    },
+    {
+      "index_1_based": 145,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 9"
+    },
+    {
+      "index_1_based": 146,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 9"
+    },
+    {
+      "index_1_based": 147,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 9"
+    },
+    {
+      "index_1_based": 148,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 9"
+    },
+    {
+      "index_1_based": 149,
+      "name": "BindingDB Target Chain Sequence 10"
+    },
+    {
+      "index_1_based": 150,
+      "name": "PDB ID(s) of Target Chain 10"
+    },
+    {
+      "index_1_based": 151,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 10"
+    },
+    {
+      "index_1_based": 152,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 10"
+    },
+    {
+      "index_1_based": 153,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 10"
+    },
+    {
+      "index_1_based": 154,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 10"
+    },
+    {
+      "index_1_based": 155,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 10"
+    },
+    {
+      "index_1_based": 156,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 10"
+    },
+    {
+      "index_1_based": 157,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 10"
+    },
+    {
+      "index_1_based": 158,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 10"
+    },
+    {
+      "index_1_based": 159,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 10"
+    },
+    {
+      "index_1_based": 160,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 10"
+    },
+    {
+      "index_1_based": 161,
+      "name": "BindingDB Target Chain Sequence 11"
+    },
+    {
+      "index_1_based": 162,
+      "name": "PDB ID(s) of Target Chain 11"
+    },
+    {
+      "index_1_based": 163,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 11"
+    },
+    {
+      "index_1_based": 164,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 11"
+    },
+    {
+      "index_1_based": 165,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 11"
+    },
+    {
+      "index_1_based": 166,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 11"
+    },
+    {
+      "index_1_based": 167,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 11"
+    },
+    {
+      "index_1_based": 168,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 11"
+    },
+    {
+      "index_1_based": 169,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 11"
+    },
+    {
+      "index_1_based": 170,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 11"
+    },
+    {
+      "index_1_based": 171,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 11"
+    },
+    {
+      "index_1_based": 172,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 11"
+    },
+    {
+      "index_1_based": 173,
+      "name": "BindingDB Target Chain Sequence 12"
+    },
+    {
+      "index_1_based": 174,
+      "name": "PDB ID(s) of Target Chain 12"
+    },
+    {
+      "index_1_based": 175,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 12"
+    },
+    {
+      "index_1_based": 176,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 12"
+    },
+    {
+      "index_1_based": 177,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 12"
+    },
+    {
+      "index_1_based": 178,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 12"
+    },
+    {
+      "index_1_based": 179,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 12"
+    },
+    {
+      "index_1_based": 180,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 12"
+    },
+    {
+      "index_1_based": 181,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 12"
+    },
+    {
+      "index_1_based": 182,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 12"
+    },
+    {
+      "index_1_based": 183,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 12"
+    },
+    {
+      "index_1_based": 184,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 12"
+    },
+    {
+      "index_1_based": 185,
+      "name": "BindingDB Target Chain Sequence 13"
+    },
+    {
+      "index_1_based": 186,
+      "name": "PDB ID(s) of Target Chain 13"
+    },
+    {
+      "index_1_based": 187,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 13"
+    },
+    {
+      "index_1_based": 188,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 13"
+    },
+    {
+      "index_1_based": 189,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 13"
+    },
+    {
+      "index_1_based": 190,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 13"
+    },
+    {
+      "index_1_based": 191,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 13"
+    },
+    {
+      "index_1_based": 192,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 13"
+    },
+    {
+      "index_1_based": 193,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 13"
+    },
+    {
+      "index_1_based": 194,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 13"
+    },
+    {
+      "index_1_based": 195,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 13"
+    },
+    {
+      "index_1_based": 196,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 13"
+    },
+    {
+      "index_1_based": 197,
+      "name": "BindingDB Target Chain Sequence 14"
+    },
+    {
+      "index_1_based": 198,
+      "name": "PDB ID(s) of Target Chain 14"
+    },
+    {
+      "index_1_based": 199,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 14"
+    },
+    {
+      "index_1_based": 200,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 14"
+    },
+    {
+      "index_1_based": 201,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 14"
+    },
+    {
+      "index_1_based": 202,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 14"
+    },
+    {
+      "index_1_based": 203,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 14"
+    },
+    {
+      "index_1_based": 204,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 14"
+    },
+    {
+      "index_1_based": 205,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 14"
+    },
+    {
+      "index_1_based": 206,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 14"
+    },
+    {
+      "index_1_based": 207,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 14"
+    },
+    {
+      "index_1_based": 208,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 14"
+    },
+    {
+      "index_1_based": 209,
+      "name": "BindingDB Target Chain Sequence 15"
+    },
+    {
+      "index_1_based": 210,
+      "name": "PDB ID(s) of Target Chain 15"
+    },
+    {
+      "index_1_based": 211,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 15"
+    },
+    {
+      "index_1_based": 212,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 15"
+    },
+    {
+      "index_1_based": 213,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 15"
+    },
+    {
+      "index_1_based": 214,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 15"
+    },
+    {
+      "index_1_based": 215,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 15"
+    },
+    {
+      "index_1_based": 216,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 15"
+    },
+    {
+      "index_1_based": 217,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 15"
+    },
+    {
+      "index_1_based": 218,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 15"
+    },
+    {
+      "index_1_based": 219,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 15"
+    },
+    {
+      "index_1_based": 220,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 15"
+    },
+    {
+      "index_1_based": 221,
+      "name": "BindingDB Target Chain Sequence 16"
+    },
+    {
+      "index_1_based": 222,
+      "name": "PDB ID(s) of Target Chain 16"
+    },
+    {
+      "index_1_based": 223,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 16"
+    },
+    {
+      "index_1_based": 224,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 16"
+    },
+    {
+      "index_1_based": 225,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 16"
+    },
+    {
+      "index_1_based": 226,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 16"
+    },
+    {
+      "index_1_based": 227,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 16"
+    },
+    {
+      "index_1_based": 228,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 16"
+    },
+    {
+      "index_1_based": 229,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 16"
+    },
+    {
+      "index_1_based": 230,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 16"
+    },
+    {
+      "index_1_based": 231,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 16"
+    },
+    {
+      "index_1_based": 232,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 16"
+    },
+    {
+      "index_1_based": 233,
+      "name": "BindingDB Target Chain Sequence 17"
+    },
+    {
+      "index_1_based": 234,
+      "name": "PDB ID(s) of Target Chain 17"
+    },
+    {
+      "index_1_based": 235,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 17"
+    },
+    {
+      "index_1_based": 236,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 17"
+    },
+    {
+      "index_1_based": 237,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 17"
+    },
+    {
+      "index_1_based": 238,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 17"
+    },
+    {
+      "index_1_based": 239,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 17"
+    },
+    {
+      "index_1_based": 240,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 17"
+    },
+    {
+      "index_1_based": 241,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 17"
+    },
+    {
+      "index_1_based": 242,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 17"
+    },
+    {
+      "index_1_based": 243,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 17"
+    },
+    {
+      "index_1_based": 244,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 17"
+    },
+    {
+      "index_1_based": 245,
+      "name": "BindingDB Target Chain Sequence 18"
+    },
+    {
+      "index_1_based": 246,
+      "name": "PDB ID(s) of Target Chain 18"
+    },
+    {
+      "index_1_based": 247,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 18"
+    },
+    {
+      "index_1_based": 248,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 18"
+    },
+    {
+      "index_1_based": 249,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 18"
+    },
+    {
+      "index_1_based": 250,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 18"
+    },
+    {
+      "index_1_based": 251,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 18"
+    },
+    {
+      "index_1_based": 252,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 18"
+    },
+    {
+      "index_1_based": 253,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 18"
+    },
+    {
+      "index_1_based": 254,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 18"
+    },
+    {
+      "index_1_based": 255,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 18"
+    },
+    {
+      "index_1_based": 256,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 18"
+    },
+    {
+      "index_1_based": 257,
+      "name": "BindingDB Target Chain Sequence 19"
+    },
+    {
+      "index_1_based": 258,
+      "name": "PDB ID(s) of Target Chain 19"
+    },
+    {
+      "index_1_based": 259,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 19"
+    },
+    {
+      "index_1_based": 260,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 19"
+    },
+    {
+      "index_1_based": 261,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 19"
+    },
+    {
+      "index_1_based": 262,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 19"
+    },
+    {
+      "index_1_based": 263,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 19"
+    },
+    {
+      "index_1_based": 264,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 19"
+    },
+    {
+      "index_1_based": 265,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 19"
+    },
+    {
+      "index_1_based": 266,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 19"
+    },
+    {
+      "index_1_based": 267,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 19"
+    },
+    {
+      "index_1_based": 268,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 19"
+    },
+    {
+      "index_1_based": 269,
+      "name": "BindingDB Target Chain Sequence 20"
+    },
+    {
+      "index_1_based": 270,
+      "name": "PDB ID(s) of Target Chain 20"
+    },
+    {
+      "index_1_based": 271,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 20"
+    },
+    {
+      "index_1_based": 272,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 20"
+    },
+    {
+      "index_1_based": 273,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 20"
+    },
+    {
+      "index_1_based": 274,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 20"
+    },
+    {
+      "index_1_based": 275,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 20"
+    },
+    {
+      "index_1_based": 276,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 20"
+    },
+    {
+      "index_1_based": 277,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 20"
+    },
+    {
+      "index_1_based": 278,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 20"
+    },
+    {
+      "index_1_based": 279,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 20"
+    },
+    {
+      "index_1_based": 280,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 20"
+    },
+    {
+      "index_1_based": 281,
+      "name": "BindingDB Target Chain Sequence 21"
+    },
+    {
+      "index_1_based": 282,
+      "name": "PDB ID(s) of Target Chain 21"
+    },
+    {
+      "index_1_based": 283,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 21"
+    },
+    {
+      "index_1_based": 284,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 21"
+    },
+    {
+      "index_1_based": 285,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 21"
+    },
+    {
+      "index_1_based": 286,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 21"
+    },
+    {
+      "index_1_based": 287,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 21"
+    },
+    {
+      "index_1_based": 288,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 21"
+    },
+    {
+      "index_1_based": 289,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 21"
+    },
+    {
+      "index_1_based": 290,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 21"
+    },
+    {
+      "index_1_based": 291,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 21"
+    },
+    {
+      "index_1_based": 292,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 21"
+    },
+    {
+      "index_1_based": 293,
+      "name": "BindingDB Target Chain Sequence 22"
+    },
+    {
+      "index_1_based": 294,
+      "name": "PDB ID(s) of Target Chain 22"
+    },
+    {
+      "index_1_based": 295,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 22"
+    },
+    {
+      "index_1_based": 296,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 22"
+    },
+    {
+      "index_1_based": 297,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 22"
+    },
+    {
+      "index_1_based": 298,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 22"
+    },
+    {
+      "index_1_based": 299,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 22"
+    },
+    {
+      "index_1_based": 300,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 22"
+    },
+    {
+      "index_1_based": 301,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 22"
+    },
+    {
+      "index_1_based": 302,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 22"
+    },
+    {
+      "index_1_based": 303,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 22"
+    },
+    {
+      "index_1_based": 304,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 22"
+    },
+    {
+      "index_1_based": 305,
+      "name": "BindingDB Target Chain Sequence 23"
+    },
+    {
+      "index_1_based": 306,
+      "name": "PDB ID(s) of Target Chain 23"
+    },
+    {
+      "index_1_based": 307,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 23"
+    },
+    {
+      "index_1_based": 308,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 23"
+    },
+    {
+      "index_1_based": 309,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 23"
+    },
+    {
+      "index_1_based": 310,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 23"
+    },
+    {
+      "index_1_based": 311,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 23"
+    },
+    {
+      "index_1_based": 312,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 23"
+    },
+    {
+      "index_1_based": 313,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 23"
+    },
+    {
+      "index_1_based": 314,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 23"
+    },
+    {
+      "index_1_based": 315,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 23"
+    },
+    {
+      "index_1_based": 316,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 23"
+    },
+    {
+      "index_1_based": 317,
+      "name": "BindingDB Target Chain Sequence 24"
+    },
+    {
+      "index_1_based": 318,
+      "name": "PDB ID(s) of Target Chain 24"
+    },
+    {
+      "index_1_based": 319,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 24"
+    },
+    {
+      "index_1_based": 320,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 24"
+    },
+    {
+      "index_1_based": 321,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 24"
+    },
+    {
+      "index_1_based": 322,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 24"
+    },
+    {
+      "index_1_based": 323,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 24"
+    },
+    {
+      "index_1_based": 324,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 24"
+    },
+    {
+      "index_1_based": 325,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 24"
+    },
+    {
+      "index_1_based": 326,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 24"
+    },
+    {
+      "index_1_based": 327,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 24"
+    },
+    {
+      "index_1_based": 328,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 24"
+    },
+    {
+      "index_1_based": 329,
+      "name": "BindingDB Target Chain Sequence 25"
+    },
+    {
+      "index_1_based": 330,
+      "name": "PDB ID(s) of Target Chain 25"
+    },
+    {
+      "index_1_based": 331,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 25"
+    },
+    {
+      "index_1_based": 332,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 25"
+    },
+    {
+      "index_1_based": 333,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 25"
+    },
+    {
+      "index_1_based": 334,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 25"
+    },
+    {
+      "index_1_based": 335,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 25"
+    },
+    {
+      "index_1_based": 336,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 25"
+    },
+    {
+      "index_1_based": 337,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 25"
+    },
+    {
+      "index_1_based": 338,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 25"
+    },
+    {
+      "index_1_based": 339,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 25"
+    },
+    {
+      "index_1_based": 340,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 25"
+    },
+    {
+      "index_1_based": 341,
+      "name": "BindingDB Target Chain Sequence 26"
+    },
+    {
+      "index_1_based": 342,
+      "name": "PDB ID(s) of Target Chain 26"
+    },
+    {
+      "index_1_based": 343,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 26"
+    },
+    {
+      "index_1_based": 344,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 26"
+    },
+    {
+      "index_1_based": 345,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 26"
+    },
+    {
+      "index_1_based": 346,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 26"
+    },
+    {
+      "index_1_based": 347,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 26"
+    },
+    {
+      "index_1_based": 348,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 26"
+    },
+    {
+      "index_1_based": 349,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 26"
+    },
+    {
+      "index_1_based": 350,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 26"
+    },
+    {
+      "index_1_based": 351,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 26"
+    },
+    {
+      "index_1_based": 352,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 26"
+    },
+    {
+      "index_1_based": 353,
+      "name": "BindingDB Target Chain Sequence 27"
+    },
+    {
+      "index_1_based": 354,
+      "name": "PDB ID(s) of Target Chain 27"
+    },
+    {
+      "index_1_based": 355,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 27"
+    },
+    {
+      "index_1_based": 356,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 27"
+    },
+    {
+      "index_1_based": 357,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 27"
+    },
+    {
+      "index_1_based": 358,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 27"
+    },
+    {
+      "index_1_based": 359,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 27"
+    },
+    {
+      "index_1_based": 360,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 27"
+    },
+    {
+      "index_1_based": 361,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 27"
+    },
+    {
+      "index_1_based": 362,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 27"
+    },
+    {
+      "index_1_based": 363,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 27"
+    },
+    {
+      "index_1_based": 364,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 27"
+    },
+    {
+      "index_1_based": 365,
+      "name": "BindingDB Target Chain Sequence 28"
+    },
+    {
+      "index_1_based": 366,
+      "name": "PDB ID(s) of Target Chain 28"
+    },
+    {
+      "index_1_based": 367,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 28"
+    },
+    {
+      "index_1_based": 368,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 28"
+    },
+    {
+      "index_1_based": 369,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 28"
+    },
+    {
+      "index_1_based": 370,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 28"
+    },
+    {
+      "index_1_based": 371,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 28"
+    },
+    {
+      "index_1_based": 372,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 28"
+    },
+    {
+      "index_1_based": 373,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 28"
+    },
+    {
+      "index_1_based": 374,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 28"
+    },
+    {
+      "index_1_based": 375,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 28"
+    },
+    {
+      "index_1_based": 376,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 28"
+    },
+    {
+      "index_1_based": 377,
+      "name": "BindingDB Target Chain Sequence 29"
+    },
+    {
+      "index_1_based": 378,
+      "name": "PDB ID(s) of Target Chain 29"
+    },
+    {
+      "index_1_based": 379,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 29"
+    },
+    {
+      "index_1_based": 380,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 29"
+    },
+    {
+      "index_1_based": 381,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 29"
+    },
+    {
+      "index_1_based": 382,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 29"
+    },
+    {
+      "index_1_based": 383,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 29"
+    },
+    {
+      "index_1_based": 384,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 29"
+    },
+    {
+      "index_1_based": 385,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 29"
+    },
+    {
+      "index_1_based": 386,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 29"
+    },
+    {
+      "index_1_based": 387,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 29"
+    },
+    {
+      "index_1_based": 388,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 29"
+    },
+    {
+      "index_1_based": 389,
+      "name": "BindingDB Target Chain Sequence 30"
+    },
+    {
+      "index_1_based": 390,
+      "name": "PDB ID(s) of Target Chain 30"
+    },
+    {
+      "index_1_based": 391,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 30"
+    },
+    {
+      "index_1_based": 392,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 30"
+    },
+    {
+      "index_1_based": 393,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 30"
+    },
+    {
+      "index_1_based": 394,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 30"
+    },
+    {
+      "index_1_based": 395,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 30"
+    },
+    {
+      "index_1_based": 396,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 30"
+    },
+    {
+      "index_1_based": 397,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 30"
+    },
+    {
+      "index_1_based": 398,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 30"
+    },
+    {
+      "index_1_based": 399,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 30"
+    },
+    {
+      "index_1_based": 400,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 30"
+    },
+    {
+      "index_1_based": 401,
+      "name": "BindingDB Target Chain Sequence 31"
+    },
+    {
+      "index_1_based": 402,
+      "name": "PDB ID(s) of Target Chain 31"
+    },
+    {
+      "index_1_based": 403,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 31"
+    },
+    {
+      "index_1_based": 404,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 31"
+    },
+    {
+      "index_1_based": 405,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 31"
+    },
+    {
+      "index_1_based": 406,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 31"
+    },
+    {
+      "index_1_based": 407,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 31"
+    },
+    {
+      "index_1_based": 408,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 31"
+    },
+    {
+      "index_1_based": 409,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 31"
+    },
+    {
+      "index_1_based": 410,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 31"
+    },
+    {
+      "index_1_based": 411,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 31"
+    },
+    {
+      "index_1_based": 412,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 31"
+    },
+    {
+      "index_1_based": 413,
+      "name": "BindingDB Target Chain Sequence 32"
+    },
+    {
+      "index_1_based": 414,
+      "name": "PDB ID(s) of Target Chain 32"
+    },
+    {
+      "index_1_based": 415,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 32"
+    },
+    {
+      "index_1_based": 416,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 32"
+    },
+    {
+      "index_1_based": 417,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 32"
+    },
+    {
+      "index_1_based": 418,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 32"
+    },
+    {
+      "index_1_based": 419,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 32"
+    },
+    {
+      "index_1_based": 420,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 32"
+    },
+    {
+      "index_1_based": 421,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 32"
+    },
+    {
+      "index_1_based": 422,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 32"
+    },
+    {
+      "index_1_based": 423,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 32"
+    },
+    {
+      "index_1_based": 424,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 32"
+    },
+    {
+      "index_1_based": 425,
+      "name": "BindingDB Target Chain Sequence 33"
+    },
+    {
+      "index_1_based": 426,
+      "name": "PDB ID(s) of Target Chain 33"
+    },
+    {
+      "index_1_based": 427,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 33"
+    },
+    {
+      "index_1_based": 428,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 33"
+    },
+    {
+      "index_1_based": 429,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 33"
+    },
+    {
+      "index_1_based": 430,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 33"
+    },
+    {
+      "index_1_based": 431,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 33"
+    },
+    {
+      "index_1_based": 432,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 33"
+    },
+    {
+      "index_1_based": 433,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 33"
+    },
+    {
+      "index_1_based": 434,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 33"
+    },
+    {
+      "index_1_based": 435,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 33"
+    },
+    {
+      "index_1_based": 436,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 33"
+    },
+    {
+      "index_1_based": 437,
+      "name": "BindingDB Target Chain Sequence 34"
+    },
+    {
+      "index_1_based": 438,
+      "name": "PDB ID(s) of Target Chain 34"
+    },
+    {
+      "index_1_based": 439,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 34"
+    },
+    {
+      "index_1_based": 440,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 34"
+    },
+    {
+      "index_1_based": 441,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 34"
+    },
+    {
+      "index_1_based": 442,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 34"
+    },
+    {
+      "index_1_based": 443,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 34"
+    },
+    {
+      "index_1_based": 444,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 34"
+    },
+    {
+      "index_1_based": 445,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 34"
+    },
+    {
+      "index_1_based": 446,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 34"
+    },
+    {
+      "index_1_based": 447,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 34"
+    },
+    {
+      "index_1_based": 448,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 34"
+    },
+    {
+      "index_1_based": 449,
+      "name": "BindingDB Target Chain Sequence 35"
+    },
+    {
+      "index_1_based": 450,
+      "name": "PDB ID(s) of Target Chain 35"
+    },
+    {
+      "index_1_based": 451,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 35"
+    },
+    {
+      "index_1_based": 452,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 35"
+    },
+    {
+      "index_1_based": 453,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 35"
+    },
+    {
+      "index_1_based": 454,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 35"
+    },
+    {
+      "index_1_based": 455,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 35"
+    },
+    {
+      "index_1_based": 456,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 35"
+    },
+    {
+      "index_1_based": 457,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 35"
+    },
+    {
+      "index_1_based": 458,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 35"
+    },
+    {
+      "index_1_based": 459,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 35"
+    },
+    {
+      "index_1_based": 460,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 35"
+    },
+    {
+      "index_1_based": 461,
+      "name": "BindingDB Target Chain Sequence 36"
+    },
+    {
+      "index_1_based": 462,
+      "name": "PDB ID(s) of Target Chain 36"
+    },
+    {
+      "index_1_based": 463,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 36"
+    },
+    {
+      "index_1_based": 464,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 36"
+    },
+    {
+      "index_1_based": 465,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 36"
+    },
+    {
+      "index_1_based": 466,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 36"
+    },
+    {
+      "index_1_based": 467,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 36"
+    },
+    {
+      "index_1_based": 468,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 36"
+    },
+    {
+      "index_1_based": 469,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 36"
+    },
+    {
+      "index_1_based": 470,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 36"
+    },
+    {
+      "index_1_based": 471,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 36"
+    },
+    {
+      "index_1_based": 472,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 36"
+    },
+    {
+      "index_1_based": 473,
+      "name": "BindingDB Target Chain Sequence 37"
+    },
+    {
+      "index_1_based": 474,
+      "name": "PDB ID(s) of Target Chain 37"
+    },
+    {
+      "index_1_based": 475,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 37"
+    },
+    {
+      "index_1_based": 476,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 37"
+    },
+    {
+      "index_1_based": 477,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 37"
+    },
+    {
+      "index_1_based": 478,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 37"
+    },
+    {
+      "index_1_based": 479,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 37"
+    },
+    {
+      "index_1_based": 480,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 37"
+    },
+    {
+      "index_1_based": 481,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 37"
+    },
+    {
+      "index_1_based": 482,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 37"
+    },
+    {
+      "index_1_based": 483,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 37"
+    },
+    {
+      "index_1_based": 484,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 37"
+    },
+    {
+      "index_1_based": 485,
+      "name": "BindingDB Target Chain Sequence 38"
+    },
+    {
+      "index_1_based": 486,
+      "name": "PDB ID(s) of Target Chain 38"
+    },
+    {
+      "index_1_based": 487,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 38"
+    },
+    {
+      "index_1_based": 488,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 38"
+    },
+    {
+      "index_1_based": 489,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 38"
+    },
+    {
+      "index_1_based": 490,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 38"
+    },
+    {
+      "index_1_based": 491,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 38"
+    },
+    {
+      "index_1_based": 492,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 38"
+    },
+    {
+      "index_1_based": 493,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 38"
+    },
+    {
+      "index_1_based": 494,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 38"
+    },
+    {
+      "index_1_based": 495,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 38"
+    },
+    {
+      "index_1_based": 496,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 38"
+    },
+    {
+      "index_1_based": 497,
+      "name": "BindingDB Target Chain Sequence 39"
+    },
+    {
+      "index_1_based": 498,
+      "name": "PDB ID(s) of Target Chain 39"
+    },
+    {
+      "index_1_based": 499,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 39"
+    },
+    {
+      "index_1_based": 500,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 39"
+    },
+    {
+      "index_1_based": 501,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 39"
+    },
+    {
+      "index_1_based": 502,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 39"
+    },
+    {
+      "index_1_based": 503,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 39"
+    },
+    {
+      "index_1_based": 504,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 39"
+    },
+    {
+      "index_1_based": 505,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 39"
+    },
+    {
+      "index_1_based": 506,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 39"
+    },
+    {
+      "index_1_based": 507,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 39"
+    },
+    {
+      "index_1_based": 508,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 39"
+    },
+    {
+      "index_1_based": 509,
+      "name": "BindingDB Target Chain Sequence 40"
+    },
+    {
+      "index_1_based": 510,
+      "name": "PDB ID(s) of Target Chain 40"
+    },
+    {
+      "index_1_based": 511,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 40"
+    },
+    {
+      "index_1_based": 512,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 40"
+    },
+    {
+      "index_1_based": 513,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 40"
+    },
+    {
+      "index_1_based": 514,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 40"
+    },
+    {
+      "index_1_based": 515,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 40"
+    },
+    {
+      "index_1_based": 516,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 40"
+    },
+    {
+      "index_1_based": 517,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 40"
+    },
+    {
+      "index_1_based": 518,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 40"
+    },
+    {
+      "index_1_based": 519,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 40"
+    },
+    {
+      "index_1_based": 520,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 40"
+    },
+    {
+      "index_1_based": 521,
+      "name": "BindingDB Target Chain Sequence 41"
+    },
+    {
+      "index_1_based": 522,
+      "name": "PDB ID(s) of Target Chain 41"
+    },
+    {
+      "index_1_based": 523,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 41"
+    },
+    {
+      "index_1_based": 524,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 41"
+    },
+    {
+      "index_1_based": 525,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 41"
+    },
+    {
+      "index_1_based": 526,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 41"
+    },
+    {
+      "index_1_based": 527,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 41"
+    },
+    {
+      "index_1_based": 528,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 41"
+    },
+    {
+      "index_1_based": 529,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 41"
+    },
+    {
+      "index_1_based": 530,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 41"
+    },
+    {
+      "index_1_based": 531,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 41"
+    },
+    {
+      "index_1_based": 532,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 41"
+    },
+    {
+      "index_1_based": 533,
+      "name": "BindingDB Target Chain Sequence 42"
+    },
+    {
+      "index_1_based": 534,
+      "name": "PDB ID(s) of Target Chain 42"
+    },
+    {
+      "index_1_based": 535,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 42"
+    },
+    {
+      "index_1_based": 536,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 42"
+    },
+    {
+      "index_1_based": 537,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 42"
+    },
+    {
+      "index_1_based": 538,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 42"
+    },
+    {
+      "index_1_based": 539,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 42"
+    },
+    {
+      "index_1_based": 540,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 42"
+    },
+    {
+      "index_1_based": 541,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 42"
+    },
+    {
+      "index_1_based": 542,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 42"
+    },
+    {
+      "index_1_based": 543,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 42"
+    },
+    {
+      "index_1_based": 544,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 42"
+    },
+    {
+      "index_1_based": 545,
+      "name": "BindingDB Target Chain Sequence 43"
+    },
+    {
+      "index_1_based": 546,
+      "name": "PDB ID(s) of Target Chain 43"
+    },
+    {
+      "index_1_based": 547,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 43"
+    },
+    {
+      "index_1_based": 548,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 43"
+    },
+    {
+      "index_1_based": 549,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 43"
+    },
+    {
+      "index_1_based": 550,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 43"
+    },
+    {
+      "index_1_based": 551,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 43"
+    },
+    {
+      "index_1_based": 552,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 43"
+    },
+    {
+      "index_1_based": 553,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 43"
+    },
+    {
+      "index_1_based": 554,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 43"
+    },
+    {
+      "index_1_based": 555,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 43"
+    },
+    {
+      "index_1_based": 556,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 43"
+    },
+    {
+      "index_1_based": 557,
+      "name": "BindingDB Target Chain Sequence 44"
+    },
+    {
+      "index_1_based": 558,
+      "name": "PDB ID(s) of Target Chain 44"
+    },
+    {
+      "index_1_based": 559,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 44"
+    },
+    {
+      "index_1_based": 560,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 44"
+    },
+    {
+      "index_1_based": 561,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 44"
+    },
+    {
+      "index_1_based": 562,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 44"
+    },
+    {
+      "index_1_based": 563,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 44"
+    },
+    {
+      "index_1_based": 564,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 44"
+    },
+    {
+      "index_1_based": 565,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 44"
+    },
+    {
+      "index_1_based": 566,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 44"
+    },
+    {
+      "index_1_based": 567,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 44"
+    },
+    {
+      "index_1_based": 568,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 44"
+    },
+    {
+      "index_1_based": 569,
+      "name": "BindingDB Target Chain Sequence 45"
+    },
+    {
+      "index_1_based": 570,
+      "name": "PDB ID(s) of Target Chain 45"
+    },
+    {
+      "index_1_based": 571,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 45"
+    },
+    {
+      "index_1_based": 572,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 45"
+    },
+    {
+      "index_1_based": 573,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 45"
+    },
+    {
+      "index_1_based": 574,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 45"
+    },
+    {
+      "index_1_based": 575,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 45"
+    },
+    {
+      "index_1_based": 576,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 45"
+    },
+    {
+      "index_1_based": 577,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 45"
+    },
+    {
+      "index_1_based": 578,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 45"
+    },
+    {
+      "index_1_based": 579,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 45"
+    },
+    {
+      "index_1_based": 580,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 45"
+    },
+    {
+      "index_1_based": 581,
+      "name": "BindingDB Target Chain Sequence 46"
+    },
+    {
+      "index_1_based": 582,
+      "name": "PDB ID(s) of Target Chain 46"
+    },
+    {
+      "index_1_based": 583,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 46"
+    },
+    {
+      "index_1_based": 584,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 46"
+    },
+    {
+      "index_1_based": 585,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 46"
+    },
+    {
+      "index_1_based": 586,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 46"
+    },
+    {
+      "index_1_based": 587,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 46"
+    },
+    {
+      "index_1_based": 588,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 46"
+    },
+    {
+      "index_1_based": 589,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 46"
+    },
+    {
+      "index_1_based": 590,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 46"
+    },
+    {
+      "index_1_based": 591,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 46"
+    },
+    {
+      "index_1_based": 592,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 46"
+    },
+    {
+      "index_1_based": 593,
+      "name": "BindingDB Target Chain Sequence 47"
+    },
+    {
+      "index_1_based": 594,
+      "name": "PDB ID(s) of Target Chain 47"
+    },
+    {
+      "index_1_based": 595,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 47"
+    },
+    {
+      "index_1_based": 596,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 47"
+    },
+    {
+      "index_1_based": 597,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 47"
+    },
+    {
+      "index_1_based": 598,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 47"
+    },
+    {
+      "index_1_based": 599,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 47"
+    },
+    {
+      "index_1_based": 600,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 47"
+    },
+    {
+      "index_1_based": 601,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 47"
+    },
+    {
+      "index_1_based": 602,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 47"
+    },
+    {
+      "index_1_based": 603,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 47"
+    },
+    {
+      "index_1_based": 604,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 47"
+    },
+    {
+      "index_1_based": 605,
+      "name": "BindingDB Target Chain Sequence 48"
+    },
+    {
+      "index_1_based": 606,
+      "name": "PDB ID(s) of Target Chain 48"
+    },
+    {
+      "index_1_based": 607,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 48"
+    },
+    {
+      "index_1_based": 608,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 48"
+    },
+    {
+      "index_1_based": 609,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 48"
+    },
+    {
+      "index_1_based": 610,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 48"
+    },
+    {
+      "index_1_based": 611,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 48"
+    },
+    {
+      "index_1_based": 612,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 48"
+    },
+    {
+      "index_1_based": 613,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 48"
+    },
+    {
+      "index_1_based": 614,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 48"
+    },
+    {
+      "index_1_based": 615,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 48"
+    },
+    {
+      "index_1_based": 616,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 48"
+    },
+    {
+      "index_1_based": 617,
+      "name": "BindingDB Target Chain Sequence 49"
+    },
+    {
+      "index_1_based": 618,
+      "name": "PDB ID(s) of Target Chain 49"
+    },
+    {
+      "index_1_based": 619,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 49"
+    },
+    {
+      "index_1_based": 620,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 49"
+    },
+    {
+      "index_1_based": 621,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 49"
+    },
+    {
+      "index_1_based": 622,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 49"
+    },
+    {
+      "index_1_based": 623,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 49"
+    },
+    {
+      "index_1_based": 624,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 49"
+    },
+    {
+      "index_1_based": 625,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 49"
+    },
+    {
+      "index_1_based": 626,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 49"
+    },
+    {
+      "index_1_based": 627,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 49"
+    },
+    {
+      "index_1_based": 628,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 49"
+    },
+    {
+      "index_1_based": 629,
+      "name": "BindingDB Target Chain Sequence 50"
+    },
+    {
+      "index_1_based": 630,
+      "name": "PDB ID(s) of Target Chain 50"
+    },
+    {
+      "index_1_based": 631,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 50"
+    },
+    {
+      "index_1_based": 632,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 50"
+    },
+    {
+      "index_1_based": 633,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 50"
+    },
+    {
+      "index_1_based": 634,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 50"
+    },
+    {
+      "index_1_based": 635,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 50"
+    },
+    {
+      "index_1_based": 636,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 50"
+    },
+    {
+      "index_1_based": 637,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 50"
+    },
+    {
+      "index_1_based": 638,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 50"
+    },
+    {
+      "index_1_based": 639,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 50"
+    },
+    {
+      "index_1_based": 640,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 50"
+    }
+  ],
+  "candidate_scientific_columns": [
+    {
+      "index_1_based": 1,
+      "name": "BindingDB Reactant_set_id"
+    },
+    {
+      "index_1_based": 2,
+      "name": "Ligand SMILES"
+    },
+    {
+      "index_1_based": 3,
+      "name": "Ligand InChI"
+    },
+    {
+      "index_1_based": 4,
+      "name": "Ligand InChI Key"
+    },
+    {
+      "index_1_based": 5,
+      "name": "BindingDB MonomerID"
+    },
+    {
+      "index_1_based": 6,
+      "name": "BindingDB Ligand Name"
+    },
+    {
+      "index_1_based": 7,
+      "name": "Target Name"
+    },
+    {
+      "index_1_based": 8,
+      "name": "Target Source Organism According to Curator or DataSource"
+    },
+    {
+      "index_1_based": 10,
+      "name": "IC50 (nM)"
+    },
+    {
+      "index_1_based": 16,
+      "name": "Temp (C)"
+    },
+    {
+      "index_1_based": 17,
+      "name": "Curation/DataSource"
+    },
+    {
+      "index_1_based": 18,
+      "name": "Article DOI"
+    },
+    {
+      "index_1_based": 19,
+      "name": "BindingDB Entry DOI"
+    },
+    {
+      "index_1_based": 20,
+      "name": "PMID"
+    },
+    {
+      "index_1_based": 21,
+      "name": "PubChem AID"
+    },
+    {
+      "index_1_based": 22,
+      "name": "Patent Number"
+    },
+    {
+      "index_1_based": 26,
+      "name": "Institution"
+    },
+    {
+      "index_1_based": 27,
+      "name": "Link to Ligand in BindingDB"
+    },
+    {
+      "index_1_based": 28,
+      "name": "Link to Target in BindingDB"
+    },
+    {
+      "index_1_based": 29,
+      "name": "Link to Ligand-Target Pair in BindingDB"
+    },
+    {
+      "index_1_based": 30,
+      "name": "Ligand HET ID in PDB"
+    },
+    {
+      "index_1_based": 31,
+      "name": "PDB ID(s) for Ligand-Target Complex"
+    },
+    {
+      "index_1_based": 32,
+      "name": "PubChem CID"
+    },
+    {
+      "index_1_based": 33,
+      "name": "PubChem SID"
+    },
+    {
+      "index_1_based": 34,
+      "name": "ChEBI ID of Ligand"
+    },
+    {
+      "index_1_based": 35,
+      "name": "ChEMBL ID of Ligand"
+    },
+    {
+      "index_1_based": 36,
+      "name": "DrugBank ID of Ligand"
+    },
+    {
+      "index_1_based": 37,
+      "name": "IUPHAR_GRAC ID of Ligand"
+    },
+    {
+      "index_1_based": 38,
+      "name": "KEGG ID of Ligand"
+    },
+    {
+      "index_1_based": 39,
+      "name": "ZINC ID of Ligand"
+    },
+    {
+      "index_1_based": 40,
+      "name": "Number of Protein Chains in Target (>1 implies a multichain complex)"
+    },
+    {
+      "index_1_based": 41,
+      "name": "BindingDB Target Chain Sequence 1"
+    },
+    {
+      "index_1_based": 42,
+      "name": "PDB ID(s) of Target Chain 1"
+    },
+    {
+      "index_1_based": 43,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 1"
+    },
+    {
+      "index_1_based": 44,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 1"
+    },
+    {
+      "index_1_based": 45,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 1"
+    },
+    {
+      "index_1_based": 46,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 1"
+    },
+    {
+      "index_1_based": 47,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 1"
+    },
+    {
+      "index_1_based": 48,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 1"
+    },
+    {
+      "index_1_based": 49,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 1"
+    },
+    {
+      "index_1_based": 50,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 1"
+    },
+    {
+      "index_1_based": 51,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 1"
+    },
+    {
+      "index_1_based": 52,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 1"
+    },
+    {
+      "index_1_based": 53,
+      "name": "BindingDB Target Chain Sequence 2"
+    },
+    {
+      "index_1_based": 54,
+      "name": "PDB ID(s) of Target Chain 2"
+    },
+    {
+      "index_1_based": 55,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 2"
+    },
+    {
+      "index_1_based": 56,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 2"
+    },
+    {
+      "index_1_based": 57,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 2"
+    },
+    {
+      "index_1_based": 58,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 2"
+    },
+    {
+      "index_1_based": 59,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 2"
+    },
+    {
+      "index_1_based": 60,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 2"
+    },
+    {
+      "index_1_based": 61,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 2"
+    },
+    {
+      "index_1_based": 62,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 2"
+    },
+    {
+      "index_1_based": 63,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 2"
+    },
+    {
+      "index_1_based": 64,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 2"
+    },
+    {
+      "index_1_based": 65,
+      "name": "BindingDB Target Chain Sequence 3"
+    },
+    {
+      "index_1_based": 66,
+      "name": "PDB ID(s) of Target Chain 3"
+    },
+    {
+      "index_1_based": 67,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 3"
+    },
+    {
+      "index_1_based": 68,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 3"
+    },
+    {
+      "index_1_based": 69,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 3"
+    },
+    {
+      "index_1_based": 70,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 3"
+    },
+    {
+      "index_1_based": 71,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 3"
+    },
+    {
+      "index_1_based": 72,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 3"
+    },
+    {
+      "index_1_based": 73,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 3"
+    },
+    {
+      "index_1_based": 74,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 3"
+    },
+    {
+      "index_1_based": 75,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 3"
+    },
+    {
+      "index_1_based": 76,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 3"
+    },
+    {
+      "index_1_based": 77,
+      "name": "BindingDB Target Chain Sequence 4"
+    },
+    {
+      "index_1_based": 78,
+      "name": "PDB ID(s) of Target Chain 4"
+    },
+    {
+      "index_1_based": 79,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 4"
+    },
+    {
+      "index_1_based": 80,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 4"
+    },
+    {
+      "index_1_based": 81,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 4"
+    },
+    {
+      "index_1_based": 82,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 4"
+    },
+    {
+      "index_1_based": 83,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 4"
+    },
+    {
+      "index_1_based": 84,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 4"
+    },
+    {
+      "index_1_based": 85,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 4"
+    },
+    {
+      "index_1_based": 86,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 4"
+    },
+    {
+      "index_1_based": 87,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 4"
+    },
+    {
+      "index_1_based": 88,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 4"
+    },
+    {
+      "index_1_based": 89,
+      "name": "BindingDB Target Chain Sequence 5"
+    },
+    {
+      "index_1_based": 90,
+      "name": "PDB ID(s) of Target Chain 5"
+    },
+    {
+      "index_1_based": 91,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 5"
+    },
+    {
+      "index_1_based": 92,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 5"
+    },
+    {
+      "index_1_based": 93,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 5"
+    },
+    {
+      "index_1_based": 94,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 5"
+    },
+    {
+      "index_1_based": 95,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 5"
+    },
+    {
+      "index_1_based": 96,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 5"
+    },
+    {
+      "index_1_based": 97,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 5"
+    },
+    {
+      "index_1_based": 98,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 5"
+    },
+    {
+      "index_1_based": 99,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 5"
+    },
+    {
+      "index_1_based": 100,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 5"
+    },
+    {
+      "index_1_based": 101,
+      "name": "BindingDB Target Chain Sequence 6"
+    },
+    {
+      "index_1_based": 102,
+      "name": "PDB ID(s) of Target Chain 6"
+    },
+    {
+      "index_1_based": 103,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 6"
+    },
+    {
+      "index_1_based": 104,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 6"
+    },
+    {
+      "index_1_based": 105,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 6"
+    },
+    {
+      "index_1_based": 106,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 6"
+    },
+    {
+      "index_1_based": 107,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 6"
+    },
+    {
+      "index_1_based": 108,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 6"
+    },
+    {
+      "index_1_based": 109,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 6"
+    },
+    {
+      "index_1_based": 110,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 6"
+    },
+    {
+      "index_1_based": 111,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 6"
+    },
+    {
+      "index_1_based": 112,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 6"
+    },
+    {
+      "index_1_based": 113,
+      "name": "BindingDB Target Chain Sequence 7"
+    },
+    {
+      "index_1_based": 114,
+      "name": "PDB ID(s) of Target Chain 7"
+    },
+    {
+      "index_1_based": 115,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 7"
+    },
+    {
+      "index_1_based": 116,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 7"
+    },
+    {
+      "index_1_based": 117,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 7"
+    },
+    {
+      "index_1_based": 118,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 7"
+    },
+    {
+      "index_1_based": 119,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 7"
+    },
+    {
+      "index_1_based": 120,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 7"
+    },
+    {
+      "index_1_based": 121,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 7"
+    },
+    {
+      "index_1_based": 122,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 7"
+    },
+    {
+      "index_1_based": 123,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 7"
+    },
+    {
+      "index_1_based": 124,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 7"
+    },
+    {
+      "index_1_based": 125,
+      "name": "BindingDB Target Chain Sequence 8"
+    },
+    {
+      "index_1_based": 126,
+      "name": "PDB ID(s) of Target Chain 8"
+    },
+    {
+      "index_1_based": 127,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 8"
+    },
+    {
+      "index_1_based": 128,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 8"
+    },
+    {
+      "index_1_based": 129,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 8"
+    },
+    {
+      "index_1_based": 130,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 8"
+    },
+    {
+      "index_1_based": 131,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 8"
+    },
+    {
+      "index_1_based": 132,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 8"
+    },
+    {
+      "index_1_based": 133,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 8"
+    },
+    {
+      "index_1_based": 134,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 8"
+    },
+    {
+      "index_1_based": 135,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 8"
+    },
+    {
+      "index_1_based": 136,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 8"
+    },
+    {
+      "index_1_based": 137,
+      "name": "BindingDB Target Chain Sequence 9"
+    },
+    {
+      "index_1_based": 138,
+      "name": "PDB ID(s) of Target Chain 9"
+    },
+    {
+      "index_1_based": 139,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 9"
+    },
+    {
+      "index_1_based": 140,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 9"
+    },
+    {
+      "index_1_based": 141,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 9"
+    },
+    {
+      "index_1_based": 142,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 9"
+    },
+    {
+      "index_1_based": 143,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 9"
+    },
+    {
+      "index_1_based": 144,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 9"
+    },
+    {
+      "index_1_based": 145,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 9"
+    },
+    {
+      "index_1_based": 146,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 9"
+    },
+    {
+      "index_1_based": 147,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 9"
+    },
+    {
+      "index_1_based": 148,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 9"
+    },
+    {
+      "index_1_based": 149,
+      "name": "BindingDB Target Chain Sequence 10"
+    },
+    {
+      "index_1_based": 150,
+      "name": "PDB ID(s) of Target Chain 10"
+    },
+    {
+      "index_1_based": 151,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 10"
+    },
+    {
+      "index_1_based": 152,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 10"
+    },
+    {
+      "index_1_based": 153,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 10"
+    },
+    {
+      "index_1_based": 154,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 10"
+    },
+    {
+      "index_1_based": 155,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 10"
+    },
+    {
+      "index_1_based": 156,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 10"
+    },
+    {
+      "index_1_based": 157,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 10"
+    },
+    {
+      "index_1_based": 158,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 10"
+    },
+    {
+      "index_1_based": 159,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 10"
+    },
+    {
+      "index_1_based": 160,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 10"
+    },
+    {
+      "index_1_based": 161,
+      "name": "BindingDB Target Chain Sequence 11"
+    },
+    {
+      "index_1_based": 162,
+      "name": "PDB ID(s) of Target Chain 11"
+    },
+    {
+      "index_1_based": 163,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 11"
+    },
+    {
+      "index_1_based": 164,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 11"
+    },
+    {
+      "index_1_based": 165,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 11"
+    },
+    {
+      "index_1_based": 166,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 11"
+    },
+    {
+      "index_1_based": 167,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 11"
+    },
+    {
+      "index_1_based": 168,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 11"
+    },
+    {
+      "index_1_based": 169,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 11"
+    },
+    {
+      "index_1_based": 170,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 11"
+    },
+    {
+      "index_1_based": 171,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 11"
+    },
+    {
+      "index_1_based": 172,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 11"
+    },
+    {
+      "index_1_based": 173,
+      "name": "BindingDB Target Chain Sequence 12"
+    },
+    {
+      "index_1_based": 174,
+      "name": "PDB ID(s) of Target Chain 12"
+    },
+    {
+      "index_1_based": 175,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 12"
+    },
+    {
+      "index_1_based": 176,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 12"
+    },
+    {
+      "index_1_based": 177,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 12"
+    },
+    {
+      "index_1_based": 178,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 12"
+    },
+    {
+      "index_1_based": 179,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 12"
+    },
+    {
+      "index_1_based": 180,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 12"
+    },
+    {
+      "index_1_based": 181,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 12"
+    },
+    {
+      "index_1_based": 182,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 12"
+    },
+    {
+      "index_1_based": 183,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 12"
+    },
+    {
+      "index_1_based": 184,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 12"
+    },
+    {
+      "index_1_based": 185,
+      "name": "BindingDB Target Chain Sequence 13"
+    },
+    {
+      "index_1_based": 186,
+      "name": "PDB ID(s) of Target Chain 13"
+    },
+    {
+      "index_1_based": 187,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 13"
+    },
+    {
+      "index_1_based": 188,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 13"
+    },
+    {
+      "index_1_based": 189,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 13"
+    },
+    {
+      "index_1_based": 190,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 13"
+    },
+    {
+      "index_1_based": 191,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 13"
+    },
+    {
+      "index_1_based": 192,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 13"
+    },
+    {
+      "index_1_based": 193,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 13"
+    },
+    {
+      "index_1_based": 194,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 13"
+    },
+    {
+      "index_1_based": 195,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 13"
+    },
+    {
+      "index_1_based": 196,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 13"
+    },
+    {
+      "index_1_based": 197,
+      "name": "BindingDB Target Chain Sequence 14"
+    },
+    {
+      "index_1_based": 198,
+      "name": "PDB ID(s) of Target Chain 14"
+    },
+    {
+      "index_1_based": 199,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 14"
+    },
+    {
+      "index_1_based": 200,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 14"
+    },
+    {
+      "index_1_based": 201,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 14"
+    },
+    {
+      "index_1_based": 202,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 14"
+    },
+    {
+      "index_1_based": 203,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 14"
+    },
+    {
+      "index_1_based": 204,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 14"
+    },
+    {
+      "index_1_based": 205,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 14"
+    },
+    {
+      "index_1_based": 206,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 14"
+    },
+    {
+      "index_1_based": 207,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 14"
+    },
+    {
+      "index_1_based": 208,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 14"
+    },
+    {
+      "index_1_based": 209,
+      "name": "BindingDB Target Chain Sequence 15"
+    },
+    {
+      "index_1_based": 210,
+      "name": "PDB ID(s) of Target Chain 15"
+    },
+    {
+      "index_1_based": 211,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 15"
+    },
+    {
+      "index_1_based": 212,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 15"
+    },
+    {
+      "index_1_based": 213,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 15"
+    },
+    {
+      "index_1_based": 214,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 15"
+    },
+    {
+      "index_1_based": 215,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 15"
+    },
+    {
+      "index_1_based": 216,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 15"
+    },
+    {
+      "index_1_based": 217,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 15"
+    },
+    {
+      "index_1_based": 218,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 15"
+    },
+    {
+      "index_1_based": 219,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 15"
+    },
+    {
+      "index_1_based": 220,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 15"
+    },
+    {
+      "index_1_based": 221,
+      "name": "BindingDB Target Chain Sequence 16"
+    },
+    {
+      "index_1_based": 222,
+      "name": "PDB ID(s) of Target Chain 16"
+    },
+    {
+      "index_1_based": 223,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 16"
+    },
+    {
+      "index_1_based": 224,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 16"
+    },
+    {
+      "index_1_based": 225,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 16"
+    },
+    {
+      "index_1_based": 226,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 16"
+    },
+    {
+      "index_1_based": 227,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 16"
+    },
+    {
+      "index_1_based": 228,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 16"
+    },
+    {
+      "index_1_based": 229,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 16"
+    },
+    {
+      "index_1_based": 230,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 16"
+    },
+    {
+      "index_1_based": 231,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 16"
+    },
+    {
+      "index_1_based": 232,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 16"
+    },
+    {
+      "index_1_based": 233,
+      "name": "BindingDB Target Chain Sequence 17"
+    },
+    {
+      "index_1_based": 234,
+      "name": "PDB ID(s) of Target Chain 17"
+    },
+    {
+      "index_1_based": 235,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 17"
+    },
+    {
+      "index_1_based": 236,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 17"
+    },
+    {
+      "index_1_based": 237,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 17"
+    },
+    {
+      "index_1_based": 238,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 17"
+    },
+    {
+      "index_1_based": 239,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 17"
+    },
+    {
+      "index_1_based": 240,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 17"
+    },
+    {
+      "index_1_based": 241,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 17"
+    },
+    {
+      "index_1_based": 242,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 17"
+    },
+    {
+      "index_1_based": 243,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 17"
+    },
+    {
+      "index_1_based": 244,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 17"
+    },
+    {
+      "index_1_based": 245,
+      "name": "BindingDB Target Chain Sequence 18"
+    },
+    {
+      "index_1_based": 246,
+      "name": "PDB ID(s) of Target Chain 18"
+    },
+    {
+      "index_1_based": 247,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 18"
+    },
+    {
+      "index_1_based": 248,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 18"
+    },
+    {
+      "index_1_based": 249,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 18"
+    },
+    {
+      "index_1_based": 250,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 18"
+    },
+    {
+      "index_1_based": 251,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 18"
+    },
+    {
+      "index_1_based": 252,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 18"
+    },
+    {
+      "index_1_based": 253,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 18"
+    },
+    {
+      "index_1_based": 254,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 18"
+    },
+    {
+      "index_1_based": 255,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 18"
+    },
+    {
+      "index_1_based": 256,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 18"
+    },
+    {
+      "index_1_based": 257,
+      "name": "BindingDB Target Chain Sequence 19"
+    },
+    {
+      "index_1_based": 258,
+      "name": "PDB ID(s) of Target Chain 19"
+    },
+    {
+      "index_1_based": 259,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 19"
+    },
+    {
+      "index_1_based": 260,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 19"
+    },
+    {
+      "index_1_based": 261,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 19"
+    },
+    {
+      "index_1_based": 262,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 19"
+    },
+    {
+      "index_1_based": 263,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 19"
+    },
+    {
+      "index_1_based": 264,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 19"
+    },
+    {
+      "index_1_based": 265,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 19"
+    },
+    {
+      "index_1_based": 266,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 19"
+    },
+    {
+      "index_1_based": 267,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 19"
+    },
+    {
+      "index_1_based": 268,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 19"
+    },
+    {
+      "index_1_based": 269,
+      "name": "BindingDB Target Chain Sequence 20"
+    },
+    {
+      "index_1_based": 270,
+      "name": "PDB ID(s) of Target Chain 20"
+    },
+    {
+      "index_1_based": 271,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 20"
+    },
+    {
+      "index_1_based": 272,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 20"
+    },
+    {
+      "index_1_based": 273,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 20"
+    },
+    {
+      "index_1_based": 274,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 20"
+    },
+    {
+      "index_1_based": 275,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 20"
+    },
+    {
+      "index_1_based": 276,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 20"
+    },
+    {
+      "index_1_based": 277,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 20"
+    },
+    {
+      "index_1_based": 278,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 20"
+    },
+    {
+      "index_1_based": 279,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 20"
+    },
+    {
+      "index_1_based": 280,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 20"
+    },
+    {
+      "index_1_based": 281,
+      "name": "BindingDB Target Chain Sequence 21"
+    },
+    {
+      "index_1_based": 282,
+      "name": "PDB ID(s) of Target Chain 21"
+    },
+    {
+      "index_1_based": 283,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 21"
+    },
+    {
+      "index_1_based": 284,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 21"
+    },
+    {
+      "index_1_based": 285,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 21"
+    },
+    {
+      "index_1_based": 286,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 21"
+    },
+    {
+      "index_1_based": 287,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 21"
+    },
+    {
+      "index_1_based": 288,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 21"
+    },
+    {
+      "index_1_based": 289,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 21"
+    },
+    {
+      "index_1_based": 290,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 21"
+    },
+    {
+      "index_1_based": 291,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 21"
+    },
+    {
+      "index_1_based": 292,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 21"
+    },
+    {
+      "index_1_based": 293,
+      "name": "BindingDB Target Chain Sequence 22"
+    },
+    {
+      "index_1_based": 294,
+      "name": "PDB ID(s) of Target Chain 22"
+    },
+    {
+      "index_1_based": 295,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 22"
+    },
+    {
+      "index_1_based": 296,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 22"
+    },
+    {
+      "index_1_based": 297,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 22"
+    },
+    {
+      "index_1_based": 298,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 22"
+    },
+    {
+      "index_1_based": 299,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 22"
+    },
+    {
+      "index_1_based": 300,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 22"
+    },
+    {
+      "index_1_based": 301,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 22"
+    },
+    {
+      "index_1_based": 302,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 22"
+    },
+    {
+      "index_1_based": 303,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 22"
+    },
+    {
+      "index_1_based": 304,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 22"
+    },
+    {
+      "index_1_based": 305,
+      "name": "BindingDB Target Chain Sequence 23"
+    },
+    {
+      "index_1_based": 306,
+      "name": "PDB ID(s) of Target Chain 23"
+    },
+    {
+      "index_1_based": 307,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 23"
+    },
+    {
+      "index_1_based": 308,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 23"
+    },
+    {
+      "index_1_based": 309,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 23"
+    },
+    {
+      "index_1_based": 310,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 23"
+    },
+    {
+      "index_1_based": 311,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 23"
+    },
+    {
+      "index_1_based": 312,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 23"
+    },
+    {
+      "index_1_based": 313,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 23"
+    },
+    {
+      "index_1_based": 314,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 23"
+    },
+    {
+      "index_1_based": 315,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 23"
+    },
+    {
+      "index_1_based": 316,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 23"
+    },
+    {
+      "index_1_based": 317,
+      "name": "BindingDB Target Chain Sequence 24"
+    },
+    {
+      "index_1_based": 318,
+      "name": "PDB ID(s) of Target Chain 24"
+    },
+    {
+      "index_1_based": 319,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 24"
+    },
+    {
+      "index_1_based": 320,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 24"
+    },
+    {
+      "index_1_based": 321,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 24"
+    },
+    {
+      "index_1_based": 322,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 24"
+    },
+    {
+      "index_1_based": 323,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 24"
+    },
+    {
+      "index_1_based": 324,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 24"
+    },
+    {
+      "index_1_based": 325,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 24"
+    },
+    {
+      "index_1_based": 326,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 24"
+    },
+    {
+      "index_1_based": 327,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 24"
+    },
+    {
+      "index_1_based": 328,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 24"
+    },
+    {
+      "index_1_based": 329,
+      "name": "BindingDB Target Chain Sequence 25"
+    },
+    {
+      "index_1_based": 330,
+      "name": "PDB ID(s) of Target Chain 25"
+    },
+    {
+      "index_1_based": 331,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 25"
+    },
+    {
+      "index_1_based": 332,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 25"
+    },
+    {
+      "index_1_based": 333,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 25"
+    },
+    {
+      "index_1_based": 334,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 25"
+    },
+    {
+      "index_1_based": 335,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 25"
+    },
+    {
+      "index_1_based": 336,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 25"
+    },
+    {
+      "index_1_based": 337,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 25"
+    },
+    {
+      "index_1_based": 338,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 25"
+    },
+    {
+      "index_1_based": 339,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 25"
+    },
+    {
+      "index_1_based": 340,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 25"
+    },
+    {
+      "index_1_based": 341,
+      "name": "BindingDB Target Chain Sequence 26"
+    },
+    {
+      "index_1_based": 342,
+      "name": "PDB ID(s) of Target Chain 26"
+    },
+    {
+      "index_1_based": 343,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 26"
+    },
+    {
+      "index_1_based": 344,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 26"
+    },
+    {
+      "index_1_based": 345,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 26"
+    },
+    {
+      "index_1_based": 346,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 26"
+    },
+    {
+      "index_1_based": 347,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 26"
+    },
+    {
+      "index_1_based": 348,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 26"
+    },
+    {
+      "index_1_based": 349,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 26"
+    },
+    {
+      "index_1_based": 350,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 26"
+    },
+    {
+      "index_1_based": 351,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 26"
+    },
+    {
+      "index_1_based": 352,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 26"
+    },
+    {
+      "index_1_based": 353,
+      "name": "BindingDB Target Chain Sequence 27"
+    },
+    {
+      "index_1_based": 354,
+      "name": "PDB ID(s) of Target Chain 27"
+    },
+    {
+      "index_1_based": 355,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 27"
+    },
+    {
+      "index_1_based": 356,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 27"
+    },
+    {
+      "index_1_based": 357,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 27"
+    },
+    {
+      "index_1_based": 358,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 27"
+    },
+    {
+      "index_1_based": 359,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 27"
+    },
+    {
+      "index_1_based": 360,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 27"
+    },
+    {
+      "index_1_based": 361,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 27"
+    },
+    {
+      "index_1_based": 362,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 27"
+    },
+    {
+      "index_1_based": 363,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 27"
+    },
+    {
+      "index_1_based": 364,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 27"
+    },
+    {
+      "index_1_based": 365,
+      "name": "BindingDB Target Chain Sequence 28"
+    },
+    {
+      "index_1_based": 366,
+      "name": "PDB ID(s) of Target Chain 28"
+    },
+    {
+      "index_1_based": 367,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 28"
+    },
+    {
+      "index_1_based": 368,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 28"
+    },
+    {
+      "index_1_based": 369,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 28"
+    },
+    {
+      "index_1_based": 370,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 28"
+    },
+    {
+      "index_1_based": 371,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 28"
+    },
+    {
+      "index_1_based": 372,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 28"
+    },
+    {
+      "index_1_based": 373,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 28"
+    },
+    {
+      "index_1_based": 374,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 28"
+    },
+    {
+      "index_1_based": 375,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 28"
+    },
+    {
+      "index_1_based": 376,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 28"
+    },
+    {
+      "index_1_based": 377,
+      "name": "BindingDB Target Chain Sequence 29"
+    },
+    {
+      "index_1_based": 378,
+      "name": "PDB ID(s) of Target Chain 29"
+    },
+    {
+      "index_1_based": 379,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 29"
+    },
+    {
+      "index_1_based": 380,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 29"
+    },
+    {
+      "index_1_based": 381,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 29"
+    },
+    {
+      "index_1_based": 382,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 29"
+    },
+    {
+      "index_1_based": 383,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 29"
+    },
+    {
+      "index_1_based": 384,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 29"
+    },
+    {
+      "index_1_based": 385,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 29"
+    },
+    {
+      "index_1_based": 386,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 29"
+    },
+    {
+      "index_1_based": 387,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 29"
+    },
+    {
+      "index_1_based": 388,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 29"
+    },
+    {
+      "index_1_based": 389,
+      "name": "BindingDB Target Chain Sequence 30"
+    },
+    {
+      "index_1_based": 390,
+      "name": "PDB ID(s) of Target Chain 30"
+    },
+    {
+      "index_1_based": 391,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 30"
+    },
+    {
+      "index_1_based": 392,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 30"
+    },
+    {
+      "index_1_based": 393,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 30"
+    },
+    {
+      "index_1_based": 394,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 30"
+    },
+    {
+      "index_1_based": 395,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 30"
+    },
+    {
+      "index_1_based": 396,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 30"
+    },
+    {
+      "index_1_based": 397,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 30"
+    },
+    {
+      "index_1_based": 398,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 30"
+    },
+    {
+      "index_1_based": 399,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 30"
+    },
+    {
+      "index_1_based": 400,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 30"
+    },
+    {
+      "index_1_based": 401,
+      "name": "BindingDB Target Chain Sequence 31"
+    },
+    {
+      "index_1_based": 402,
+      "name": "PDB ID(s) of Target Chain 31"
+    },
+    {
+      "index_1_based": 403,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 31"
+    },
+    {
+      "index_1_based": 404,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 31"
+    },
+    {
+      "index_1_based": 405,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 31"
+    },
+    {
+      "index_1_based": 406,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 31"
+    },
+    {
+      "index_1_based": 407,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 31"
+    },
+    {
+      "index_1_based": 408,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 31"
+    },
+    {
+      "index_1_based": 409,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 31"
+    },
+    {
+      "index_1_based": 410,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 31"
+    },
+    {
+      "index_1_based": 411,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 31"
+    },
+    {
+      "index_1_based": 412,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 31"
+    },
+    {
+      "index_1_based": 413,
+      "name": "BindingDB Target Chain Sequence 32"
+    },
+    {
+      "index_1_based": 414,
+      "name": "PDB ID(s) of Target Chain 32"
+    },
+    {
+      "index_1_based": 415,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 32"
+    },
+    {
+      "index_1_based": 416,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 32"
+    },
+    {
+      "index_1_based": 417,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 32"
+    },
+    {
+      "index_1_based": 418,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 32"
+    },
+    {
+      "index_1_based": 419,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 32"
+    },
+    {
+      "index_1_based": 420,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 32"
+    },
+    {
+      "index_1_based": 421,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 32"
+    },
+    {
+      "index_1_based": 422,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 32"
+    },
+    {
+      "index_1_based": 423,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 32"
+    },
+    {
+      "index_1_based": 424,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 32"
+    },
+    {
+      "index_1_based": 425,
+      "name": "BindingDB Target Chain Sequence 33"
+    },
+    {
+      "index_1_based": 426,
+      "name": "PDB ID(s) of Target Chain 33"
+    },
+    {
+      "index_1_based": 427,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 33"
+    },
+    {
+      "index_1_based": 428,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 33"
+    },
+    {
+      "index_1_based": 429,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 33"
+    },
+    {
+      "index_1_based": 430,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 33"
+    },
+    {
+      "index_1_based": 431,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 33"
+    },
+    {
+      "index_1_based": 432,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 33"
+    },
+    {
+      "index_1_based": 433,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 33"
+    },
+    {
+      "index_1_based": 434,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 33"
+    },
+    {
+      "index_1_based": 435,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 33"
+    },
+    {
+      "index_1_based": 436,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 33"
+    },
+    {
+      "index_1_based": 437,
+      "name": "BindingDB Target Chain Sequence 34"
+    },
+    {
+      "index_1_based": 438,
+      "name": "PDB ID(s) of Target Chain 34"
+    },
+    {
+      "index_1_based": 439,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 34"
+    },
+    {
+      "index_1_based": 440,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 34"
+    },
+    {
+      "index_1_based": 441,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 34"
+    },
+    {
+      "index_1_based": 442,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 34"
+    },
+    {
+      "index_1_based": 443,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 34"
+    },
+    {
+      "index_1_based": 444,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 34"
+    },
+    {
+      "index_1_based": 445,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 34"
+    },
+    {
+      "index_1_based": 446,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 34"
+    },
+    {
+      "index_1_based": 447,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 34"
+    },
+    {
+      "index_1_based": 448,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 34"
+    },
+    {
+      "index_1_based": 449,
+      "name": "BindingDB Target Chain Sequence 35"
+    },
+    {
+      "index_1_based": 450,
+      "name": "PDB ID(s) of Target Chain 35"
+    },
+    {
+      "index_1_based": 451,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 35"
+    },
+    {
+      "index_1_based": 452,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 35"
+    },
+    {
+      "index_1_based": 453,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 35"
+    },
+    {
+      "index_1_based": 454,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 35"
+    },
+    {
+      "index_1_based": 455,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 35"
+    },
+    {
+      "index_1_based": 456,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 35"
+    },
+    {
+      "index_1_based": 457,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 35"
+    },
+    {
+      "index_1_based": 458,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 35"
+    },
+    {
+      "index_1_based": 459,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 35"
+    },
+    {
+      "index_1_based": 460,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 35"
+    },
+    {
+      "index_1_based": 461,
+      "name": "BindingDB Target Chain Sequence 36"
+    },
+    {
+      "index_1_based": 462,
+      "name": "PDB ID(s) of Target Chain 36"
+    },
+    {
+      "index_1_based": 463,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 36"
+    },
+    {
+      "index_1_based": 464,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 36"
+    },
+    {
+      "index_1_based": 465,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 36"
+    },
+    {
+      "index_1_based": 466,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 36"
+    },
+    {
+      "index_1_based": 467,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 36"
+    },
+    {
+      "index_1_based": 468,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 36"
+    },
+    {
+      "index_1_based": 469,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 36"
+    },
+    {
+      "index_1_based": 470,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 36"
+    },
+    {
+      "index_1_based": 471,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 36"
+    },
+    {
+      "index_1_based": 472,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 36"
+    },
+    {
+      "index_1_based": 473,
+      "name": "BindingDB Target Chain Sequence 37"
+    },
+    {
+      "index_1_based": 474,
+      "name": "PDB ID(s) of Target Chain 37"
+    },
+    {
+      "index_1_based": 475,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 37"
+    },
+    {
+      "index_1_based": 476,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 37"
+    },
+    {
+      "index_1_based": 477,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 37"
+    },
+    {
+      "index_1_based": 478,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 37"
+    },
+    {
+      "index_1_based": 479,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 37"
+    },
+    {
+      "index_1_based": 480,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 37"
+    },
+    {
+      "index_1_based": 481,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 37"
+    },
+    {
+      "index_1_based": 482,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 37"
+    },
+    {
+      "index_1_based": 483,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 37"
+    },
+    {
+      "index_1_based": 484,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 37"
+    },
+    {
+      "index_1_based": 485,
+      "name": "BindingDB Target Chain Sequence 38"
+    },
+    {
+      "index_1_based": 486,
+      "name": "PDB ID(s) of Target Chain 38"
+    },
+    {
+      "index_1_based": 487,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 38"
+    },
+    {
+      "index_1_based": 488,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 38"
+    },
+    {
+      "index_1_based": 489,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 38"
+    },
+    {
+      "index_1_based": 490,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 38"
+    },
+    {
+      "index_1_based": 491,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 38"
+    },
+    {
+      "index_1_based": 492,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 38"
+    },
+    {
+      "index_1_based": 493,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 38"
+    },
+    {
+      "index_1_based": 494,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 38"
+    },
+    {
+      "index_1_based": 495,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 38"
+    },
+    {
+      "index_1_based": 496,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 38"
+    },
+    {
+      "index_1_based": 497,
+      "name": "BindingDB Target Chain Sequence 39"
+    },
+    {
+      "index_1_based": 498,
+      "name": "PDB ID(s) of Target Chain 39"
+    },
+    {
+      "index_1_based": 499,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 39"
+    },
+    {
+      "index_1_based": 500,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 39"
+    },
+    {
+      "index_1_based": 501,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 39"
+    },
+    {
+      "index_1_based": 502,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 39"
+    },
+    {
+      "index_1_based": 503,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 39"
+    },
+    {
+      "index_1_based": 504,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 39"
+    },
+    {
+      "index_1_based": 505,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 39"
+    },
+    {
+      "index_1_based": 506,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 39"
+    },
+    {
+      "index_1_based": 507,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 39"
+    },
+    {
+      "index_1_based": 508,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 39"
+    },
+    {
+      "index_1_based": 509,
+      "name": "BindingDB Target Chain Sequence 40"
+    },
+    {
+      "index_1_based": 510,
+      "name": "PDB ID(s) of Target Chain 40"
+    },
+    {
+      "index_1_based": 511,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 40"
+    },
+    {
+      "index_1_based": 512,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 40"
+    },
+    {
+      "index_1_based": 513,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 40"
+    },
+    {
+      "index_1_based": 514,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 40"
+    },
+    {
+      "index_1_based": 515,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 40"
+    },
+    {
+      "index_1_based": 516,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 40"
+    },
+    {
+      "index_1_based": 517,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 40"
+    },
+    {
+      "index_1_based": 518,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 40"
+    },
+    {
+      "index_1_based": 519,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 40"
+    },
+    {
+      "index_1_based": 520,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 40"
+    },
+    {
+      "index_1_based": 521,
+      "name": "BindingDB Target Chain Sequence 41"
+    },
+    {
+      "index_1_based": 522,
+      "name": "PDB ID(s) of Target Chain 41"
+    },
+    {
+      "index_1_based": 523,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 41"
+    },
+    {
+      "index_1_based": 524,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 41"
+    },
+    {
+      "index_1_based": 525,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 41"
+    },
+    {
+      "index_1_based": 526,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 41"
+    },
+    {
+      "index_1_based": 527,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 41"
+    },
+    {
+      "index_1_based": 528,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 41"
+    },
+    {
+      "index_1_based": 529,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 41"
+    },
+    {
+      "index_1_based": 530,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 41"
+    },
+    {
+      "index_1_based": 531,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 41"
+    },
+    {
+      "index_1_based": 532,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 41"
+    },
+    {
+      "index_1_based": 533,
+      "name": "BindingDB Target Chain Sequence 42"
+    },
+    {
+      "index_1_based": 534,
+      "name": "PDB ID(s) of Target Chain 42"
+    },
+    {
+      "index_1_based": 535,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 42"
+    },
+    {
+      "index_1_based": 536,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 42"
+    },
+    {
+      "index_1_based": 537,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 42"
+    },
+    {
+      "index_1_based": 538,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 42"
+    },
+    {
+      "index_1_based": 539,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 42"
+    },
+    {
+      "index_1_based": 540,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 42"
+    },
+    {
+      "index_1_based": 541,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 42"
+    },
+    {
+      "index_1_based": 542,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 42"
+    },
+    {
+      "index_1_based": 543,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 42"
+    },
+    {
+      "index_1_based": 544,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 42"
+    },
+    {
+      "index_1_based": 545,
+      "name": "BindingDB Target Chain Sequence 43"
+    },
+    {
+      "index_1_based": 546,
+      "name": "PDB ID(s) of Target Chain 43"
+    },
+    {
+      "index_1_based": 547,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 43"
+    },
+    {
+      "index_1_based": 548,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 43"
+    },
+    {
+      "index_1_based": 549,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 43"
+    },
+    {
+      "index_1_based": 550,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 43"
+    },
+    {
+      "index_1_based": 551,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 43"
+    },
+    {
+      "index_1_based": 552,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 43"
+    },
+    {
+      "index_1_based": 553,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 43"
+    },
+    {
+      "index_1_based": 554,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 43"
+    },
+    {
+      "index_1_based": 555,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 43"
+    },
+    {
+      "index_1_based": 556,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 43"
+    },
+    {
+      "index_1_based": 557,
+      "name": "BindingDB Target Chain Sequence 44"
+    },
+    {
+      "index_1_based": 558,
+      "name": "PDB ID(s) of Target Chain 44"
+    },
+    {
+      "index_1_based": 559,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 44"
+    },
+    {
+      "index_1_based": 560,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 44"
+    },
+    {
+      "index_1_based": 561,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 44"
+    },
+    {
+      "index_1_based": 562,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 44"
+    },
+    {
+      "index_1_based": 563,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 44"
+    },
+    {
+      "index_1_based": 564,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 44"
+    },
+    {
+      "index_1_based": 565,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 44"
+    },
+    {
+      "index_1_based": 566,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 44"
+    },
+    {
+      "index_1_based": 567,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 44"
+    },
+    {
+      "index_1_based": 568,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 44"
+    },
+    {
+      "index_1_based": 569,
+      "name": "BindingDB Target Chain Sequence 45"
+    },
+    {
+      "index_1_based": 570,
+      "name": "PDB ID(s) of Target Chain 45"
+    },
+    {
+      "index_1_based": 571,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 45"
+    },
+    {
+      "index_1_based": 572,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 45"
+    },
+    {
+      "index_1_based": 573,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 45"
+    },
+    {
+      "index_1_based": 574,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 45"
+    },
+    {
+      "index_1_based": 575,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 45"
+    },
+    {
+      "index_1_based": 576,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 45"
+    },
+    {
+      "index_1_based": 577,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 45"
+    },
+    {
+      "index_1_based": 578,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 45"
+    },
+    {
+      "index_1_based": 579,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 45"
+    },
+    {
+      "index_1_based": 580,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 45"
+    },
+    {
+      "index_1_based": 581,
+      "name": "BindingDB Target Chain Sequence 46"
+    },
+    {
+      "index_1_based": 582,
+      "name": "PDB ID(s) of Target Chain 46"
+    },
+    {
+      "index_1_based": 583,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 46"
+    },
+    {
+      "index_1_based": 584,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 46"
+    },
+    {
+      "index_1_based": 585,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 46"
+    },
+    {
+      "index_1_based": 586,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 46"
+    },
+    {
+      "index_1_based": 587,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 46"
+    },
+    {
+      "index_1_based": 588,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 46"
+    },
+    {
+      "index_1_based": 589,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 46"
+    },
+    {
+      "index_1_based": 590,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 46"
+    },
+    {
+      "index_1_based": 591,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 46"
+    },
+    {
+      "index_1_based": 592,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 46"
+    },
+    {
+      "index_1_based": 593,
+      "name": "BindingDB Target Chain Sequence 47"
+    },
+    {
+      "index_1_based": 594,
+      "name": "PDB ID(s) of Target Chain 47"
+    },
+    {
+      "index_1_based": 595,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 47"
+    },
+    {
+      "index_1_based": 596,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 47"
+    },
+    {
+      "index_1_based": 597,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 47"
+    },
+    {
+      "index_1_based": 598,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 47"
+    },
+    {
+      "index_1_based": 599,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 47"
+    },
+    {
+      "index_1_based": 600,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 47"
+    },
+    {
+      "index_1_based": 601,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 47"
+    },
+    {
+      "index_1_based": 602,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 47"
+    },
+    {
+      "index_1_based": 603,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 47"
+    },
+    {
+      "index_1_based": 604,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 47"
+    },
+    {
+      "index_1_based": 605,
+      "name": "BindingDB Target Chain Sequence 48"
+    },
+    {
+      "index_1_based": 606,
+      "name": "PDB ID(s) of Target Chain 48"
+    },
+    {
+      "index_1_based": 607,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 48"
+    },
+    {
+      "index_1_based": 608,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 48"
+    },
+    {
+      "index_1_based": 609,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 48"
+    },
+    {
+      "index_1_based": 610,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 48"
+    },
+    {
+      "index_1_based": 611,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 48"
+    },
+    {
+      "index_1_based": 612,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 48"
+    },
+    {
+      "index_1_based": 613,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 48"
+    },
+    {
+      "index_1_based": 614,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 48"
+    },
+    {
+      "index_1_based": 615,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 48"
+    },
+    {
+      "index_1_based": 616,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 48"
+    },
+    {
+      "index_1_based": 617,
+      "name": "BindingDB Target Chain Sequence 49"
+    },
+    {
+      "index_1_based": 618,
+      "name": "PDB ID(s) of Target Chain 49"
+    },
+    {
+      "index_1_based": 619,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 49"
+    },
+    {
+      "index_1_based": 620,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 49"
+    },
+    {
+      "index_1_based": 621,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 49"
+    },
+    {
+      "index_1_based": 622,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 49"
+    },
+    {
+      "index_1_based": 623,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 49"
+    },
+    {
+      "index_1_based": 624,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 49"
+    },
+    {
+      "index_1_based": 625,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 49"
+    },
+    {
+      "index_1_based": 626,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 49"
+    },
+    {
+      "index_1_based": 627,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 49"
+    },
+    {
+      "index_1_based": 628,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 49"
+    },
+    {
+      "index_1_based": 629,
+      "name": "BindingDB Target Chain Sequence 50"
+    },
+    {
+      "index_1_based": 630,
+      "name": "PDB ID(s) of Target Chain 50"
+    },
+    {
+      "index_1_based": 631,
+      "name": "UniProt (SwissProt) Recommended Name of Target Chain 50"
+    },
+    {
+      "index_1_based": 632,
+      "name": "UniProt (SwissProt) Entry Name of Target Chain 50"
+    },
+    {
+      "index_1_based": 633,
+      "name": "UniProt (SwissProt) Primary ID of Target Chain 50"
+    },
+    {
+      "index_1_based": 634,
+      "name": "UniProt (SwissProt) Secondary ID(s) of Target Chain 50"
+    },
+    {
+      "index_1_based": 635,
+      "name": "UniProt (SwissProt) Alternative ID(s) of Target Chain 50"
+    },
+    {
+      "index_1_based": 636,
+      "name": "UniProt (TrEMBL) Submitted Name of Target Chain 50"
+    },
+    {
+      "index_1_based": 637,
+      "name": "UniProt (TrEMBL) Entry Name of Target Chain 50"
+    },
+    {
+      "index_1_based": 638,
+      "name": "UniProt (TrEMBL) Primary ID of Target Chain 50"
+    },
+    {
+      "index_1_based": 639,
+      "name": "UniProt (TrEMBL) Secondary ID(s) of Target Chain 50"
+    },
+    {
+      "index_1_based": 640,
+      "name": "UniProt (TrEMBL) Alternative ID(s) of Target Chain 50"
+    }
+  ],
+  "note": "Header inspection only; no assay records processed or counts independently validated."
+}

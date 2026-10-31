@@ -1,0 +1,74 @@
+target,source,target_name,construct_category,name_notation,mutation_signature,observations
+EGFR,ChEMBL,Epidermal growth factor receptor,plain_name,none,,13316
+EGFR,Curated from the literature by BindingDB,Epidermal growth factor receptor,plain_name,none,,1217
+EGFR,Curated from the literature by BindingDB,Epidermal growth factor receptor [1-973],other_construct,square_brackets,,17
+EGFR,Curated from the literature by BindingDB,Epidermal growth factor receptor [645-1186],other_construct,square_brackets,,33
+EGFR,Curated from the literature by BindingDB,Epidermal growth factor receptor [668-1210],other_construct,square_brackets,,4
+EGFR,Curated from the literature by BindingDB,"Epidermal growth factor receptor [671-1210,L858R]",mixed_construct,square_brackets,L858R,10
+EGFR,Curated from the literature by BindingDB,"Epidermal growth factor receptor [696-1210,T790M]",mixed_construct,square_brackets,T790M,5
+EGFR,US Patent,Epidermal growth factor receptor,plain_name,none,,6452
+EGFR,US Patent,Epidermal growth factor receptor (EGFR)(L858R)(T790M),substitutions_only,parentheses,L858R|T790M,100
+EGFR,US Patent,"Epidermal growth factor receptor [1-18,20-1210,C797S]",mixed_construct,square_brackets,C797S,318
+EGFR,US Patent,"Epidermal growth factor receptor [1-18,20-1210,T790M,C797S]",mixed_construct,square_brackets,C797S|T790M,249
+EGFR,US Patent,"Epidermal growth factor receptor [1-18,20-1210,T790M]",mixed_construct,square_brackets,T790M,83
+EGFR,US Patent,"Epidermal growth factor receptor [1-18,20-1210]",other_construct,square_brackets,,138
+EGFR,US Patent,"Epidermal growth factor receptor [1-18,20-745,747-749,751-1210,T790M]",mixed_construct,square_brackets,T790M,29
+EGFR,US Patent,"Epidermal growth factor receptor [1-18,20-745,747-749,751-1210]",other_construct,square_brackets,,29
+EGFR,US Patent,"Epidermal growth factor receptor [1-18,20-745,751-1210,T790M,C797S]",mixed_construct,square_brackets,C797S|T790M,98
+EGFR,US Patent,"Epidermal growth factor receptor [1-18,20-745,751-1210,T790M]",mixed_construct,square_brackets,T790M,80
+EGFR,US Patent,"Epidermal growth factor receptor [1-249,301-1210,T790M,L858R]",mixed_construct,square_brackets,L858R|T790M,23
+EGFR,US Patent,"Epidermal growth factor receptor [1-745,747-749,751-1210]",other_construct,square_brackets,,4
+EGFR,US Patent,"Epidermal growth factor receptor [1-745,751-1210,C797S]",mixed_construct,square_brackets,C797S,665
+EGFR,US Patent,"Epidermal growth factor receptor [1-745,751-1210,T790M,C797S]",mixed_construct,square_brackets,C797S|T790M,10
+EGFR,US Patent,"Epidermal growth factor receptor [1-745,751-1210,T790M]",mixed_construct,square_brackets,T790M,10
+EGFR,US Patent,"Epidermal growth factor receptor [1-745,751-1210]",other_construct,square_brackets,,243
+EGFR,US Patent,"Epidermal growth factor receptor [1-746,750-1210,A750P]",mixed_construct,square_brackets,A750P,2
+EGFR,US Patent,"Epidermal growth factor receptor [1-746,753-1210,P753S]",mixed_construct,square_brackets,P753S,2
+EGFR,US Patent,"Epidermal growth factor receptor [1-751,75360-1210]",other_construct,square_brackets,,2
+EGFR,US Patent,"Epidermal growth factor receptor [1-763,'FHEA',764-1210]",other_construct,square_brackets,,106
+EGFR,US Patent,"Epidermal growth factor receptor [1-769,'ASV',770-1210]",other_construct,square_brackets,,102
+EGFR,US Patent,"Epidermal growth factor receptor [1-769,'SV',770-1210]",other_construct,square_brackets,,58
+EGFR,US Patent,"Epidermal growth factor receptor [1-769,'SVD',770-1210]",other_construct,square_brackets,,58
+EGFR,US Patent,"Epidermal growth factor receptor [1-770,'NPG',771-1210,T790M]",mixed_construct,square_brackets,T790M,8
+EGFR,US Patent,"Epidermal growth factor receptor [1-770,'NPG',771-1210]",other_construct,square_brackets,,414
+EGFR,US Patent,"Epidermal growth factor receptor [1-770,'SVD',771-1210]",other_construct,square_brackets,,302
+EGFR,US Patent,"Epidermal growth factor receptor [1-772,'NPH',773-1210]",other_construct,square_brackets,,12
+EGFR,US Patent,"Epidermal growth factor receptor [1-773,'NPH',774-1210]",other_construct,square_brackets,,103
+EGFR,US Patent,"Epidermal growth factor receptor [1-999,L858R]",mixed_construct,square_brackets,L858R,2
+EGFR,US Patent,"Epidermal growth factor receptor [668-1210,T790M,L858R]",mixed_construct,square_brackets,L858R|T790M,26
+EGFR,US Patent,Epidermal growth factor receptor [668-1210],other_construct,square_brackets,,7
+EGFR,US Patent,Epidermal growth factor receptor [669-1210],other_construct,square_brackets,,165
+EGFR,US Patent,"Epidermal growth factor receptor [669-770,'SVD',771-1210]",other_construct,square_brackets,,59
+EGFR,US Patent,"Epidermal growth factor receptor [695-1022,T790M,C797S,L858R]",mixed_construct,square_brackets,C797S|L858R|T790M,151
+EGFR,US Patent,Epidermal growth factor receptor [695-1022],other_construct,square_brackets,,142
+EGFR,US Patent,"Epidermal growth factor receptor [695-745,751-1022,T790M,C797S]",mixed_construct,square_brackets,C797S|T790M,49
+EGFR,US Patent,"Epidermal growth factor receptor [696-1022,L858R]",mixed_construct,square_brackets,L858R,7
+EGFR,US Patent,Epidermal growth factor receptor [G719C],substitutions_only,square_brackets,G719C,2
+EGFR,US Patent,Epidermal growth factor receptor [G719S],substitutions_only,square_brackets,G719S,2
+EGFR,US Patent,"Epidermal growth factor receptor [L858R,C797S]",substitutions_only,square_brackets,C797S|L858R,672
+EGFR,US Patent,"Epidermal growth factor receptor [L858R,T790M,C797S]",substitutions_only,square_brackets,C797S|L858R|T790M,678
+EGFR,US Patent,Epidermal growth factor receptor [L858R],substitutions_only,square_brackets,L858R,637
+EGFR,US Patent,Epidermal growth factor receptor [L861Q],substitutions_only,square_brackets,L861Q,2
+EGFR,US Patent,Epidermal growth factor receptor [S768I],substitutions_only,square_brackets,S768I,58
+EGFR,US Patent,"Epidermal growth factor receptor [T790M,C797S,L858R]",substitutions_only,square_brackets,C797S|L858R|T790M,275
+EGFR,US Patent,"Epidermal growth factor receptor [T790M,L858R]",substitutions_only,square_brackets,L858R|T790M,1411
+EGFR,US Patent,Epidermal growth factor receptor [T790M],substitutions_only,square_brackets,T790M,229
+EGFR,WIPO,Epidermal growth factor receptor,plain_name,none,,12
+EGFR,WIPO,"Epidermal growth factor receptor [1-18,20-1210,C797S]",mixed_construct,square_brackets,C797S,12
+EGFR,WIPO,"Epidermal growth factor receptor [1-18,20-1210,T790M,C797S]",mixed_construct,square_brackets,C797S|T790M,229
+EGFR,WIPO,"Epidermal growth factor receptor [1-18,20-1210,T790M]",mixed_construct,square_brackets,T790M,12
+EGFR,WIPO,"Epidermal growth factor receptor [1-18,20-1210]",other_construct,square_brackets,,12
+EGFR,WIPO,"Epidermal growth factor receptor [669-770,'SVD',771-1210]",other_construct,square_brackets,,14
+EGFR,WIPO,"Epidermal growth factor receptor [L858R,C797S]",substitutions_only,square_brackets,C797S|L858R,12
+EGFR,WIPO,"Epidermal growth factor receptor [L858R,T790M,C797S]",substitutions_only,square_brackets,C797S|L858R|T790M,12
+EGFR,WIPO,Epidermal growth factor receptor [L858R],substitutions_only,square_brackets,L858R,12
+EGFR,WIPO,"Epidermal growth factor receptor [T790M,L858R]",substitutions_only,square_brackets,L858R|T790M,12
+HER2,ChEMBL,Receptor tyrosine-protein kinase erbB-2,plain_name,none,,2477
+HER2,ChEMBL,Receptor tyrosine-protein kinase erbB-2 [V777L],substitutions_only,square_brackets,V777L,2
+HER2,Curated from the literature by BindingDB,Receptor tyrosine-protein kinase erbB-2,plain_name,none,,152
+HER2,US Patent,Receptor tyrosine-protein kinase erbB-2,plain_name,none,,2107
+HER2,US Patent,"Receptor tyrosine-protein kinase erbB-2 [1-775,'VC',777-1255]",other_construct,square_brackets,,24
+HER2,US Patent,"Receptor tyrosine-protein kinase erbB-2 [1-775,'YVMA',776-1255]",other_construct,square_brackets,,299
+HER2,US Patent,"Receptor tyrosine-protein kinase erbB-2 [1-780,'GSP',781-1255]",other_construct,square_brackets,,31
+HER2,US Patent,"Receptor tyrosine-protein kinase erbB-2 [676-775,'YVMA',776-1255]",other_construct,square_brackets,,495
+HER2,US Patent,Receptor tyrosine-protein kinase erbB-2 [V777L],substitutions_only,square_brackets,V777L,408

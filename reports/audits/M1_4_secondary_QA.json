@@ -1,0 +1,31 @@
+{
+  "input_files": [
+    "bindingdb_egfr_her2_observation_audit.json",
+    "bindingdb_egfr_her2_observations.csv"
+  ],
+  "totals": {
+    "EGFR": 29215,
+    "HER2": 5995
+  },
+  "measurement_status": {
+    "EGFR/exact": 23483,
+    "EGFR/censored": 5731,
+    "HER2/exact": 5174,
+    "HER2/censored": 821,
+    "EGFR/invalid": 1
+  },
+  "organism_raw": {
+    "Homo sapiens": 30547,
+    "Human": 3409,
+    "missing": 1254
+  },
+  "unannotated_target_name": {
+    "EGFR": 20997,
+    "HER2": 4736
+  },
+  "annotated_or_other_target_name": {
+    "EGFR": 8218,
+    "HER2": 1259
+  },
+  "audit_outcome": "Counts reconcile. Flag Human as human; preserve target construct strata."
+}

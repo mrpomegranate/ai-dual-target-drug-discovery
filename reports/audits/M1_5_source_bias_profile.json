@@ -1,0 +1,198 @@
+{
+  "stage": "M1.5_source_and_construct_descriptive_diagnostics",
+  "generated_utc": "2026-10-31T21:45:14.686565+00:00",
+  "input_file": "bindingdb_egfr_her2_observations.csv",
+  "input_sha256": "5579aa3d6d4ceb66f0b23cb3803e1978c54c212206e33e50cd0658ebcd6b52e3",
+  "records": 35210,
+  "plot_versions": {
+    "matplotlib": "3.11.2",
+    "pandas": "2.3.3"
+  },
+  "groups": [
+    {
+      "target": "EGFR",
+      "source": "ChEMBL",
+      "observations": 13316,
+      "exact_ic50": 11014,
+      "censored_ic50": 2301,
+      "invalid_ic50": 1,
+      "exact_pic50_median": 7.0414,
+      "bracket_annotated_target_names": 0,
+      "bracket_annotation_percent": 0.0,
+      "activity_counts": {
+        "active": 8389,
+        "inactive": 4791,
+        "indeterminate": 136
+      },
+      "distinct_reported_inchi_keys": 8078,
+      "metadata_population_percent": {
+        "Article DOI": 75.79,
+        "PMID": 98.15,
+        "Patent number": 0.0,
+        "pH": 0.04,
+        "Temperature": 0.0
+      }
+    },
+    {
+      "target": "EGFR",
+      "source": "Curated from the literature by BindingDB",
+      "observations": 1286,
+      "exact_ic50": 1076,
+      "censored_ic50": 210,
+      "invalid_ic50": 0,
+      "exact_pic50_median": 6.5229,
+      "bracket_annotated_target_names": 69,
+      "bracket_annotation_percent": 5.37,
+      "activity_counts": {
+        "active": 678,
+        "inactive": 608,
+        "indeterminate": 0
+      },
+      "distinct_reported_inchi_keys": 1196,
+      "metadata_population_percent": {
+        "Article DOI": 99.14,
+        "PMID": 100.0,
+        "Patent number": 0.0,
+        "pH": 47.9,
+        "Temperature": 48.99
+      }
+    },
+    {
+      "target": "EGFR",
+      "source": "US Patent",
+      "observations": 14274,
+      "exact_ic50": 11057,
+      "censored_ic50": 3217,
+      "invalid_ic50": 0,
+      "exact_pic50_median": 7.8356,
+      "bracket_annotated_target_names": 7722,
+      "bracket_annotation_percent": 54.1,
+      "activity_counts": {
+        "active": 11500,
+        "inactive": 2594,
+        "indeterminate": 180
+      },
+      "distinct_reported_inchi_keys": 6348,
+      "metadata_population_percent": {
+        "Article DOI": 0.05,
+        "PMID": 0.0,
+        "Patent number": 100.0,
+        "pH": 3.99,
+        "Temperature": 4.2
+      }
+    },
+    {
+      "target": "EGFR",
+      "source": "WIPO",
+      "observations": 339,
+      "exact_ic50": 336,
+      "censored_ic50": 3,
+      "invalid_ic50": 0,
+      "exact_pic50_median": 8.1707,
+      "bracket_annotated_target_names": 327,
+      "bracket_annotation_percent": 96.46,
+      "activity_counts": {
+        "active": 326,
+        "inactive": 13,
+        "indeterminate": 0
+      },
+      "distinct_reported_inchi_keys": 233,
+      "metadata_population_percent": {
+        "Article DOI": 0.0,
+        "PMID": 0.0,
+        "Patent number": 100.0,
+        "pH": 0.0,
+        "Temperature": 0.0
+      }
+    },
+    {
+      "target": "HER2",
+      "source": "ChEMBL",
+      "observations": 2479,
+      "exact_ic50": 2152,
+      "censored_ic50": 327,
+      "invalid_ic50": 0,
+      "exact_pic50_median": 6.8928,
+      "bracket_annotated_target_names": 2,
+      "bracket_annotation_percent": 0.08,
+      "activity_counts": {
+        "active": 1518,
+        "inactive": 951,
+        "indeterminate": 10
+      },
+      "distinct_reported_inchi_keys": 2034,
+      "metadata_population_percent": {
+        "Article DOI": 86.53,
+        "PMID": 99.64,
+        "Patent number": 0.0,
+        "pH": 0.2,
+        "Temperature": 0.0
+      }
+    },
+    {
+      "target": "HER2",
+      "source": "Curated from the literature by BindingDB",
+      "observations": 152,
+      "exact_ic50": 150,
+      "censored_ic50": 2,
+      "invalid_ic50": 0,
+      "exact_pic50_median": 6.8963,
+      "bracket_annotated_target_names": 0,
+      "bracket_annotation_percent": 0.0,
+      "activity_counts": {
+        "active": 120,
+        "inactive": 32,
+        "indeterminate": 0
+      },
+      "distinct_reported_inchi_keys": 136,
+      "metadata_population_percent": {
+        "Article DOI": 100.0,
+        "PMID": 100.0,
+        "Patent number": 0.0,
+        "pH": 30.26,
+        "Temperature": 27.63
+      }
+    },
+    {
+      "target": "HER2",
+      "source": "US Patent",
+      "observations": 3364,
+      "exact_ic50": 2872,
+      "censored_ic50": 492,
+      "invalid_ic50": 0,
+      "exact_pic50_median": 7.3909,
+      "bracket_annotated_target_names": 1257,
+      "bracket_annotation_percent": 37.37,
+      "activity_counts": {
+        "active": 3163,
+        "inactive": 199,
+        "indeterminate": 2
+      },
+      "distinct_reported_inchi_keys": 2083,
+      "metadata_population_percent": {
+        "Article DOI": 0.0,
+        "PMID": 0.0,
+        "Patent number": 100.0,
+        "pH": 0.83,
+        "Temperature": 0.98
+      }
+    }
+  ],
+  "figures": [
+    "01_observations_by_source.png",
+    "02_construct_annotations_by_source.png",
+    "03_exact_pic50_by_source_egfr.png",
+    "04_exact_pic50_by_source_her2.png",
+    "05_activity_by_source.png",
+    "06_metadata_completeness.png",
+    "07_observations_vs_distinct_inchikeys.png"
+  ],
+  "limitations": [
+    "Source is BindingDB curation source; not individual lab/site identity.",
+    "Observations are not independent molecules; duplicates and repeated assays preserved.",
+    "Bracket notation is a proxy for construct annotation, not validated genotype.",
+    "Only exact IC50 records are used in pIC50 boxplots; censored records excluded.",
+    "No causal source bias, model bias, or model performance is established.",
+    "A full independent molecule/assay curation and source-held-out evaluation remain future work."
+  ]
+}

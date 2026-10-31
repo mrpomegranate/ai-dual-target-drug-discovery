@@ -1,0 +1,79 @@
+{
+  "audit_stage": "M1.4_observation_extraction_not_curated_labels",
+  "completed_at_utc": "2026-10-31T21:25:33.078174+00:00",
+  "source": {
+    "archive_filename": "BindingDB_All_202610_tsv.zip",
+    "archive_size_bytes": 594284548,
+    "member_name": "BindingDB_All.tsv",
+    "member_uncompressed_bytes": 9004582822,
+    "member_crc32_hex": "40765311",
+    "header_column_count": 640,
+    "header_sha256": "c8257ee5d10da9a315ac42711845e9397fe92e3b42eee1651af526314054f863"
+  },
+  "target_policy": {
+    "egfr": "P00533",
+    "her2": "P04626",
+    "match_field": "UniProt (SwissProt) Primary ID of Target Chain 1",
+    "chain_count_required": "1",
+    "activity_threshold_nm": 1000,
+    "organism_policy": "Record observed metadata; flag but do not silently exclude mismatches",
+    "invalid_ic50_policy": "Retain flagged row without pIC50",
+    "duplicates_policy": "Preserve original observations without aggregation"
+  },
+  "totals": {
+    "chain1_target_accession_records": 38570,
+    "data_records_scanned": 3243660,
+    "excluded_missing_ic50": 2565,
+    "excluded_not_single_chain": 795,
+    "ic50_censored": 6552,
+    "ic50_exact": 28657,
+    "ic50_invalid": 1,
+    "observation_rows_written": 35210
+  },
+  "per_target": {
+    "EGFR": {
+      "accession_matched_records": 31585,
+      "eligible_single_chain_records": 31570,
+      "excluded_missing_ic50": 2355,
+      "excluded_not_single_chain": 15,
+      "ic50_censored": 5731,
+      "ic50_exact": 23483,
+      "ic50_invalid": 1,
+      "observation_rows_written": 29215,
+      "organism_human": 28371,
+      "organism_missing": 844,
+      "smiles_present": 29215
+    },
+    "HER2": {
+      "accession_matched_records": 6985,
+      "eligible_single_chain_records": 6205,
+      "excluded_missing_ic50": 210,
+      "excluded_not_single_chain": 780,
+      "ic50_censored": 821,
+      "ic50_exact": 5174,
+      "observation_rows_written": 5995,
+      "organism_human": 5585,
+      "organism_missing": 410,
+      "smiles_present": 5995
+    }
+  },
+  "first_parse_errors": [
+    {
+      "record_number": 3020894,
+      "raw_ic50": "0.000",
+      "error": "IC50 must be positive: '0.000'"
+    }
+  ],
+  "outputs": {
+    "observations_csv": "data\\interim\\bindingdb_egfr_her2_observations.csv"
+  },
+  "limitations": [
+    "This stage matches chain-1 SwissProt primary accessions only.",
+    "Multichain complexes are excluded from this observation extract and counted.",
+    "No canonicalization, molecule merging, assay reconciliation, or duplicate removal.",
+    "The organism flag is metadata, not a strict inclusion criterion.",
+    "UTF-8 decoding uses replacement characters for invalid source bytes.",
+    "The source ZIP SHA-256 was verified separately and is not recalculated by this script.",
+    "All counts here are observation-level, not unique molecule or paired-molecule counts."
+  ]
+}
