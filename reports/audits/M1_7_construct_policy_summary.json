@@ -1,0 +1,188 @@
+{
+  "stage": "M1.7_provisional_construct_policy_NOT_curated_training_labels",
+  "generated_utc": "2026-10-31T23:29:29.700163+00:00",
+  "input_csv_name": "bindingdb_egfr_her2_observations.csv",
+  "input_sha256": "5579aa3d6d4ceb66f0b23cb3803e1978c54c212206e33e50cd0658ebcd6b52e3",
+  "observations": 35210,
+  "activity_threshold_nm": 1000,
+  "policy": {
+    "primary": "plain target name, explicit human metadata and present SMILES; exact IC50 for regression, determinate censored only for classification",
+    "secondary": "all recognized name-annotated constructs reserved; separately flag assay/organism eligibility",
+    "unknown_names": "manual review; never automatically place in reference or construct challenge set",
+    "sequence_verification": "NOT performed; plain names are provisional, NOT confirmed wild-type",
+    "no_model_split": "No molecular or scaffold train/test allocation has occurred"
+  },
+  "total_partitions": {
+    "primary_exact_candidate": 20665,
+    "primary_classification_candidate": 4845,
+    "primary_hold_organism": 0,
+    "primary_hold_smiles": 0,
+    "primary_hold_measurement": 223,
+    "secondary_construct_reserve": 9477,
+    "manual_construct_review": 0
+  },
+  "per_target": {
+    "EGFR": {
+      "observations": 29215,
+      "partitions": {
+        "primary_exact_candidate": 16517,
+        "primary_classification_candidate": 4267,
+        "primary_hold_organism": 0,
+        "primary_hold_smiles": 0,
+        "primary_hold_measurement": 213,
+        "secondary_construct_reserve": 8218,
+        "manual_construct_review": 0
+      },
+      "reserve_assay_roles": {
+        "exact_candidate": 6261,
+        "classification_candidate": 1013,
+        "not_ready": 944
+      },
+      "organism_metadata": {
+        "human": 28371,
+        "missing": 844,
+        "nonhuman_or_unexpected": 0
+      }
+    },
+    "HER2": {
+      "observations": 5995,
+      "partitions": {
+        "primary_exact_candidate": 4148,
+        "primary_classification_candidate": 578,
+        "primary_hold_organism": 0,
+        "primary_hold_smiles": 0,
+        "primary_hold_measurement": 10,
+        "secondary_construct_reserve": 1259,
+        "manual_construct_review": 0
+      },
+      "reserve_assay_roles": {
+        "exact_candidate": 793,
+        "classification_candidate": 54,
+        "not_ready": 412
+      },
+      "organism_metadata": {
+        "human": 5585,
+        "missing": 410,
+        "nonhuman_or_unexpected": 0
+      }
+    }
+  },
+  "by_source": [
+    {
+      "target": "EGFR",
+      "source": "ChEMBL",
+      "observations": 13316,
+      "partitions": {
+        "primary_exact_candidate": 11014,
+        "primary_classification_candidate": 2166,
+        "primary_hold_organism": 0,
+        "primary_hold_smiles": 0,
+        "primary_hold_measurement": 136,
+        "secondary_construct_reserve": 0,
+        "manual_construct_review": 0
+      }
+    },
+    {
+      "target": "EGFR",
+      "source": "Curated from the literature by BindingDB",
+      "observations": 1286,
+      "partitions": {
+        "primary_exact_candidate": 1009,
+        "primary_classification_candidate": 208,
+        "primary_hold_organism": 0,
+        "primary_hold_smiles": 0,
+        "primary_hold_measurement": 0,
+        "secondary_construct_reserve": 69,
+        "manual_construct_review": 0
+      }
+    },
+    {
+      "target": "EGFR",
+      "source": "US Patent",
+      "observations": 14274,
+      "partitions": {
+        "primary_exact_candidate": 4482,
+        "primary_classification_candidate": 1893,
+        "primary_hold_organism": 0,
+        "primary_hold_smiles": 0,
+        "primary_hold_measurement": 77,
+        "secondary_construct_reserve": 7822,
+        "manual_construct_review": 0
+      }
+    },
+    {
+      "target": "EGFR",
+      "source": "WIPO",
+      "observations": 339,
+      "partitions": {
+        "primary_exact_candidate": 12,
+        "primary_classification_candidate": 0,
+        "primary_hold_organism": 0,
+        "primary_hold_smiles": 0,
+        "primary_hold_measurement": 0,
+        "secondary_construct_reserve": 327,
+        "manual_construct_review": 0
+      }
+    },
+    {
+      "target": "HER2",
+      "source": "ChEMBL",
+      "observations": 2479,
+      "partitions": {
+        "primary_exact_candidate": 2150,
+        "primary_classification_candidate": 317,
+        "primary_hold_organism": 0,
+        "primary_hold_smiles": 0,
+        "primary_hold_measurement": 10,
+        "secondary_construct_reserve": 2,
+        "manual_construct_review": 0
+      }
+    },
+    {
+      "target": "HER2",
+      "source": "Curated from the literature by BindingDB",
+      "observations": 152,
+      "partitions": {
+        "primary_exact_candidate": 150,
+        "primary_classification_candidate": 2,
+        "primary_hold_organism": 0,
+        "primary_hold_smiles": 0,
+        "primary_hold_measurement": 0,
+        "secondary_construct_reserve": 0,
+        "manual_construct_review": 0
+      }
+    },
+    {
+      "target": "HER2",
+      "source": "US Patent",
+      "observations": 3364,
+      "partitions": {
+        "primary_exact_candidate": 1848,
+        "primary_classification_candidate": 259,
+        "primary_hold_organism": 0,
+        "primary_hold_smiles": 0,
+        "primary_hold_measurement": 0,
+        "secondary_construct_reserve": 1257,
+        "manual_construct_review": 0
+      }
+    }
+  ],
+  "source_reported_inchikey_diagnostics": {
+    "primary_exact_egfr_her2_overlap": 1587,
+    "primary_exact_vs_secondary_exact_same_target": {
+      "EGFR": 1072,
+      "HER2": 405
+    },
+    "interpretation": "Source-reported structure identifiers only; not standardized, paired, scaffold-split or assay-reconciled"
+  },
+  "source_organism_flag_disagreements": 0,
+  "limitations": [
+    "Only target-name annotations were examined, not sequences or protein constructs experimentally verified.",
+    "Source-reported InChIKeys are not canonicalized chemical identities.",
+    "Secondary reserve includes censored, missing-metadata and otherwise unusable observations; only annotated exact candidates could enter regression after further curation.",
+    "Dataset role assignment does not prevent source, chemistry, or scaffold overlap. These checks remain mandatory.",
+    "Same-molecule reference-vs-mutant comparisons are a separate paired assay analysis, not scaffold-held-out model evaluation.",
+    "Publication/patent/source categories are not laboratory identifiers; causal confounding not established.",
+    "No raw observations merged, imputed, relabeled, or used to train a model."
+  ]
+}

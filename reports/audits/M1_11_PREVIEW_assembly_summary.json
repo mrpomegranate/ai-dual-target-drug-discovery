@@ -1,0 +1,54 @@
+{
+  "stage": "M1.11_masked_paired_molecular_dataset_PROVISIONAL_NOT_SPLIT_OR_VERIFIED",
+  "generated_utc": "2026-11-01T23:02:42.753842+00:00",
+  "inputs": {
+    "labels_file": "M1_10_local_label_candidates.csv",
+    "labels_sha256": "e8df6611bebe6e7ccd27618e98db08f43180a0ba3e6c296e72726d0d539e20e3",
+    "m10_summary_file": "M1_10_reconciliation_summary.json",
+    "m10_summary_sha256": "4b17f3264d356dee4884dc0ee173312d792880cf03de97d12a6f9e8a6e07cb6e",
+    "standardized_file": "M1_8c_local_standardized_observations.csv",
+    "standardized_sha256": "dc6e131c8fc1f242b93fa885f540809f28934808cc8611e26a3bd96bd7be6e7d",
+    "rdkit_version_provenance": "2025.09.4"
+  },
+  "analysis": {
+    "accepted_molecule_target_labels": 12221,
+    "EGFR_labels": 9015,
+    "HER2_labels": 3206,
+    "unique_accepted_structures": 10866,
+    "dual_labeled_structures": 1355,
+    "EGFR_only_labeled_structures": 7660,
+    "HER2_only_labeled_structures": 1851,
+    "dual_activity_class_counts": {
+      "dual_active": 863,
+      "dual_inactive": 280,
+      "EGFR_only_active": 142,
+      "HER2_only_active": 70
+    },
+    "all_m10_candidate_pairs_retained_in_disposition_audit": 14223,
+    "held_molecule_target_pairs": 2002,
+    "held_only_structures_excluded_from_dataset": 1695,
+    "accepted_single_exact_labels": 10996,
+    "accepted_tight_consensus_labels": 1225,
+    "reserved_annotated_construct_observations": 9477,
+    "reserved_annotated_construct_with_approved_identity": 9421,
+    "accepted_pair_annotations_overlapping_construct_reserve": 1683,
+    "identity_digests_and_exact_source_links_checked": true,
+    "missing_values_are_blank_and_controlled_by_masks": true,
+    "train_val_test_splits_created": false
+  },
+  "outputs": {
+    "multitask_dataset": "/mnt/data/M1_11_PREVIEW_multitask_molecules_PRIVATE.csv",
+    "full_pair_dispositions": "/mnt/data/M1_11_PREVIEW_pair_dispositions_PRIVATE.csv",
+    "separate_construct_reserve": "/mnt/data/M1_11_PREVIEW_annotated_construct_reserve_PRIVATE.csv",
+    "figure": "/mnt/data/M1_11_Paired_Dataset_Assembly/reports/figures/dataset_assembly/19_multitask_label_coverage.png"
+  },
+  "limitations": [
+    "Every label is provisional and unverified at protein-sequence/assay-endpoint level.",
+    "Missing target labels remain blank, never zero and never imputed.",
+    "A structure with one held target label can still enter the dataset for its other accepted target.",
+    "Held-only structures are preserved in the pair disposition export but excluded from modeling rows.",
+    "Annotated constructs are separate from primary training candidates, including overlapping structures.",
+    "No Bemis-Murcko scaffold split, source-held-out split, training, or external validation performed.",
+    "Dual-active status requires both accepted target labels and is only a provisional classification."
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "stage": "M1.10_provisional_exact_potency_label_reconciliation_NOT_validated_assay_labels",
+  "generated_utc": "2026-11-01T22:48:57.350150+00:00",
+  "policy": {
+    "candidate_input": "M1.7 primary exact, M1.8c approved provisional chemical structure IDs",
+    "exact_repeat_consensus_max_range_pic50": 0.3,
+    "relaxed_sensitivity_max_range_pic50": 0.5,
+    "activity_cutoff": "strict IC50 < 1000 nM is active",
+    "one_exact_observation": "provisional unreplicated label; assay not confirmed",
+    "repeat_estimator": "median of provenance-key medians, not proof of independent evidence",
+    "censored_conflicts": "contradictory determinate censored activity vetoes exact regression label",
+    "construct_assays": "plain target names only; no sequence or endpoint confirmation",
+    "ambiguous_censored_records": "not used as exact regression labels",
+    "duplicate_sources": "all records retained; apparent duplicate signatures flagged"
+  },
+  "inputs": {
+    "input_filename": "M1_8c_local_standardized_observations.csv",
+    "input_sha256": "dc6e131c8fc1f242b93fa885f540809f28934808cc8611e26a3bd96bd7be6e7d",
+    "m18d_summary_sha256": "ee52887bb7ac41fc4274c6ddc338d3cf2996c53a08438bb391db4d04a0c1fb85",
+    "m19a_summary_sha256": "d26a765810bb07adee3d34280f153b5b208921e40bc9cbb9b8841d311ea7c43c"
+  },
+  "analysis": {
+    "input_observations": 35210,
+    "eligible_exact_observations": 20649,
+    "eligible_determinate_censored_observations": 4844,
+    "candidate_molecule_target_pairs": 14223,
+    "policy_status_counts": {
+      "hold_censored_activity_contradiction": 285,
+      "hold_exact_activity_contradiction": 354,
+      "hold_major_disagreement_gt1_pic50": 597,
+      "hold_moderate_disagreement": 766,
+      "provisional_single_exact": 10996,
+      "provisional_tight_consensus": 1225
+    },
+    "provisional_regression_labels": 12221,
+    "held_regression_pairs": 2002,
+    "pairs_with_censored_evidence": 672,
+    "pairs_with_any_censored_activity_conflict": 333,
+    "pairs_with_exact_activity_conflict": 354,
+    "pairs_accepted_if_censored_evidence_ignored": 12438,
+    "pairs_accepted_relaxed_cutoff_0_50": 12447,
+    "strict_accepted_pairs_also_seen_in_annotated_construct_reserve": 1683,
+    "per_target": {
+      "EGFR": {
+        "pairs": 10860,
+        "provisional_labels": 9015,
+        "policy_status_counts": {
+          "hold_censored_activity_contradiction": 279,
+          "hold_exact_activity_contradiction": 335,
+          "hold_major_disagreement_gt1_pic50": 530,
+          "hold_moderate_disagreement": 701,
+          "provisional_single_exact": 8025,
+          "provisional_tight_consensus": 990
+        },
+        "pairs_with_censored_conflict": 326
+      },
+      "HER2": {
+        "pairs": 3363,
+        "provisional_labels": 3206,
+        "policy_status_counts": {
+          "hold_censored_activity_contradiction": 6,
+          "hold_exact_activity_contradiction": 19,
+          "hold_major_disagreement_gt1_pic50": 67,
+          "hold_moderate_disagreement": 65,
+          "provisional_single_exact": 2971,
+          "provisional_tight_consensus": 235
+        },
+        "pairs_with_censored_conflict": 7
+      }
+    }
+  },
+  "outputs": {
+    "labels": "/mnt/data/M1_10_local_label_candidates.csv",
+    "sensitivity": "/mnt/data/M1_10_local_sensitivity.csv",
+    "observation_trace": "/mnt/data/M1_10_local_observation_trace.csv",
+    "figure": "/mnt/data/M1_10_label_reconciliation_bundle/reports/figures/label_reconciliation/18_provisional_label_decisions.png"
+  },
+  "limitations": [
+    "Every regression label is provisional: neither reference EGFR/HER2 sequence nor biochemical assay endpoint is verified at record level.",
+    "Single-observation labels are unreplicated, not necessarily reliable ground truth.",
+    "A provenance_key is a publication/patent grouping, not an independent lab or assay ID.",
+    "Accepted repeats only agree within an empirical 0.30 pIC50 range; this is a policy choice, not a universally established measurement error threshold.",
+    "Censored evidence is used only to flag contradictory activity; censored values are never converted to exact regression pIC50.",
+    "No salts, tautomers, protein constructs or source-linked chemistry are silently merged.",
+    "No train/test split, baseline model, GNN, or external validation has occurred."
+  ]
+}

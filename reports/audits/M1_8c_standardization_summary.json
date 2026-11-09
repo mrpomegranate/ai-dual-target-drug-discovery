@@ -1,0 +1,79 @@
+{
+  "stage": "M1.8c_provisional_structure_identity_NOT_assay_aggregation",
+  "generated_utc": "2026-11-01T20:51:50.830835+00:00",
+  "rdkit_version_for_stereochemistry_flags": "2026.09.1",
+  "structure_identity_policy": "RDKit M1.8a canonical isomeric SMILES; SHA256 policy-v1 token; exact textual canonical identity only",
+  "no_chemical_transforms": "No salt stripping, fragment selection, uncharging, tautomer normalization, stereo completion, or raw SMILES edits",
+  "input": {
+    "policy_file": "M1_7_observation_decisions.csv",
+    "policy_sha256": "a9f7eef01054d89d01abc85d55e378e3e3cbefe3e4cccad5dbbbe1055fb16c32",
+    "identity_file": "M1_8a_identity_QA.csv",
+    "identity_sha256": "1153fa2d0cdb2e4fac02495eef4ffa847e523fb12c21e55b90cf308ccbf2a578",
+    "priority_file": "M1_8b_priority_review.csv",
+    "priority_sha256": "0f071798b8503bd5b47b15041869bca8e83d90e537a191973e3a448cbd0e6664"
+  },
+  "observations_retained": 35210,
+  "unique_raw_smiles": 17925,
+  "high_priority_raw_smiles_quarantined": 32,
+  "observations_by_structure_status": {
+    "hold_inchikey_connectivity_disagreement": 79,
+    "hold_multifragment": 1,
+    "hold_rdkit_parse_failure": 3,
+    "provisional_exact_structure": 35127
+  },
+  "by_target": {
+    "EGFR": {
+      "hold_inchikey_connectivity_disagreement": 78,
+      "hold_multifragment": 1,
+      "hold_rdkit_parse_failure": 2,
+      "provisional_exact_structure": 29134
+    },
+    "HER2": {
+      "hold_inchikey_connectivity_disagreement": 1,
+      "hold_rdkit_parse_failure": 1,
+      "provisional_exact_structure": 5993
+    }
+  },
+  "by_m17_partition": {
+    "primary_classification_candidate": {
+      "hold_rdkit_parse_failure": 1,
+      "provisional_exact_structure": 4844
+    },
+    "primary_exact_candidate": {
+      "hold_inchikey_connectivity_disagreement": 13,
+      "hold_multifragment": 1,
+      "hold_rdkit_parse_failure": 2,
+      "provisional_exact_structure": 20649
+    },
+    "primary_hold_measurement": {
+      "hold_inchikey_connectivity_disagreement": 10,
+      "provisional_exact_structure": 213
+    },
+    "secondary_construct_reserve": {
+      "hold_inchikey_connectivity_disagreement": 56,
+      "provisional_exact_structure": 9421
+    }
+  },
+  "m17_partition_totals_retained": {
+    "primary_classification_candidate": 4845,
+    "primary_exact_candidate": 20665,
+    "primary_hold_measurement": 223,
+    "secondary_construct_reserve": 9477
+  },
+  "canonical_smiles_with_multiple_raw_input_representations": 4,
+  "rdkit_inchikeys_corresponding_to_multiple_canonical_smiles": 8,
+  "provisional_structure_id_overlap_egfr_her2_all_roles": 2528,
+  "provisional_primary_exact_id_overlap_egfr_her2": 1662,
+  "output": {
+    "observation_file": "data\\interim\\M1_8c_standardized_observations.csv",
+    "collision_inventory": "reports\\audits\\M1_8c_representation_collisions.csv"
+  },
+  "limitations": [
+    "A structure ID is provisional and does not imply confirmed formulation, stereoisomer purity or assay equivalence.",
+    "RDKit canonical strings come from the prior M1.8a audit; re-run upstream QA after RDKit or policy changes.",
+    "Unspecified potentially stereogenic elements are flagged, never assigned by inference.",
+    "InChIKey is descriptive, not the primary identity join key.",
+    "High-priority and multicomponent records are retained with no approved structure ID.",
+    "No IC50 labels merged, no dataset split, and no model trained."
+  ]
+}

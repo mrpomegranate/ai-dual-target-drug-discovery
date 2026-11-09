@@ -1,0 +1,171 @@
+{
+  "stage": "M1.9b_descriptive_disagreement_triage_NOT_curation_or_label_aggregation",
+  "generated_utc": "2026-11-01T21:44:52.903238+00:00",
+  "inputs": {
+    "molecule_file": "M1_9a_molecule_disagreement.csv",
+    "molecule_sha256": "d9365b85ae49f50c870ec198fe5cabeea24fbfbf8fac8cb0e9fa26cccda0e71b",
+    "study_file": "M1_9a_study_disagreement.csv",
+    "study_sha256": "25bcd9d06d39aba69e2b0f64d0624edb9180831c5cf0d65ea7d2b61e1e4c56af"
+  },
+  "analysis": {
+    "input_molecule_target_pairs": 14223,
+    "input_provenance_groups": 17112,
+    "input_exact_ic50_observations": 20649,
+    "repeated_pairs": 3093,
+    "priority_pairs": 986,
+    "priority_provenance_groups": 2507,
+    "threshold_crossing_pairs": 354,
+    "repeated_pairs_gt10fold": 904,
+    "repeated_pairs_gt10000fold": 32,
+    "repeated_pairs_gt10fold_one_provenance": 599,
+    "repeated_pairs_gt10fold_multi_provenance": 305,
+    "pairs_within_any_provenance_gt10fold": 758,
+    "pairs_between_provenance_medians_gt10fold": 208,
+    "pairs_with_both_within_and_between_gt10fold": 69,
+    "tiers": {
+      "T0_crossing_gt10fold": 272,
+      "T1_crossing_up_to_10fold": 82,
+      "T2_gt10fold_non_crossing": 632,
+      "T3_other_repeated": 2107
+    },
+    "tiers_by_target": {
+      "EGFR": {
+        "T0_crossing_gt10fold": 255,
+        "T1_crossing_up_to_10fold": 80,
+        "T2_gt10fold_non_crossing": 565,
+        "T3_other_repeated": 1807
+      },
+      "HER2": {
+        "T0_crossing_gt10fold": 17,
+        "T1_crossing_up_to_10fold": 2,
+        "T2_gt10fold_non_crossing": 67,
+        "T3_other_repeated": 300
+      }
+    },
+    "top_10_cases": [
+      {
+        "review_rank": 1,
+        "target": "EGFR",
+        "m18c_structure_id": "RDKISO1-33c11ca304147f772f51e6576f9fde32447f6cc6f703084a6788ddc6fc474f4e",
+        "tier": "T0_crossing_gt10fold",
+        "n_observations": 21,
+        "n_provenance_groups": 18,
+        "minimum_ic50_nm": 0.24,
+        "maximum_ic50_nm": 83000000.0,
+        "range_pic50": 8.538866850664467
+      },
+      {
+        "review_rank": 2,
+        "target": "EGFR",
+        "m18c_structure_id": "RDKISO1-e5f0b480c8f7ae54ab731633baa4f29a6f65f19b482201ad5dc4819cd845685b",
+        "tier": "T0_crossing_gt10fold",
+        "n_observations": 243,
+        "n_provenance_groups": 103,
+        "minimum_ic50_nm": 0.002,
+        "maximum_ic50_nm": 480000.0,
+        "range_pic50": 8.380211241711608
+      },
+      {
+        "review_rank": 3,
+        "target": "EGFR",
+        "m18c_structure_id": "RDKISO1-8dbfb1d20abc96e272377364b9ff02195bdc45cd40c1bc66817e28f2a8368f30",
+        "tier": "T0_crossing_gt10fold",
+        "n_observations": 183,
+        "n_provenance_groups": 143,
+        "minimum_ic50_nm": 0.029,
+        "maximum_ic50_nm": 421000.0,
+        "range_pic50": 7.161884097936712
+      },
+      {
+        "review_rank": 4,
+        "target": "EGFR",
+        "m18c_structure_id": "RDKISO1-c8b3f283680259433857fd02d6c9971c834e2d90f12e16d036f7a7eeb587074c",
+        "tier": "T0_crossing_gt10fold",
+        "n_observations": 79,
+        "n_provenance_groups": 61,
+        "minimum_ic50_nm": 0.06,
+        "maximum_ic50_nm": 377400.0,
+        "range_pic50": 6.798650645445269
+      },
+      {
+        "review_rank": 5,
+        "target": "EGFR",
+        "m18c_structure_id": "RDKISO1-d9fdf1e7f288cc433d117c65162e4e6cd798da300d939f127ff32c14d8baef5f",
+        "tier": "T0_crossing_gt10fold",
+        "n_observations": 34,
+        "n_provenance_groups": 22,
+        "minimum_ic50_nm": 0.04,
+        "maximum_ic50_nm": 223900.0,
+        "range_pic50": 6.747994102251066
+      },
+      {
+        "review_rank": 6,
+        "target": "EGFR",
+        "m18c_structure_id": "RDKISO1-d682eedcb1da717581be998a8aa966152a117c9780ab0c4b809ffb215c7ba1fe",
+        "tier": "T0_crossing_gt10fold",
+        "n_observations": 2,
+        "n_provenance_groups": 2,
+        "minimum_ic50_nm": 55.0,
+        "maximum_ic50_nm": 55000000.0,
+        "range_pic50": 6.0
+      },
+      {
+        "review_rank": 7,
+        "target": "EGFR",
+        "m18c_structure_id": "RDKISO1-0095bc6c215bac681e8e711f84cacc445ecb7ee91dcddef672ec068c57247880",
+        "tier": "T0_crossing_gt10fold",
+        "n_observations": 191,
+        "n_provenance_groups": 137,
+        "minimum_ic50_nm": 0.1,
+        "maximum_ic50_nm": 92300.0,
+        "range_pic50": 5.965201701025912
+      },
+      {
+        "review_rank": 8,
+        "target": "EGFR",
+        "m18c_structure_id": "RDKISO1-58c536a57f640003bcdca4b3c3fa85ef23cc0d74e1a5c91acb1f6ffcd88ca423",
+        "tier": "T0_crossing_gt10fold",
+        "n_observations": 28,
+        "n_provenance_groups": 22,
+        "minimum_ic50_nm": 0.02,
+        "maximum_ic50_nm": 10117.0,
+        "range_pic50": 5.704021754330016
+      },
+      {
+        "review_rank": 9,
+        "target": "EGFR",
+        "m18c_structure_id": "RDKISO1-79c93761bc8fe89a707dbdb1f3ea3d4147985cd6b04271114f3642d8589bb083",
+        "tier": "T0_crossing_gt10fold",
+        "n_observations": 32,
+        "n_provenance_groups": 25,
+        "minimum_ic50_nm": 1.2,
+        "maximum_ic50_nm": 178000.0,
+        "range_pic50": 5.171238756261269
+      },
+      {
+        "review_rank": 10,
+        "target": "EGFR",
+        "m18c_structure_id": "RDKISO1-87faaac2725168c3212722b685c933f1bfa4690a6f0f574d25d9e0195d6874e3",
+        "tier": "T0_crossing_gt10fold",
+        "n_observations": 102,
+        "n_provenance_groups": 53,
+        "minimum_ic50_nm": 0.01,
+        "maximum_ic50_nm": 1401.0,
+        "range_pic50": 5.146438135285774
+      }
+    ]
+  },
+  "interpretation_limits": [
+    "M1.9a aggregate input only; individual reactant_set_id and assay conditions are not present here.",
+    "A provenance_key groups DOI/PMID/patent records, not verified assays, labs or independent replicates.",
+    "A within-group range is not proof of within-laboratory bias.",
+    "Observed extrema and medians can be influenced by outliers, duplicated reporting and unmeasured assay differences.",
+    "Construct-reference status is provisional; no target sequence verification has occurred.",
+    "No chemical structures, IC50 values, source observations or labels are modified or aggregated."
+  ],
+  "outputs": {
+    "review_cases": "data\\interim\\M1_9b_priority_cases.csv",
+    "review_provenance_groups": "data\\interim\\M1_9b_priority_studies.csv",
+    "figure": "reports\\figures\\assay_disagreement\\14_disagreement_triage.png"
+  }
+}

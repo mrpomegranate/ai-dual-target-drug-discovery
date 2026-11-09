@@ -1,0 +1,13 @@
+collision_type,identifier,distinct_structures_or_representations
+multiple_raw_smiles_same_isomeric_canonical,C=CC(=O)N1CCN(c2ccn3ncnc(Nc4ccc(Oc5ccn6ncnc6c5)c(C)c4)c23)CC1,2
+multiple_raw_smiles_same_isomeric_canonical,COc1cc(O[C@H]2CCN(C)CC2(F)F)c2c(Nc3ccc(Oc4ccn5ncnc5c4)c(C)c3)ncnc2c1,2
+multiple_raw_smiles_same_isomeric_canonical,CS(=O)(=O)CCNCc1ccc(-c2ccc3ncnc(Nc4ccc(OCc5cccc(F)c5)c(Cl)c4)c3c2)o1,2
+multiple_raw_smiles_same_isomeric_canonical,CS(=O)(=O)NCCNCc1ccc(-c2ccc3ncnc(Nc4ccc(OCc5cccc(F)c5)c(Cl)c4)c3c2)o1,2
+one_rdkit_inchikey_multiple_canonical_smiles,CDMGBJANTYXAIV-UHFFFAOYSA-N,2
+one_rdkit_inchikey_multiple_canonical_smiles,HFOOHVUKODGHBP-UHFFFAOYSA-N,2
+one_rdkit_inchikey_multiple_canonical_smiles,MHRKNNUUCCNFPI-UHFFFAOYSA-N,2
+one_rdkit_inchikey_multiple_canonical_smiles,OAMVGUFHZPRXOM-UHFFFAOYSA-N,2
+one_rdkit_inchikey_multiple_canonical_smiles,OBPPQMUVDDMIQI-UHFFFAOYSA-N,2
+one_rdkit_inchikey_multiple_canonical_smiles,PPZFAINTCTWXKE-UHFFFAOYSA-N,2
+one_rdkit_inchikey_multiple_canonical_smiles,UHTHHESEBZOYNR-UHFFFAOYSA-N,2
+one_rdkit_inchikey_multiple_canonical_smiles,XZFPVQIMSWHDCR-UHFFFAOYSA-N,2

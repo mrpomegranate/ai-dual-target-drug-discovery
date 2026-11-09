@@ -1,0 +1,38 @@
+{
+  "stage": "M1.9d2_original_publication_review_casebook_NOT_row_verification_or_labels",
+  "full_queue_groups_reconciled": 656,
+  "full_evidence_rows_reconciled": 1001,
+  "selected_source_groups": 14,
+  "selected_observation_rows": 44,
+  "selected_by_target": {
+    "EGFR": 8,
+    "HER2": 6
+  },
+  "selected_by_review_priority": {
+    "highest": 12,
+    "high": 1,
+    "routine": 1
+  },
+  "publication_abstracts_prechecked": 5,
+  "row_to_table_matches_confirmed": 0,
+  "label_or_chemical_identity_changes": 0,
+  "limitations": [
+    "PubMed publication context is not a match between an individual BindingDB row and a paper table.",
+    "Reported target names may conceal mutant constructs or mixed biochemical/cellular endpoints.",
+    "The source groups are not laboratory IDs or proven independent assays.",
+    "Only a deliberately focused subset is reviewed. No conclusions about whole-dataset rates.",
+    "All original IC50 values are preserved. No labels are aggregated or altered."
+  ],
+  "generated_utc": "2026-11-01T22:24:46.408363+00:00",
+  "inputs": {
+    "queue": "M1_9d1_source_review_queue.csv",
+    "queue_sha256": "9bbfca5ed4767c0b32ceaa83930824463bdcb175c40ff2d1df2ffef1a5ddb8de",
+    "evidence": "M1_9c_priority_observation_evidence.csv",
+    "evidence_sha256": "55f866d4ab6b57e66e74ab93d4e2936f8b61ab4882b761c192ce273028d0cf5a"
+  },
+  "outputs": {
+    "worksheet": "data\\interim\\M1_9d2_source_verification_worksheet.csv",
+    "selected_records": "data\\interim\\M1_9d2_selected_source_observations.csv",
+    "figure": "reports\\figures\\assay_disagreement\\17_original_source_review_selection.png"
+  }
+}

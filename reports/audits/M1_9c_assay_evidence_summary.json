@@ -1,0 +1,84 @@
+{
+  "stage": "M1.9c_priority_observation_evidence_NOT_lab_causality_or_label_aggregation",
+  "selected_pairs": 20,
+  "selected_pairs_by_target": {
+    "EGFR": 10,
+    "HER2": 10
+  },
+  "exact_observation_rows": 1001,
+  "provenance_groups": 656,
+  "suspected_duplicate_signature_rows": 62,
+  "metadata_present_rows": {
+    "source": 1001,
+    "article_doi": 655,
+    "pmid": 946,
+    "patent_number": 52,
+    "pubchem_aid": 58,
+    "ph": 12,
+    "temperature_c": 12
+  },
+  "source_categories": {
+    "ChEMBL": 938,
+    "US Patent": 48,
+    "Curated from the literature by BindingDB": 11,
+    "WIPO": 4
+  },
+  "pairs_with_multiple_target_name_strings": 0,
+  "provenance_groups_with_gt10fold_within_group": 115,
+  "example_cases": [
+    {
+      "rank": 1,
+      "target": "EGFR",
+      "structure_id": "RDKISO1-33c11ca304147f772f51e6576f9fde32447f6cc6f703084a6788ddc6fc474f4e",
+      "n_observations": 21,
+      "n_provenance_groups": 18
+    },
+    {
+      "rank": 2,
+      "target": "EGFR",
+      "structure_id": "RDKISO1-e5f0b480c8f7ae54ab731633baa4f29a6f65f19b482201ad5dc4819cd845685b",
+      "n_observations": 243,
+      "n_provenance_groups": 103
+    },
+    {
+      "rank": 3,
+      "target": "EGFR",
+      "structure_id": "RDKISO1-8dbfb1d20abc96e272377364b9ff02195bdc45cd40c1bc66817e28f2a8368f30",
+      "n_observations": 183,
+      "n_provenance_groups": 143
+    },
+    {
+      "rank": 4,
+      "target": "EGFR",
+      "structure_id": "RDKISO1-c8b3f283680259433857fd02d6c9971c834e2d90f12e16d036f7a7eeb587074c",
+      "n_observations": 79,
+      "n_provenance_groups": 61
+    },
+    {
+      "rank": 5,
+      "target": "EGFR",
+      "structure_id": "RDKISO1-d9fdf1e7f288cc433d117c65162e4e6cd798da300d939f127ff32c14d8baef5f",
+      "n_observations": 34,
+      "n_provenance_groups": 22
+    }
+  ],
+  "cautions": [
+    "Selection is deliberately extreme and not representative of all BindingDB observations.",
+    "Publication/patent provenance_key is not an assay ID, laboratory ID or evidence of independence.",
+    "Matching exact values/context are possible duplicate reporting or technical replicates, not confirmed duplicates.",
+    "PubChem AID, when present, is an assay identifier but may not resolve all assay conditions.",
+    "Missing pH/temperature metadata does not establish assay equality.",
+    "No lab/source causal effect estimated; no observation changed, merged, censored or relabeled."
+  ],
+  "generated_utc": "2026-11-01T21:54:56.848457+00:00",
+  "input_file": "M1_8c_standardized_observations.csv",
+  "input_sha256": "dc6e131c8fc1f242b93fa885f540809f28934808cc8611e26a3bd96bd7be6e7d",
+  "priority_file": "M1_9b_priority_cases.csv",
+  "priority_sha256": "61aa43bdfb638be4ea437628025af904518d980beefef3958aaebf00cf308803",
+  "per_target_limit": 10,
+  "outputs": {
+    "private_evidence": "data\\interim\\M1_9c_priority_observation_evidence.csv",
+    "private_study_summary": "data\\interim\\M1_9c_priority_provenance_groups.csv",
+    "figure": "reports\\figures\\assay_disagreement\\15_priority_case_assay_evidence.png"
+  }
+}
