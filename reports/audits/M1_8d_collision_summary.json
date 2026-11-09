@@ -1,0 +1,53 @@
+{
+  "stage": "M1.8d_representation_collision_review_NOT_label_aggregation",
+  "generated_utc": "2026-11-01T20:50:13.530335+00:00",
+  "input_file": "M1_8c_standardized_observations.csv",
+  "input_sha256": "dc6e131c8fc1f242b93fa885f540809f28934808cc8611e26a3bd96bd7be6e7d",
+  "m18c_collision_inventory_file": "M1_8c_representation_collisions.csv",
+  "m18c_collision_inventory_sha256": "e6a5b47f0f190b868955165b351bf732738b896526b3111ea60ca1a986cb5955",
+  "all_observations": 35210,
+  "approved_observations": 35127,
+  "held_observations": 83,
+  "collision_results": {
+    "multiple_raw_smiles_same_isomeric_canonical": {
+      "collision_groups": 4,
+      "observation_rows": 154,
+      "unique_structure_ids": 4,
+      "by_target": {
+        "EGFR": 97,
+        "HER2": 57
+      },
+      "by_m17_partition": {
+        "primary_exact_candidate": 137,
+        "secondary_construct_reserve": 2,
+        "primary_classification_candidate": 15
+      }
+    },
+    "one_rdkit_inchikey_multiple_canonical_smiles": {
+      "collision_groups": 8,
+      "observation_rows": 41,
+      "unique_structure_ids": 16,
+      "by_target": {
+        "EGFR": 40,
+        "HER2": 1
+      },
+      "by_m17_partition": {
+        "primary_exact_candidate": 39,
+        "primary_classification_candidate": 2
+      }
+    }
+  },
+  "collision_groups_total": 12,
+  "inclusion_policy": "Canonical isomeric SMILES remains exact-structure identity. Shared InChIKey alone does not merge or average labels.",
+  "split_policy": "Future splits must keep the same exact ID together and review same-InChIKey families for leakage; scaffold/source controls remain separately required.",
+  "limitations": [
+    "A collision is a representation/identifier diagnostic, not evidence that an assay measurement is wrong.",
+    "Same InChIKey can correspond to multiple input canonical SMILES, including tautomeric/resonance-like forms.",
+    "No pIC50/IC50 averaging, no target construct verification, no scaffold split, no model training.",
+    "Source publication identifiers and assay matching require further reconciliation."
+  ],
+  "output": {
+    "review_csv": "reports\\audits\\M1_8d_collision_review.csv",
+    "figure": "reports\\figures\\molecular_identity\\12_collision_groups_and_observations.png"
+  }
+}

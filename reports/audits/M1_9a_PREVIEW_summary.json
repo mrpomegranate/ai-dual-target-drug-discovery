@@ -1,0 +1,67 @@
+{
+  "stage": "M1.9a_primary_exact_ic50_disagreement_diagnostics_NOT_label_aggregation",
+  "generated_at_utc": "2026-11-01T21:00:46.080522+00:00",
+  "cutoff_nm_strict_less_than": 1000.0,
+  "population": {
+    "input_observations": 35210,
+    "primary_exact_with_provisional_structure_id": 20649,
+    "not_in_primary_exact_audit": 14561,
+    "distinct_molecule_target_pairs": 14223,
+    "distinct_provenance_keys_in_primary_exact": 1068
+  },
+  "per_target": [
+    {
+      "target": "EGFR",
+      "observations": 16503,
+      "distinct_molecule_target_pairs": 10860,
+      "repeated_pairs": 2707,
+      "observations_in_repeated_pairs": 8350,
+      "repeated_pairs_range_gt_0_3_pic50": 1626,
+      "repeated_pairs_range_gt_1_pic50": 820,
+      "repeated_pairs_crossing_activity_threshold": 335,
+      "pairs_with_multiple_provenance_groups": 1151,
+      "multi_provenance_pairs_with_range_gt_1_pic50": 279,
+      "multi_provenance_pairs_with_study_median_range_gt_1": 185
+    },
+    {
+      "target": "HER2",
+      "observations": 4146,
+      "distinct_molecule_target_pairs": 3363,
+      "repeated_pairs": 386,
+      "observations_in_repeated_pairs": 1169,
+      "repeated_pairs_range_gt_0_3_pic50": 151,
+      "repeated_pairs_range_gt_1_pic50": 84,
+      "repeated_pairs_crossing_activity_threshold": 19,
+      "pairs_with_multiple_provenance_groups": 200,
+      "multi_provenance_pairs_with_range_gt_1_pic50": 26,
+      "multi_provenance_pairs_with_study_median_range_gt_1": 23
+    }
+  ],
+  "repeated_pairs_total": 3093,
+  "observations_in_repeated_pairs": 9519,
+  "repeated_pairs_range_gt_1_pic50": 904,
+  "pairs_with_multiple_provenance_groups": 1351,
+  "exact_value_signatures_repeated_within_same_provenance": 452,
+  "extra_rows_in_repeated_value_signatures": 473,
+  "rows_matching_full_context_duplicate_signature": 808,
+  "study_groups": 17112,
+  "study_groups_with_repeated_observations": 2383,
+  "study_groups_with_within_group_range_gt_1": 937,
+  "molecule_target_pairs_in_multiple_source_categories": 431,
+  "matched_molecule_target_pairs_with_source_median_range_gt_1": 55,
+  "limitations": [
+    "Study groups use upstream publication/patent provenance_key, NOT verified assay, laboratory, or independent experimental replicates.",
+    "Exact IC50 values only; censored measurements and annotated constructs are out of scope for this first disagreement audit.",
+    "Repeated identical entries are possible duplicate reporting, NOT confirmed duplicate experiments.",
+    "Same nominal target and plain target name do NOT confirm identical protein sequence, assay format, pH, ATP concentration or protocol.",
+    "Unadjusted pIC50 ranges reflect chemistry, assay heterogeneity, reporting issues, and outliers; they do not demonstrate source causality.",
+    "Study medians are descriptive diagnostics, NOT curated regression labels. No observations are merged or removed."
+  ],
+  "input_file": "M1_8c_local_standardized_observations.csv",
+  "input_sha256": "dc6e131c8fc1f242b93fa885f540809f28934808cc8611e26a3bd96bd7be6e7d",
+  "outputs": {
+    "molecule_review": "/mnt/data/M1_9a_molecule_disagreement_private.csv",
+    "study_review": "/mnt/data/M1_9a_study_disagreement_private.csv",
+    "figure": "reports/figures/assay_disagreement/13_primary_exact_ic50_disagreement.png"
+  }
+}

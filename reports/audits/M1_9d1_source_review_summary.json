@@ -1,0 +1,48 @@
+{
+  "stage": "M1.9d1_source_review_QUEUE_not_curation",
+  "observations": 1001,
+  "selected_molecule_target_pairs": 20,
+  "provenance_groups": 656,
+  "distinct_reactant_set_ids": 1001,
+  "within_provenance_gt10fold": 115,
+  "within_provenance_crossing_1000_nm": 28,
+  "source_review_priority_counts": {
+    "routine": 539,
+    "high": 89,
+    "highest": 28
+  },
+  "suspected_duplicate_signature_rows": 62,
+  "unique_target_name_strings": 2,
+  "metadata_rows_present": {
+    "article_doi": 655,
+    "pmid": 946,
+    "patent_number": 52,
+    "pubchem_aid": 58,
+    "ph": 12,
+    "temperature_c": 12
+  },
+  "source_counts": {
+    "ChEMBL": 938,
+    "US Patent": 48,
+    "Curated from the literature by BindingDB": 11,
+    "WIPO": 4
+  },
+  "limits": [
+    "The 20 cases are deliberately selected extremes, not a representative random sample.",
+    "Provenance keys are publication/patent identifiers, not assay or laboratory identifiers.",
+    "A paper title or abstract mentioning mutants does not prove a specific BindingDB row is mutant.",
+    "Source link matching to original tables is not performed automatically.",
+    "No IC50 values, chemical identities, potency labels or train/test allocations are changed."
+  ],
+  "generated_utc": "2026-11-01T22:12:53.892462+00:00",
+  "inputs": {
+    "evidence_file": "M1_9c_priority_observation_evidence.csv",
+    "evidence_sha256": "55f866d4ab6b57e66e74ab93d4e2936f8b61ab4882b761c192ce273028d0cf5a",
+    "provenance_file": "M1_9c_priority_provenance_groups.csv",
+    "provenance_sha256": "3990dd12436fad4aa92feb60c9aba8f8aa2ea82e5031f63866fb3be931cb7255"
+  },
+  "outputs": {
+    "review_queue": "data\\interim\\M1_9d1_source_review_queue.csv",
+    "figure": "reports\\figures\\assay_disagreement\\16_priority_metadata_coverage.png"
+  }
+}

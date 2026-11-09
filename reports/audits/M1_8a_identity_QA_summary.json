@@ -1,0 +1,134 @@
+{
+  "stage": "M1.8a_RDKit_identity_QA_NOT_curated_molecules_or_labels",
+  "generated_utc": "2026-10-31T23:37:33.356047+00:00",
+  "rdkit_version": "2026.09.1",
+  "observations": 35210,
+  "unique_raw_smiles": 17925,
+  "unique_reported_inchikeys": 17131,
+  "unique_rdkit_canonical_isomeric_smiles": 17919,
+  "unique_rdkit_inchikeys": 17911,
+  "unique_structure_parse_status": {
+    "parsed": 17923,
+    "rdkit_parse_failure": 2
+  },
+  "unique_structure_source_key_comparison": {
+    "exact_match": 11859,
+    "same_connectivity_block_only": 6034,
+    "different_connectivity_block": 30,
+    "rdkit_key_unavailable": 2
+  },
+  "observation_source_key_comparison": {
+    "exact_match": 23137,
+    "same_connectivity_block_only": 11991,
+    "different_connectivity_block": 79,
+    "rdkit_key_unavailable": 3
+  },
+  "unique_raw_smiles_with_multiple_fragments": 1,
+  "reported_inchikeys_with_multiple_isomeric_canonical_smiles": 653,
+  "rdkit_inchikeys_with_multiple_isomeric_canonical_smiles": 8,
+  "parse_failure_record_ids": [
+    "50695132",
+    "695385",
+    "695386"
+  ],
+  "different_connectivity_sample_record_ids": [
+    "117755",
+    "117756",
+    "117758",
+    "117759",
+    "117760",
+    "117761",
+    "117762",
+    "117763",
+    "117764",
+    "117766",
+    "117767",
+    "117768",
+    "117770",
+    "117771",
+    "117772",
+    "117773",
+    "117774",
+    "117775",
+    "117776",
+    "117777",
+    "1502254",
+    "1502255",
+    "1502256",
+    "1502257",
+    "1502258",
+    "1502259",
+    "1502260",
+    "1502261",
+    "1502262",
+    "1502263"
+  ],
+  "by_target_and_m17_partition": {
+    "EGFR/primary_classification_candidate": {
+      "observations": 4267,
+      "distinct_reported_inchikeys": 3340,
+      "distinct_rdkit_inchikeys": 3409,
+      "rdkit_parse_failures": 1,
+      "rdkit_key_different_connectivity": 0
+    },
+    "EGFR/primary_exact_candidate": {
+      "observations": 16517,
+      "distinct_reported_inchikeys": 10605,
+      "distinct_rdkit_inchikeys": 10860,
+      "rdkit_parse_failures": 1,
+      "rdkit_key_different_connectivity": 12
+    },
+    "EGFR/primary_hold_measurement": {
+      "observations": 213,
+      "distinct_reported_inchikeys": 174,
+      "distinct_rdkit_inchikeys": 176,
+      "rdkit_parse_failures": 0,
+      "rdkit_key_different_connectivity": 10
+    },
+    "EGFR/secondary_construct_reserve": {
+      "observations": 8218,
+      "distinct_reported_inchikeys": 3497,
+      "distinct_rdkit_inchikeys": 3737,
+      "rdkit_parse_failures": 0,
+      "rdkit_key_different_connectivity": 56
+    },
+    "HER2/primary_classification_candidate": {
+      "observations": 578,
+      "distinct_reported_inchikeys": 547,
+      "distinct_rdkit_inchikeys": 559,
+      "rdkit_parse_failures": 0,
+      "rdkit_key_different_connectivity": 0
+    },
+    "HER2/primary_exact_candidate": {
+      "observations": 4148,
+      "distinct_reported_inchikeys": 3086,
+      "distinct_rdkit_inchikeys": 3364,
+      "rdkit_parse_failures": 1,
+      "rdkit_key_different_connectivity": 1
+    },
+    "HER2/primary_hold_measurement": {
+      "observations": 10,
+      "distinct_reported_inchikeys": 10,
+      "distinct_rdkit_inchikeys": 10,
+      "rdkit_parse_failures": 0,
+      "rdkit_key_different_connectivity": 0
+    },
+    "HER2/secondary_construct_reserve": {
+      "observations": 1259,
+      "distinct_reported_inchikeys": 1005,
+      "distinct_rdkit_inchikeys": 1171,
+      "rdkit_parse_failures": 0,
+      "rdkit_key_different_connectivity": 0
+    }
+  },
+  "limitations": [
+    "Source-reported InChIKeys may omit stereochemistry or reflect a different normalization convention.",
+    "Agreement of InChIKey first blocks indicates matching InChI connectivity layer, not necessarily identical stereochemistry, protonation or assay material.",
+    "Canonical isomeric SMILES are calculated from supplied SMILES only; no salt stripping, tautomer normalization, uncharging or stereochemical completion occurs.",
+    "A reported-InChIKey mismatch is a QA flag, not automatic evidence of erroneous data.",
+    "No observations or target-construct groups are removed, aggregated or assigned to train/test partitions."
+  ],
+  "input_filename": "M1_7_observation_decisions.csv",
+  "input_sha256": "a9f7eef01054d89d01abc85d55e378e3e3cbefe3e4cccad5dbbbe1055fb16c32",
+  "output_filename": "M1_8a_identity_QA.csv"
+}

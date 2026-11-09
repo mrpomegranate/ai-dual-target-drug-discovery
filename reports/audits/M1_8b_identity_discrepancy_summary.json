@@ -1,0 +1,69 @@
+{
+  "stage": "M1.8b_structure_identity_discrepancy_triage_NOT_curation",
+  "generated_utc": "2026-11-01T19:13:00.247660+00:00",
+  "input_name": "M1_8a_identity_QA.csv",
+  "input_sha256": "1153fa2d0cdb2e4fac02495eef4ffa847e523fb12c21e55b90cf308ccbf2a578",
+  "observations_retained": 35210,
+  "unique_raw_smiles": 17925,
+  "identity_class_counts_unique_smiles": {
+    "different_connectivity_block": 30,
+    "exact_match": 11859,
+    "rdkit_unavailable": 2,
+    "same_connectivity_other_inchi_layer_difference": 15,
+    "source_unspecified_stereochemical_block": 6019
+  },
+  "review_priority_counts_unique_smiles": {
+    "routine": 11858,
+    "review_by_policy": 6019,
+    "high": 32,
+    "medium": 16
+  },
+  "high_priority_distinct_smiles": 32,
+  "high_priority_observation_count": 82,
+  "multi_fragment_distinct_smiles": 1,
+  "raw_smiles_with_multiple_source_keys": 0,
+  "reported_keys_with_multiple_canonical_smiles": 653,
+  "rdkit_keys_with_multiple_canonical_smiles": 8,
+  "by_source": [
+    {
+      "source": "ChEMBL",
+      "observations": 15795,
+      "unique_smiles_within_source": 8640,
+      "different_connectivity_unique_smiles": 5,
+      "rdkit_unavailable_unique_smiles": 1
+    },
+    {
+      "source": "Curated from the literature by BindingDB",
+      "observations": 1438,
+      "unique_smiles_within_source": 1213,
+      "different_connectivity_unique_smiles": 0,
+      "rdkit_unavailable_unique_smiles": 0
+    },
+    {
+      "source": "US Patent",
+      "observations": 17638,
+      "unique_smiles_within_source": 8341,
+      "different_connectivity_unique_smiles": 25,
+      "rdkit_unavailable_unique_smiles": 1
+    },
+    {
+      "source": "WIPO",
+      "observations": 339,
+      "unique_smiles_within_source": 233,
+      "different_connectivity_unique_smiles": 0,
+      "rdkit_unavailable_unique_smiles": 0
+    }
+  ],
+  "outputs": {
+    "structure_review_csv": "M1_8b_identity_review.csv",
+    "high_priority_csv": "M1_8b_priority_review.csv"
+  },
+  "limitations": [
+    "All counts refer to unique raw SMILES unless explicitly labeled observations.",
+    "Source key missing stereo block is a review clue, not proven stereo root cause.",
+    "Different connectivity InChI blocks flag disagreement, not necessarily incorrect molecules.",
+    "No stereoisomer collapse, salt stripping, tautomer normalization, or IC50 aggregation.",
+    "This input omits experimental IC50 and study IDs; assay reconciliation requires upstream evidence.",
+    "No molecule split or model training performed."
+  ]
+}
