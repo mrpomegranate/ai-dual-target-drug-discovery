@@ -1,0 +1,79 @@
+{
+  "audit": {
+    "all_target_masks_preserved": true,
+    "by_partition": {
+      "test": {
+        "EGFR_labels": 902,
+        "EGFR_only_active": 19,
+        "HER2_labels": 321,
+        "HER2_only_active": 8,
+        "dual_active": 95,
+        "dual_inactive": 14,
+        "dual_labeled": 136,
+        "molecules": 1087,
+        "scaffold_groups": 391
+      },
+      "train": {
+        "EGFR_labels": 7211,
+        "EGFR_only_active": 109,
+        "HER2_labels": 2565,
+        "HER2_only_active": 57,
+        "dual_active": 685,
+        "dual_inactive": 233,
+        "dual_labeled": 1084,
+        "molecules": 8692,
+        "scaffold_groups": 3115
+      },
+      "validation": {
+        "EGFR_labels": 902,
+        "EGFR_only_active": 14,
+        "HER2_labels": 320,
+        "HER2_only_active": 5,
+        "dual_active": 83,
+        "dual_inactive": 33,
+        "dual_labeled": 135,
+        "molecules": 1087,
+        "scaffold_groups": 389
+      }
+    },
+    "largest_group_size": 517,
+    "scaffold_types": {
+      "acyclic_identity_group": 6,
+      "ring_scaffold": 10860
+    },
+    "total_scaffold_groups": 3895,
+    "total_unique_molecules": 10866,
+    "zero_molecule_id_overlap": true,
+    "zero_scaffold_group_id_overlap": true
+  },
+  "input": {
+    "m11_source_rdkit_version": "2026.09.1",
+    "m11_summary_sha256": "f08f86caf43ecb02aa99fb0d40a8f86c44878ced9afe4ddc279e8812732de8e4",
+    "path": "M1_11_multitask_molecules.csv",
+    "sha256": "589f29c210ef12fe55a22b23fc20e5a8fac0db787ea814714558335eeee63523"
+  },
+  "interpretation": {
+    "acyclic": "Each empty-Murcko acyclic molecule forms an identity-level group; acyclic split is NOT scaffold OOD",
+    "evidence": "All M1.11 target labels remain provisional; no WT assay sequence verification implied",
+    "group_balancing": "Only group sizes and availability masks (not pIC50 or activity labels) used",
+    "holdout": "Test is frozen for final comparison; no training or tuning on test",
+    "scaffold": "Bemis-Murcko rings and linkers, chirality excluded for grouping"
+  },
+  "outputs": {
+    "dataset": "data/interim/M2_1_scaffold_split_molecules.csv",
+    "dataset_sha256": "83a64d02e45ccd9a6310947efcd5cdef9bddc9603edcd55e1d207eb1cafc18b8",
+    "figure": "reports/figures/splitting/20_scaffold_disjoint_split.png",
+    "figure_sha256": "990f66c83e76dcd493f23ba5e95d19ea2ad9702088fcf34a3a14445588776413",
+    "manifest": "data/interim/M2_1_scaffold_split_manifest.csv",
+    "manifest_sha256": "05968ca1ed2a16ca8165e8a28ececa0f361fc9e61a64ac2e69abb1e0e4b7423a"
+  },
+  "policy": "M2.1-rdkit-murcko-stereo-off-acyclic-identity-v1",
+  "random_seed": 714,
+  "rdkit_version": "2026.09.1",
+  "stage": "M2.1_scaffold_disjoint_split_provisional_assay_labels",
+  "target_fractions": {
+    "test": 0.1,
+    "train": 0.8,
+    "validation": 0.1
+  }
+}

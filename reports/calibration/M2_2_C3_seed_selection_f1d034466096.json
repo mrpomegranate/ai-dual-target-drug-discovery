@@ -1,0 +1,136 @@
+{
+  "candidates_checked": [
+    {
+      "assignment_sha256": "142ee5187fb3fde7a350dfa60e458b15951cc48d6ce6dee29d362d9b06ba21ac",
+      "calibration_negative": 39,
+      "calibration_paired": 179,
+      "paired_prevalence": {
+        "calibration": 0.7821229050279329,
+        "fit": 0.5624082232011748,
+        "threshold": 0.7232142857142857
+      },
+      "seed": 714,
+      "status": "rejected",
+      "threshold_negative": 62,
+      "threshold_paired": 224
+    },
+    {
+      "assignment_sha256": "1c8ad968a6e2acd043b58ed3a826a6543945a4520cbf9446792cab23111e09de",
+      "calibration_negative": 109,
+      "calibration_paired": 278,
+      "paired_prevalence": {
+        "calibration": 0.6079136690647482,
+        "fit": 0.6752577319587629,
+        "threshold": 0.5491071428571429
+      },
+      "seed": 715,
+      "status": "rejected",
+      "threshold_negative": 101,
+      "threshold_paired": 224
+    },
+    {
+      "assignment_sha256": "8ce1ded4ee763ab170e0e53983d2a6bad5293983ed6631192799ae4dce0c92de",
+      "calibration_negative": 58,
+      "calibration_paired": 239,
+      "paired_prevalence": {
+        "calibration": 0.7573221757322176,
+        "fit": 0.5768115942028985,
+        "threshold": 0.6838709677419355
+      },
+      "seed": 716,
+      "status": "rejected",
+      "threshold_negative": 49,
+      "threshold_paired": 155
+    },
+    {
+      "assignment_sha256": "03ccca8e86eaf6a142b0106ddccd41edd2f7a36c4fce98c796deaaf1ff903947",
+      "calibration_negative": 76,
+      "calibration_paired": 216,
+      "paired_prevalence": {
+        "calibration": 0.6481481481481481,
+        "fit": 0.5973597359735974,
+        "threshold": 0.6984732824427481
+      },
+      "seed": 717,
+      "status": "rejected",
+      "threshold_negative": 79,
+      "threshold_paired": 262
+    },
+    {
+      "assignment_sha256": "d9717ff70a011ca09877e3621732ddc3b374bc8f833a15813652f8c87e572770",
+      "calibration_negative": 91,
+      "calibration_paired": 266,
+      "paired_prevalence": {
+        "calibration": 0.6578947368421053,
+        "fit": 0.6856649395509499,
+        "threshold": 0.47280334728033474
+      },
+      "seed": 718,
+      "status": "rejected",
+      "threshold_negative": 126,
+      "threshold_paired": 239
+    },
+    {
+      "assignment_sha256": "2b99214bce37d30e1eed8f6e22984242492560b2999bb174a8d378604de9171c",
+      "calibration_negative": 72,
+      "calibration_paired": 223,
+      "paired_prevalence": {
+        "calibration": 0.6771300448430493,
+        "fit": 0.6284074605451937,
+        "threshold": 0.5853658536585366
+      },
+      "seed": 719,
+      "status": "accepted",
+      "threshold_negative": 68,
+      "threshold_paired": 164
+    }
+  ],
+  "dataset_sha256": "83a64d02e45ccd9a6310947efcd5cdef9bddc9603edcd55e1d207eb1cafc18b8",
+  "frozen_manifest_sha256": "05968ca1ed2a16ca8165e8a28ececa0f361fc9e61a64ac2e69abb1e0e4b7423a",
+  "method": "first_seed_meeting_predeclared_training_only_balance_rules",
+  "no_model_metric_or_validation_label_used": true,
+  "previous_stage_c3_run_id": "2e8b155d2ebd4cf3a2ca6ffc71a947c3",
+  "rules": {
+    "calibration_fraction": 0.2,
+    "candidates": 200,
+    "max_prevalence_deviation": 0.05,
+    "min_class_per_reserved_role": 50,
+    "min_paired_per_reserved_role": 150,
+    "start_seed": 714,
+    "threshold_fraction": 0.2
+  },
+  "selected_assignment_sha256": "2b99214bce37d30e1eed8f6e22984242492560b2999bb174a8d378604de9171c",
+  "selected_audits": {
+    "calibration": {
+      "dual_active": 151,
+      "egfr_labels": 1382,
+      "her2_labels": 499,
+      "molecules": 1658,
+      "not_dual_active": 72,
+      "paired_labels": 223,
+      "scaffolds": 623
+    },
+    "fit": {
+      "dual_active": 438,
+      "egfr_labels": 4465,
+      "her2_labels": 1596,
+      "molecules": 5364,
+      "not_dual_active": 259,
+      "paired_labels": 697,
+      "scaffolds": 1869
+    },
+    "threshold": {
+      "dual_active": 96,
+      "egfr_labels": 1364,
+      "her2_labels": 470,
+      "molecules": 1670,
+      "not_dual_active": 68,
+      "paired_labels": 164,
+      "scaffolds": 623
+    }
+  },
+  "selected_seed": 719,
+  "stage_b_run_id": "12c9fc400b354f6da4e993e69e36b1cb",
+  "test_partition_not_loaded": true,
+  "training_paired_prevalence": 0.6319188191881919
+}

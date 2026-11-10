@@ -1,0 +1,87 @@
+{
+  "audits": [
+    {
+      "dual_active": 438,
+      "dual_prevalence": 0.6284074605451937,
+      "egfr_labels": 4465,
+      "her2_labels": 1596,
+      "molecule_fraction": 0.6171191900598251,
+      "molecules": 5364,
+      "not_dual_active": 259,
+      "paired_labels": 697,
+      "role": "fit",
+      "scaffold_fraction": 0.6,
+      "scaffolds": 1869
+    },
+    {
+      "dual_active": 151,
+      "dual_prevalence": 0.6771300448430493,
+      "egfr_labels": 1382,
+      "her2_labels": 499,
+      "molecule_fraction": 0.1907501150483203,
+      "molecules": 1658,
+      "not_dual_active": 72,
+      "paired_labels": 223,
+      "role": "calibration",
+      "scaffold_fraction": 0.2,
+      "scaffolds": 623
+    },
+    {
+      "dual_active": 96,
+      "dual_prevalence": 0.5853658536585366,
+      "egfr_labels": 1364,
+      "her2_labels": 470,
+      "molecule_fraction": 0.19213069489185458,
+      "molecules": 1670,
+      "not_dual_active": 68,
+      "paired_labels": 164,
+      "role": "threshold",
+      "scaffold_fraction": 0.2,
+      "scaffolds": 623
+    },
+    {
+      "dual_active": 685,
+      "dual_prevalence": 0.6319188191881919,
+      "egfr_labels": 7211,
+      "her2_labels": 2565,
+      "molecule_fraction": 1.0,
+      "molecules": 8692,
+      "not_dual_active": 399,
+      "paired_labels": 1084,
+      "role": "total_training",
+      "scaffold_fraction": 1.0,
+      "scaffolds": 3115
+    }
+  ],
+  "caveats": [
+    "Optuna previously used training records for model selection; these role assignments are not independent of that selection.",
+    "No model was fitted and no probability calibrator, conformal interval, or decision threshold was estimated in this run.",
+    "Valid conformal coverage on novel scaffolds is not guaranteed by this split, particularly under distribution shift."
+  ],
+  "source": {
+    "curation_summary_sha256": "f13a782e36421734255b996afaa8137e1882d8dfb708cd7f365974cbf92a0536",
+    "dataset_sha256": "83a64d02e45ccd9a6310947efcd5cdef9bddc9603edcd55e1d207eb1cafc18b8",
+    "development_validation_molecules": 1087,
+    "manifest_sha256": "05968ca1ed2a16ca8165e8a28ececa0f361fc9e61a64ac2e69abb1e0e4b7423a",
+    "test_labels_used": false
+  },
+  "split": {
+    "activity_rule": "EGFR pIC50 > 6 AND HER2 pIC50 > 6",
+    "assignment_sha256": "2b99214bce37d30e1eed8f6e22984242492560b2999bb174a8d378604de9171c",
+    "fraction_unit": "scaffold groups, not molecules",
+    "manifest_csv_sha256": "359b3e7e01efffde4156da0ec5f37b1d1203953c2783558ad688fd4aecdd46f9",
+    "max_attempts": 1,
+    "min_dual_per_class": 50,
+    "min_target_labels": 10,
+    "requested_calibration_fraction_of_scaffolds": 0.2,
+    "requested_seed": 719,
+    "requested_threshold_fraction_of_scaffolds": 0.2,
+    "roles": [
+      "fit",
+      "calibration",
+      "threshold"
+    ],
+    "seed_used": 719
+  },
+  "stage": "M2_2_StageC_split_audit"
+}
