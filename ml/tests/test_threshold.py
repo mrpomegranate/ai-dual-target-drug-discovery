@@ -11,11 +11,11 @@ from types import SimpleNamespace
 
 import numpy as np
 import pytest
-from sklearn.metrics import f1_score
 from dual_target.calibration import threshold as th
 from dual_target.calibration.probability import fit_sigmoid_dual_calibration
 from dual_target.calibration.scaffold_calibration import make_scaffold_calibration_split
 from dual_target.models.random_forest import RFConfig
+from sklearn.metrics import f1_score
 
 
 @dataclass(frozen=True)

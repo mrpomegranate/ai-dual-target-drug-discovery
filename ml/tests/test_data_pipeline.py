@@ -229,3 +229,107 @@ def test_load_pipeline_composes_existing_loader(modeling_data, monkeypatch):
     assert tuple(seen) == paths
     assert result.data is modeling_data
     assert len(result.folds) == 3
+
+# --- Stage C fit-only tuning integration checks ---
+
+def _fit_only_demo_source():
+    from types import SimpleNamespace
+
+    from dual_target.calibration.scaffold_calibration import (
+        make_scaffold_calibration_split,
+    )
+
+    records = []
+    for i in range(160):
+        for j in range(3):
+            records.append(SimpleNamespace(
+                structure_id=f"fit-m-{i}-{j}",
+                scaffold_group_id=f"fit-scaffold-{i}",
+                egfr_mask=True,
+                her2_mask=True,
+                egfr_pic50=6.8 if i % 2 == 0 else 5.7,
+                her2_pic50=6.6 if i % 2 == 0 else 5.6,
+            ))
+    validation = tuple(SimpleNamespace(
+        structure_id=f"dev-m-{i}",
+        scaffold_group_id=f"dev-scaffold-{i}",
+        egfr_mask=True,
+        her2_mask=True,
+        egfr_pic50=6.2,
+        her2_pic50=6.4,
+    ) for i in range(12))
+    source = SimpleNamespace(data=SimpleNamespace(
+        train=tuple(records), validation=validation,
+        dataset_sha256="demo-dataset-sha", manifest_sha256="demo-manifest-sha",
+    ))
+    split = make_scaffold_calibration_split(
+        source, seed=719, minimum_dual_per_class=1, max_attempts=1,
+    )
+    return source, split
+
+
+def test_fit_only_pipeline_restricts_optuna_to_fitting_role():
+    from dual_target.data.pipeline import build_fit_only_tuning_pipeline
+
+    source, split = _fit_only_demo_source()
+    view = build_fit_only_tuning_pipeline(
+        source, split, expected_assignment_sha256=split.assignment_sha256,
+    )
+    fit_ids = {r.structure_id for r in split.fit}
+    reserved_ids = {r.structure_id for r in split.calibration + split.threshold}
+    assert {r.structure_id for r in view.data.train} == fit_ids
+    assert fit_ids.isdisjoint(reserved_ids)
+    holdouts = [r.structure_id for f in view.folds for r in f.holdout]
+    assert len(holdouts) == len(set(holdouts)) == len(fit_ids)
+    assert set(holdouts) == fit_ids
+    for f in view.folds:
+        assert {r.scaffold_group_id for r in f.fit}.isdisjoint(
+            r.scaffold_group_id for r in f.holdout
+        )
+        assert {r.structure_id for r in f.fit + f.holdout}.isdisjoint(reserved_ids)
+
+
+def test_fit_only_pipeline_rejects_wrong_frozen_hash():
+    import pytest
+    from dual_target.data.pipeline import build_fit_only_tuning_pipeline
+
+    source, split = _fit_only_demo_source()
+    with pytest.raises(ValueError, match="hash|assignment"):
+        build_fit_only_tuning_pipeline(
+            source, split, expected_assignment_sha256="wrong-hash",
+        )
+
+
+def test_fit_only_pipeline_rejects_tampered_calibration_label():
+    from dataclasses import replace
+    from types import SimpleNamespace
+
+    import pytest
+    from dual_target.data.pipeline import build_fit_only_tuning_pipeline
+
+    source, split = _fit_only_demo_source()
+    original = split.calibration[0]
+    modified = SimpleNamespace(**vars(original))
+    modified.egfr_pic50 += 1.0
+    changed = replace(split, calibration=(modified,) + split.calibration[1:])
+    with pytest.raises(ValueError, match="record differs"):
+        build_fit_only_tuning_pipeline(
+            source, changed, expected_assignment_sha256=split.assignment_sha256,
+        )
+
+
+def test_fit_only_pipeline_rejects_validation_scaffold_leakage():
+    from types import SimpleNamespace
+
+    import pytest
+    from dual_target.data.pipeline import build_fit_only_tuning_pipeline
+
+    source, split = _fit_only_demo_source()
+    source.data.validation = (
+        SimpleNamespace(**vars(split.fit[0])),
+    )
+    with pytest.raises(ValueError, match="validation"):
+        build_fit_only_tuning_pipeline(
+            source, split, expected_assignment_sha256=split.assignment_sha256,
+        )
+# --- End Stage C fit-only tuning integration checks ---

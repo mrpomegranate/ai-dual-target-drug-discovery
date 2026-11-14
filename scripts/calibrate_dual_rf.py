@@ -1,13 +1,14 @@
-"""Stage C.4: evaluate training-only sigmoid calibration for direct dual RF.
+"""Stage D.1: refit the fit-only Optuna-selected dual RF and sigmoid calibrator.
 
-Reconstruct and verify the frozen seed-719 scaffold assignment. Fit a fresh
-reference 200-tree Random Forest on its 'fit' portion, fit a one-dimensional
-sigmoid using only the disjoint 'calibration' portion, and report raw versus
-calibrated scores on the frozen M2.1 development-validation partition.
+Verify the frozen seed-719 scaffold assignment. Train a fresh 200-tree RF
+classifier on the 697 accepted paired labels in the 'fit' role using Trial 18
+from the leakage-corrected Optuna study. Fit a sigmoid only on the disjoint
+223 paired 'calibration' labels, then report diagnostics on M2.1 development
+validation. The 164 paired 'threshold' labels and locked test stay untouched.
 
-The 'threshold' portion is NEVER scored or used to select a decision cutoff.
-The final M2.1 test labels are NEVER loaded. This Stage C forest is NOT the
-full-training reference forest evaluated in Stage B.
+Optuna hyperparameters were selected on fit-only scaffold CV, not on the
+calibration, threshold, or development-validation labels. Historical validation
+exploration and label-informed selection of split seed 719 remain caveats.
 """
 
 from __future__ import annotations
@@ -60,6 +61,10 @@ FROZEN_ASSIGNMENT_SHA256 = (
 STAGE_B_RUN_ID = "12c9fc400b354f6da4e993e69e36b1cb"
 STAGE_C_AUDIT_RUN_ID = "d2ca6b7898f34890a756c547c706bc56"
 STAGE_C_SELECTION_RUN_ID = "5d013a8325904155ac3774e42e01a7f2"
+OPTUNA_PARENT_RUN_ID = "2c748d4495ec47a4924d66043349709b"
+OPTUNA_DUAL_STUDY = "M2_2_fit_only_reffirst_200trees_dual_200trees_5folds"
+OPTUNA_BEST_TRIAL = 18
+OPTUNA_BEST_CV_AP = 0.9076405916837615
 
 
 def parse_args() -> argparse.Namespace:
@@ -73,10 +78,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--n-jobs", type=int, default=2)
     parser.add_argument("--tracking-uri", default=None)
     parser.add_argument("--experiment", default="EGFR_HER2_M2_Scaffold_Benchmark")
-    parser.add_argument("--run-name", default="M2_2_StageC4_Dual_RF_Sigmoid")
+    parser.add_argument(
+        "--run-name", default="M2_2_StageD1_FitOnly_Optimized_Dual_RF_Sigmoid"
+    )
     args = parser.parse_args()
     if args.trees != 200:
-        parser.error("--trees must be 200 to match the frozen Stage B reference RF")
+        parser.error("--trees must be 200 to match the selected fit-only Optuna trial")
     if args.n_jobs == 0:
         parser.error("--n-jobs must not be zero")
     return args
@@ -169,20 +176,23 @@ def git_state() -> tuple[str, str]:
         return "unknown", "unknown"
 
 
-def log_dataset_identities(pipeline, dataset_path: Path) -> None:
-    """Log identities without putting potency labels in MLflow input schemas."""
-    for role in ("train", "validation"):
-        records = getattr(pipeline.data, role)
+def log_dataset_identities(pipeline, split, dataset_path: Path) -> None:
+    """Log the actual fit/calibration/validation roles, without labels."""
+    for role, records in (
+        ("fit", split.fit),
+        ("calibration", split.calibration),
+        ("validation", pipeline.data.validation),
+    ):
         frame = pd.DataFrame({
             "molecule_id": [row.structure_id for row in records],
             "scaffold_id": [row.scaffold_group_id for row in records],
         })
         mlflow.log_input(
             mlflow.data.from_pandas(
-                frame, name=f"M2_1_{role}_identities_C4",
+                frame, name=f"M2_2_stage_d1_{role}_identities",
                 source=dataset_path.resolve().as_uri(),
             ),
-            context=role,
+            context="training" if role == "fit" else role,
         )
 
 
@@ -283,8 +293,8 @@ def log_comparison_figures(validation: DualProbabilityScores) -> None:
 def log_model_and_predictions(model, validation: DualProbabilityScores) -> None:
     with TemporaryDirectory() as directory:
         folder = Path(directory)
-        rf_file = folder / "stage_c4_reference_dual_rf.joblib"
-        sigmoid_file = folder / "stage_c4_sigmoid.joblib"
+        rf_file = folder / "stage_d1_optimized_dual_rf.joblib"
+        sigmoid_file = folder / "stage_d1_sigmoid.joblib"
         joblib.dump(model.forest, rf_file)
         joblib.dump(model.sigmoid, sigmoid_file)
         mlflow.log_artifact(str(rf_file), artifact_path="models")
@@ -294,7 +304,7 @@ def log_model_and_predictions(model, validation: DualProbabilityScores) -> None:
             ("calibration", model.calibration_scores),
             ("validation", validation),
         ):
-            output = folder / f"stage_c4_{role}_predictions.csv"
+            output = folder / f"stage_d1_{role}_predictions.csv"
             _prediction_frame(scores).to_csv(output, index=False)
             mlflow.log_artifact(str(output), artifact_path=f"predictions/{role}")
 
@@ -314,19 +324,31 @@ def main() -> None:
         max_attempts=1,
     )
     audit = verify_frozen_assignment(split, pipeline, args)
-    config = RFConfig(n_estimators=args.trees, seed=714, n_jobs=args.n_jobs)
+    # Selected solely by five-fold scaffold CV on the Stage C fit role.
+    # Dual classifier: Optuna Trial 18 (200 trees, 20 total trials).
+    config = RFConfig(
+        n_estimators=args.trees,
+        max_depth=20,
+        min_samples_leaf=2,
+        min_samples_split=4,
+        max_features="sqrt",
+        seed=714,
+        n_jobs=args.n_jobs,
+    )
     bank = build_morgan_feature_bank(pipeline.data.train)
     validation_bank = build_morgan_feature_bank(pipeline.data.validation)
     if (
         bank.radius, bank.n_bits, bank.include_chirality
     ) != (config.radius, config.n_bits, config.include_chirality):
-        raise ValueError("Training fingerprint bank differs from reference RF config")
+        raise ValueError("Training fingerprint bank differs from optimized RF config")
     if (
         validation_bank.radius, validation_bank.n_bits, validation_bank.include_chirality
     ) != (config.radius, config.n_bits, config.include_chirality):
-        raise ValueError("Validation fingerprint bank differs from reference RF config")
+        raise ValueError("Validation fingerprint bank differs from optimized RF config")
 
-    print("STAGE C.4 — DUAL-ACTIVITY SIGMOID CALIBRATION")
+    print("STAGE D.1 — FIT-ONLY OPTIMIZED DUAL RF AND SIGMOID CALIBRATION")
+    print(f"Source Optuna study: {OPTUNA_DUAL_STUDY} (trial {OPTUNA_BEST_TRIAL})")
+    print(f"Selected RF configuration: {asdict(config)}")
     print(f"Frozen assignment SHA-256: {split.assignment_sha256}")
     print(f"Train molecules (all roles): {len(pipeline.data.train)}")
     print(f"Fitting paired labels: {split.fit_audit.paired_labels}")
@@ -338,9 +360,11 @@ def main() -> None:
     with mlflow.start_run(run_name=args.run_name) as parent:
         commit, dirty = git_state()
         mlflow.set_tags({
-            "milestone": "M2.2_stage_C4",
+            "milestone": "M2.2_stage_D1",
             "training_protocol": "scaffold_disjoint_fit_calibration_threshold",
-            "model_variant": "reference_200tree_RF_stageC_fit_subset",
+            "model_variant": "fit_only_optuna_200tree_RF_stageC_fit_subset",
+            "optuna_source_parent_run_id": OPTUNA_PARENT_RUN_ID,
+            "optuna_source_study": OPTUNA_DUAL_STUDY,
             "calibration_method": "sigmoid_logistic_regression",
             "threshold_tuned": "false",
             "test_labels_loaded": "false",
@@ -364,35 +388,50 @@ def main() -> None:
             "rf_seed": config.seed,
             "rf_trees": config.n_estimators,
             "rf_n_jobs": config.n_jobs,
+            "rf_max_depth": config.max_depth,
+            "rf_min_samples_leaf": config.min_samples_leaf,
+            "rf_min_samples_split": config.min_samples_split,
+            "rf_max_features": config.max_features,
+            "optuna_selected_trial": OPTUNA_BEST_TRIAL,
+            "optuna_source_run_id": OPTUNA_PARENT_RUN_ID,
+            "optuna_study_name": OPTUNA_DUAL_STUDY,
         })
-        log_dataset_identities(pipeline, args.dataset)
+        log_dataset_identities(pipeline, split, args.dataset)
         mlflow.log_artifact(str(args.split_manifest), artifact_path="provenance")
         mlflow.log_artifact(str(args.split_audit), artifact_path="provenance")
         mlflow.log_artifact(str(args.manifest), artifact_path="provenance")
         mlflow.log_artifact(str(args.summary), artifact_path="provenance")
-        mlflow.log_dict(asdict(config), "provenance/reference_rf_config.json")
+        mlflow.log_dict(asdict(config), "provenance/optimized_rf_config.json")
+        mlflow.log_metric("optuna_fit_only_cv_ap", OPTUNA_BEST_CV_AP)
         mlflow.log_dict({
             "stage_b_parent_run_id": STAGE_B_RUN_ID,
             "stage_c_split_audit_run_id": STAGE_C_AUDIT_RUN_ID,
             "stage_c_seed_selection_run_id": STAGE_C_SELECTION_RUN_ID,
+            "optuna_source_parent_run_id": OPTUNA_PARENT_RUN_ID,
+            "optuna_study_name": OPTUNA_DUAL_STUDY,
+            "optuna_selected_trial": OPTUNA_BEST_TRIAL,
+            "optuna_selected_cv_ap": OPTUNA_BEST_CV_AP,
+            "optuna_selection_used_fit_labels_only": True,
             "frozen_assignment_sha256": FROZEN_ASSIGNMENT_SHA256,
             "calibration_audit": audit["audits"],
             "calibration_probability_metrics_are_in_sample_for_sigmoid": True,
             "development_validation_probabilities_are_held_out": True,
             "threshold_role_used_for_fitting_calibration_or_selection": False,
             "test_partition_labels_loaded": False,
-            "optuna_and_split_selection_previously_used_training_labels": True,
+            "old_full_train_optuna_hyperparameters_reused": False,
+            "split_seed_selected_after_label_balance_inspection": True,
+            "development_validation_previously_explored": True,
             "stage_b_forest_reused": False,
             "uncertainty_caveat": (
                 "Scaffold disjointness and in-domain calibration do not guarantee "
                 "calibration on unseen scaffold distributions."
             ),
-        }, "provenance/stage_c4_protocol.json")
+        }, "provenance/stage_d1_protocol.json")
 
-        with mlflow.start_run(run_name="Reference_RF_200tree_Sigmoid", nested=True):
+        with mlflow.start_run(run_name="Optimized_RF_200tree_Sigmoid", nested=True):
             mlflow.set_tags({
                 "task": "dual",
-                "model_variant": "reference_200tree_stageC_fit_subset",
+                "model_variant": "fit_only_optuna_200tree_stageC_fit_subset",
                 "validation_only_evaluation": "true",
             })
             model = fit_sigmoid_dual_calibration(
@@ -430,7 +469,7 @@ def main() -> None:
                 f"{name:<20} {getattr(validation.raw_metrics, name):>14.4f} "
                 f"{getattr(validation.calibrated_metrics, name):>14.4f}"
             )
-        print(f"\nStage C.4 parent MLflow run: {parent.info.run_id}")
+        print(f"\nStage D.1 parent MLflow run: {parent.info.run_id}")
         print("Decision thresholds were not tuned; final test labels were not loaded.")
         print("Do not compare these Stage C subset-fit metrics as if Stage B used the same fit size.")
 

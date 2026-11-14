@@ -1,15 +1,14 @@
-"""Stage C.5: EGFR/HER2 scaffold-disjoint split-conformal RF intervals.
+"""Stage D.3: fit-only Optuna EGFR/HER2 split-conformal RF intervals.
 
-Use only the frozen M2.1 train partition to fit and calibrate two new RFs.
-The frozen seed-719 roles are: fit RF; calibrate residual half-width; reserve
-threshold role. Evaluate the *unmodified* 90% intervals on M2.1 development
-validation, while leaving the M2.1 final test inaccessible.
+Reconstruct the frozen seed-719 scaffold roles. Read and verify the NEW
+reference-first Optuna studies tuned using only the 5,364 fitting molecules
+(five internal scaffold-disjoint folds), then train two 200-tree regressors
+on the fitting labels. Compute fixed 90% conformal residual intervals using
+only the disjoint calibration labels; reserve the threshold subset.
 
-Use the recorded 200-tree Optuna configurations (selected during training-only
-scaffold CV) for the two regressors. These subset-fit forests are DISTINCT from
-the full-training Stage B models. Conformal calibration here does not provide a
-distribution-free coverage guarantee under scaffold distribution shift or
-post-hyperparameter-selection dependence. Report empirical validation coverage.
+Report empirical coverage/MAE on development validation; never access locked
+test labels. Neither scaffold shift nor label-informed choice of split seed
+719 guarantees formal distribution-free coverage on unseen scaffolds.
 """
 
 from __future__ import annotations
@@ -48,16 +47,33 @@ from dual_target.calibration.conformal import (
     fit_split_conformal_regression,
 )
 from dual_target.calibration.scaffold_calibration import make_scaffold_calibration_split
-from dual_target.data.pipeline import load_modeling_pipeline
-from dual_target.features.morgan_pipeline import build_morgan_feature_bank
-from evaluate_optimized_rf import (
-    DEFAULT_OPTUNA_DB,
-    log_dataset_identity,
-    read_selections,
+from dual_target.data.pipeline import (
+    build_fit_only_tuning_pipeline,
+    load_modeling_pipeline,
 )
+from dual_target.features.morgan_pipeline import build_morgan_feature_bank
+from evaluate_optimized_rf import read_selections
 
 TARGETS = ("egfr", "her2")
-STAGE_C4_RUN_ID = "d061759968704966b66907f519d8543f"
+DEFAULT_FIT_ONLY_OPTUNA_DB = Path("reports/optuna/rf_fit_only_seed719.db")
+FIT_ONLY_OPTUNA_PARENT_RUN_ID = "2c748d4495ec47a4924d66043349709b"
+STAGE_D1_RUN_ID = "7f604eb2e3514ed9802d6d22fa304fb2"
+EXPECTED_FIT_ONLY_SELECTIONS = {
+    "egfr": {
+        "best_trial": 13,
+        "max_depth": None,
+        "min_samples_leaf": 2,
+        "min_samples_split": 3,
+        "max_features": 0.5,
+    },
+    "her2": {
+        "best_trial": 0,
+        "max_depth": None,
+        "min_samples_leaf": 1,
+        "min_samples_split": 2,
+        "max_features": "sqrt",
+    },
+}
 EXPECTED_LABEL_COUNTS = {
     "egfr": {"fit": 4465, "calibration": 1382, "threshold": 1364, "validation": 902},
     "her2": {"fit": 1596, "calibration": 499, "threshold": 470, "validation": 320},
@@ -71,8 +87,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--summary", type=Path, default=DEFAULT_SUMMARY)
     parser.add_argument("--split-audit", type=Path, default=DEFAULT_AUDIT)
     parser.add_argument("--split-manifest", type=Path, default=DEFAULT_SPLIT_MANIFEST)
-    parser.add_argument("--study-db", type=Path, default=DEFAULT_OPTUNA_DB)
-    parser.add_argument("--study-prefix", default="M2_2_RF_scaffold")
+    parser.add_argument("--study-db", type=Path, default=DEFAULT_FIT_ONLY_OPTUNA_DB)
+    parser.add_argument("--study-prefix", default="M2_2_fit_only_reffirst_200trees")
     parser.add_argument("--folds", type=int, default=5)
     parser.add_argument("--min-completed-trials", type=int, default=20)
     parser.add_argument("--trees", type=int, default=200)
@@ -81,7 +97,7 @@ def parse_args() -> argparse.Namespace:
                         help="Miscoverage level; default 0.10 for 90%% intervals")
     parser.add_argument("--tracking-uri", default=None)
     parser.add_argument("--experiment", default="EGFR_HER2_M2_Scaffold_Benchmark")
-    parser.add_argument("--run-name", default="M2_2_StageC5_Potency_RF_Conformal")
+    parser.add_argument("--run-name", default="M2_2_StageD3_FitOnly_Potency_RF_Conformal")
     args = parser.parse_args()
     if args.trees != 200:
         parser.error("--trees must be 200 to reproduce the selected Optuna studies")
@@ -107,6 +123,42 @@ def _verify_target_counts(split, pipeline) -> None:
         )
         if validation != expected["validation"]:
             raise ValueError(f"Frozen {target} development-validation labels changed")
+
+
+def _verify_fit_only_optuna_selections(selections: dict, provenance: dict) -> None:
+    """Ensure the new 20-trial fit-only studies are the expected frozen winners."""
+    for target, expected in EXPECTED_FIT_ONLY_SELECTIONS.items():
+        meta = provenance[target]
+        config = selections[target]
+        if meta["best_trial"] != expected["best_trial"]:
+            raise ValueError(f"{target.upper()} Optuna winner changed from frozen run")
+        if meta["completed_trials"] != 20:
+            raise ValueError(f"{target.upper()} study must have exactly 20 completed trials")
+        if any(
+            getattr(config, name) != value
+            for name, value in expected.items()
+            if name != "best_trial"
+        ):
+            raise ValueError(f"{target.upper()} selected RF settings changed")
+        if config.n_estimators != 200 or config.seed != 714:
+            raise ValueError(f"{target.upper()} unexpected tree count or model seed")
+
+
+def _log_role_identities(pipeline, split) -> None:
+    """Record the actual fit/calibration/validation roles without potency labels."""
+    for role, records in (
+        ("fit", split.fit),
+        ("calibration", split.calibration),
+        ("validation", pipeline.data.validation),
+    ):
+        frame = pd.DataFrame({
+            "molecule_id": [row.structure_id for row in records],
+            "scaffold_id": [row.scaffold_group_id for row in records],
+        })
+        mlflow.log_input(
+            mlflow.data.from_pandas(frame, name=f"M2_2_stage_d3_{role}_identities"),
+            context="training" if role == "fit" else role,
+        )
 
 
 def _interval_frame(scores: PotencyIntervalScores) -> pd.DataFrame:
@@ -242,7 +294,7 @@ def log_model_artifacts(
 ) -> None:
     with TemporaryDirectory() as tmp:
         directory = Path(tmp)
-        forest_path = directory / f"{model.target}_stage_c5_forest.joblib"
+        forest_path = directory / f"{model.target}_stage_d3_forest.joblib"
         joblib.dump(model.forest, forest_path)
         mlflow.log_artifact(str(forest_path), artifact_path="models")
         mlflow.log_dict({
@@ -287,13 +339,30 @@ def main() -> None:
     )
     split_audit = verify_frozen_assignment(split, pipeline, args)
     _verify_target_counts(split, pipeline)
+    # This fit-only view is the SAME selection boundary used by the corrected
+    # Optuna run. Do not pass the full 8,692-molecule pipeline to read_selections.
+    fit_only_pipeline = build_fit_only_tuning_pipeline(
+        pipeline, split, n_splits=args.folds,
+    )
+    if len(fit_only_pipeline.data.train) != 5364:
+        raise ValueError("Unexpected fit-only Optuna molecule count")
+    fit_only_bank = build_morgan_feature_bank(fit_only_pipeline.data.train)
+    selections, selection_provenance = read_selections(
+        fit_only_pipeline, fit_only_bank, args
+    )
+    _verify_fit_only_optuna_selections(selections, selection_provenance)
+
+    # Conformal fitting/calibration needs both roles in the original train bank.
+    # The conformal module indexes only split.fit and split.calibration labels.
     train_bank = build_morgan_feature_bank(pipeline.data.train)
     validation_bank = build_morgan_feature_bank(pipeline.data.validation)
-    selections, selection_provenance = read_selections(pipeline, train_bank, args)
 
-    print("STAGE C.5 — EGFR/HER2 SPLIT-CONFORMAL REGRESSION")
+    print("STAGE D.3 — FIT-ONLY OPTUNA EGFR/HER2 CONFORMAL REGRESSION")
     print(f"Frozen assignment SHA-256: {split.assignment_sha256}")
-    print(f"Training molecules: {len(pipeline.data.train)}")
+    print(f"Original M2.1 training partition: {len(pipeline.data.train)} molecules")
+    print(f"Optuna / RF fit subset: {len(split.fit)} molecules")
+    print(f"Reserved conformal calibration subset: {len(split.calibration)} molecules")
+    print(f"Reserved threshold subset: {len(split.threshold)} molecules")
     print(f"Development-validation molecules: {len(pipeline.data.validation)}")
     for target in TARGETS:
         counts = EXPECTED_LABEL_COUNTS[target]
@@ -306,17 +375,18 @@ def main() -> None:
     with mlflow.start_run(run_name=args.run_name) as parent:
         commit, dirty = git_state()
         mlflow.set_tags({
-            "milestone": "M2.2_stage_C5",
+            "milestone": "M2.2_stage_D3",
             "training_protocol": "seed719_scaffold_disjoint_split_conformal",
             "calibration_method": "split_conformal_absolute_residual",
-            "model_variant": "Optuna_selected_200tree_RF_stageC_fit_subset",
+            "model_variant": "fit_only_optuna_reference_first_200tree_RF",
+            "fit_only_optuna_parent_run_id": FIT_ONLY_OPTUNA_PARENT_RUN_ID,
             "threshold_role_used": "false",
             "development_validation_used_for_fitting": "false",
             "test_labels_loaded": "false",
             "stage_b_parent_run_id": STAGE_B_RUN_ID,
             "stage_c_split_audit_run_id": STAGE_C_AUDIT_RUN_ID,
             "stage_c_seed_selection_run_id": STAGE_C_SELECTION_RUN_ID,
-            "stage_c4_sigmoid_run_id": STAGE_C4_RUN_ID,
+            "stage_d1_dual_rf_calibration_run_id": STAGE_D1_RUN_ID,
             "git_commit": commit,
             "git_dirty": dirty,
         })
@@ -328,7 +398,10 @@ def main() -> None:
             "stage_c_split_manifest_sha256": _file_sha256(args.split_manifest),
             "stage_c_split_audit_sha256": _file_sha256(args.split_audit),
             "train_feature_sha256": train_bank.fingerprint_sha256,
+            "fit_only_optuna_feature_sha256": fit_only_bank.fingerprint_sha256,
             "validation_feature_sha256": validation_bank.fingerprint_sha256,
+            "optuna_source_parent_run_id": FIT_ONLY_OPTUNA_PARENT_RUN_ID,
+            "fit_only_tuning_molecules": len(fit_only_pipeline.data.train),
             "alpha": args.alpha,
             "target_coverage": 1.0 - args.alpha,
             "rf_trees": args.trees,
@@ -336,7 +409,7 @@ def main() -> None:
             "rf_n_jobs": args.n_jobs,
             "split_seed": split.seed_used,
         })
-        log_dataset_identity(pipeline.data, args.dataset)
+        _log_role_identities(pipeline, split)
         for path in (args.manifest, args.summary, args.split_manifest, args.split_audit):
             mlflow.log_artifact(str(path), artifact_path="provenance")
         mlflow.log_dict({
@@ -346,21 +419,24 @@ def main() -> None:
             "stage_b_parent_run_id": STAGE_B_RUN_ID,
             "stage_c_split_audit_run_id": STAGE_C_AUDIT_RUN_ID,
             "stage_c_seed_selection_run_id": STAGE_C_SELECTION_RUN_ID,
-            "stage_c4_sigmoid_run_id": STAGE_C4_RUN_ID,
+            "stage_d1_dual_rf_calibration_run_id": STAGE_D1_RUN_ID,
             "interval_method": "global_symmetrical_absolute_residual_split_conformal",
             "target_coverage_selected_before_validation": True,
             "calibration_quantile_uses_only_stage_c_calibration_role": True,
             "threshold_role_reserved": True,
             "final_test_labels_loaded": False,
             "stage_b_full_training_forests_reused": False,
-            "original_training_data_involved_in_optuna_selection": True,
+            "optuna_selection_used_fit_role_only": True,
+            "calibration_or_threshold_labels_used_for_optuna_selection": False,
+            "label_informed_seed_719_selection_caveat": True,
+            "previous_development_validation_exploration_caveat": True,
             "interpretation_caveat": (
                 "Nominal marginal coverage relies on exchangeability. "
-                "Scaffold-disjoint validation and earlier hyperparameter selection "
-                "can violate the assumptions; report empirical coverage only. "
+                "Scaffold-disjoint validation and label-informed seed selection "
+                "may violate assumptions; report empirical coverage only. "
                 "Coverage-sensitivity plot is diagnostic, NOT used to pick alpha."
             ),
-        }, "provenance/stage_c5_protocol.json")
+        }, "provenance/stage_d3_protocol.json")
 
         rows = []
         parent_metrics = {}
@@ -435,10 +511,10 @@ def main() -> None:
         mlflow.log_metrics(parent_metrics)
         mlflow.log_dict({"rows": rows}, "comparison/conformal_metrics.json")
         with TemporaryDirectory() as tmp:
-            comparison_csv = Path(tmp) / "stage_c5_conformal_metrics.csv"
+            comparison_csv = Path(tmp) / "stage_d3_conformal_metrics.csv"
             pd.DataFrame(rows).to_csv(comparison_csv, index=False)
             mlflow.log_artifact(str(comparison_csv), artifact_path="comparison")
-        print(f"\nStage C.5 parent MLflow run: {parent.info.run_id}")
+        print(f"\nStage D.3 parent MLflow run: {parent.info.run_id}")
         print("Threshold subset untouched; final test labels were not loaded.")
         print("Diagnostic coverage curve does not select alpha or alter the fitted models.")
 

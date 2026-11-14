@@ -1,8 +1,10 @@
 
 """Training-only Optuna tuning for Morgan Random Forest baselines.
 
-Uses the frozen M2.1 training partition and its scaffold-disjoint internal
-folds. Does not access external validation or test labels, fit calibrators,
+The provided pipeline determines which training molecules are visible.
+For leakage-aware Stage C tuning, pass the fit-only seed-719 pipeline.
+
+Does not access external validation or test labels, fit calibrators,
 or optimize decision thresholds.
 """
 
@@ -38,9 +40,7 @@ class RFOptimizationResult:
 
 def _fold_manifest_hash(pipeline: ModelingPipeline) -> str:
     """Hash stable molecule-to-internal-fold assignments."""
-    assignments = [
-        asdict(item) for item in fold_manifest(pipeline.folds)
-    ]
+    assignments = [asdict(item) for item in fold_manifest(pipeline.folds)]
     encoded = json.dumps(
         assignments, sort_keys=True, separators=(",", ":")
     )
@@ -51,7 +51,7 @@ def _suggest_config(
     trial: optuna.Trial,
     base: RFConfig,
 ) -> RFConfig:
-    """Search only parameters supported by the existing RF module."""
+    """Search parameters supported by the RF module."""
     return replace(
         base,
         max_depth=trial.suggest_categorical(
@@ -73,6 +73,7 @@ def _config_from_params(
     base: RFConfig,
     params: dict[str, Any],
 ) -> RFConfig:
+    """Reconstruct the best RF configuration."""
     return replace(
         base,
         max_depth=params["max_depth"],
@@ -84,7 +85,7 @@ def _config_from_params(
 
 @dataclass(frozen=True)
 class RFOptunaObjective:
-    """Optuna objective using only internal scaffold-CV folds."""
+    """Optuna objective using internal scaffold-CV folds."""
 
     pipeline: ModelingPipeline
     bank: MorganFeatureBank
@@ -92,6 +93,9 @@ class RFOptunaObjective:
     base_config: RFConfig
 
     def __call__(self, trial: optuna.Trial) -> float:
+        if trial.user_attrs.get("trial_role") != "reference":
+            trial.set_user_attr("trial_role", "search")
+
         config = _suggest_config(trial, self.base_config)
 
         result: RFCVResult = run_rf_scaffold_cv(
@@ -108,10 +112,12 @@ class RFOptunaObjective:
         trial.set_user_attr(
             "mean_train_score",
             float(
-                np.mean([
-                    fold.train_score
-                    for fold in result.fold_metrics
-                ])
+                np.mean(
+                    [
+                        fold.train_score
+                        for fold in result.fold_metrics
+                    ]
+                )
             ),
         )
 
@@ -152,11 +158,14 @@ def optimize_rf(
     callbacks: Sequence[
         Callable[[optuna.Study, FrozenTrial], None]
     ] = (),
+    reference_first: bool = False,
 ) -> RFOptimizationResult:
     """Select RF settings using training-only scaffold CV.
 
-    Callbacks allow separate MLflow tracking without coupling this
-    module to an experiment-tracking implementation.
+    If reference_first=True, Trial 0 evaluates the untuned RF
+    configuration. Remaining trials use Optuna suggestions.
+
+    n_trials includes the reference trial.
     """
     if task not in ("egfr", "her2", "dual"):
         raise ValueError(f"Unsupported task: {task}")
@@ -166,6 +175,9 @@ def optimize_rf(
 
     if base_config.n_estimators < 1:
         raise ValueError("n_estimators must be positive")
+
+    if not isinstance(reference_first, bool):
+        raise TypeError("reference_first must be a bool")
 
     if (
         bank.radius != base_config.radius
@@ -177,7 +189,9 @@ def optimize_rf(
         )
 
     if not pipeline.folds:
-        raise ValueError("No training-only scaffold folds available")
+        raise ValueError(
+            "No training-only scaffold folds available"
+        )
 
     metric_name = (
         "average_precision" if task == "dual" else "mae"
@@ -197,6 +211,7 @@ def optimize_rf(
         ),
         "base_config": asdict(base_config),
         "evaluation": "training_only_scaffold_group_cv",
+        "reference_first": reference_first,
     }
 
     study = optuna.create_study(
@@ -209,6 +224,7 @@ def optimize_rf(
         load_if_exists=storage is not None,
     )
 
+    # Reject incompatible studies before adding new trials.
     for key, value in provenance.items():
         if (
             key in study.user_attrs
@@ -220,8 +236,53 @@ def optimize_rf(
 
         study.set_user_attr(key, value)
 
+    # Queue the reference RF as Trial 0 if requested.
+    if reference_first:
+        reference_params = {
+            "max_depth": None,
+            "min_samples_leaf": 1,
+            "min_samples_split": 2,
+            "max_features": "sqrt",
+        }
+
+        existing_trials = study.get_trials(
+            deepcopy=False
+        )
+
+        if not existing_trials:
+            study.enqueue_trial(
+                reference_params,
+                user_attrs={
+                    "trial_role": "reference",
+                },
+            )
+        else:
+            first_trial = existing_trials[0]
+
+            if (
+                first_trial.user_attrs.get("trial_role")
+                != "reference"
+            ):
+                raise ValueError(
+                    "Existing study did not begin with "
+                    "a reference RF trial. Use a new "
+                    "study name or prefix."
+                )
+
+            if (
+                first_trial.params
+                and first_trial.params != reference_params
+            ):
+                raise ValueError(
+                    "Existing reference trial has "
+                    "different parameters."
+                )
+
     objective = RFOptunaObjective(
-        pipeline, bank, task, base_config
+        pipeline,
+        bank,
+        task,
+        base_config,
     )
 
     study.optimize(
@@ -236,7 +297,8 @@ def optimize_rf(
         study=study,
         task=task,
         best_config=_config_from_params(
-            base_config, study.best_trial.params
+            base_config,
+            study.best_trial.params,
         ),
         best_score=float(study.best_value),
         metric_name=metric_name,

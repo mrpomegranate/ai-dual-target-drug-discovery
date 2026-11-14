@@ -1,16 +1,18 @@
-"""Stage C.6: select and evaluate a raw-RF dual-activity decision cutoff.
+"""Stage D.2: select a raw optimized-RF dual-activity decision threshold.
 
-Reuse the EXACT Stage C.4 fitted Random Forest from MLflow (no retraining).
-The only label-dependent threshold selection is on the frozen seed-719
-``threshold`` role (164 paired molecules). Apply the frozen F1-maximizing
-cutoff to M2.1 development validation (135 paired labels) without retuning.
+Reuse the EXACT Stage D.1 Optuna-selected forest from MLflow without retraining.
+Select an F1-maximizing cutoff using ONLY the frozen seed-719 threshold role
+(164 paired labels); apply that frozen cutoff to M2.1 development validation
+(135 paired labels) without retuning. Calibration labels reproduce the saved
+D.1 predictions but are not used to choose the threshold.
 
-Activity labels always mean EGFR pIC50 > 6 AND HER2 pIC50 > 6.
-Neither final-test labels nor the reserved conformal labels are accessed.
+Dual-active means EGFR pIC50 > 6 AND HER2 pIC50 > 6. The locked test
+partition is never accessed. Historical development-validation exploration
+and label-informed seed-719 selection remain methodological limitations.
 
-Run from the repository root, e.g.:
+Run from the repository root:
   uv run --locked python scripts/tune_dual_threshold.py \
-    --run-name M2_2_StageC6_Dual_RF_Threshold
+    --run-name M2_2_StageD2_Optimized_Dual_RF_Threshold
 """
 
 from __future__ import annotations
@@ -65,14 +67,17 @@ FROZEN_ASSIGNMENT_SHA256 = (
 )
 STAGE_B_RUN_ID = "12c9fc400b354f6da4e993e69e36b1cb"
 STAGE_C_AUDIT_RUN_ID = "d2ca6b7898f34890a756c547c706bc56"
-STAGE_C4_SOURCE_RUN_ID = "d061759968704966b66907f519d8543f"
-SOURCE_CHILD_NAME = "Reference_RF_200tree_Sigmoid"
-SOURCE_FOREST_PATH = "models/stage_c4_reference_dual_rf.joblib"
-SOURCE_SIGMOID_PATH = "models/stage_c4_sigmoid.joblib"
+STAGE_D1_SOURCE_RUN_ID = "7f604eb2e3514ed9802d6d22fa304fb2"
+OPTUNA_SOURCE_PARENT_RUN_ID = "2c748d4495ec47a4924d66043349709b"
+OPTUNA_DUAL_STUDY = "M2_2_fit_only_reffirst_200trees_dual_200trees_5folds"
+OPTUNA_SELECTED_TRIAL = 18
+SOURCE_CHILD_NAME = "Optimized_RF_200tree_Sigmoid"
+SOURCE_FOREST_PATH = "models/stage_d1_optimized_dual_rf.joblib"
+SOURCE_SIGMOID_PATH = "models/stage_d1_sigmoid.joblib"
 SOURCE_CALIBRATION_PATH = (
-    "predictions/calibration/stage_c4_calibration_predictions.csv"
+    "predictions/calibration/stage_d1_calibration_predictions.csv"
 )
-SOURCE_CONFIG_PATH = "provenance/reference_rf_config.json"
+SOURCE_CONFIG_PATH = "provenance/optimized_rf_config.json"
 
 
 def parse_args() -> argparse.Namespace:
@@ -82,10 +87,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--summary", type=Path, default=DEFAULT_SUMMARY)
     parser.add_argument("--split-audit", type=Path, default=DEFAULT_SPLIT_AUDIT)
     parser.add_argument("--split-manifest", type=Path, default=DEFAULT_SPLIT_CSV)
-    parser.add_argument("--stage-c4-run-id", default=STAGE_C4_SOURCE_RUN_ID)
+    parser.add_argument("--stage-d1-run-id", default=STAGE_D1_SOURCE_RUN_ID)
     parser.add_argument("--tracking-uri", default=None)
     parser.add_argument("--experiment", default="EGFR_HER2_M2_Scaffold_Benchmark")
-    parser.add_argument("--run-name", default="M2_2_StageC6_Dual_RF_Threshold")
+    parser.add_argument("--run-name", default="M2_2_StageD2_Optimized_Dual_RF_Threshold")
     return parser.parse_args()
 
 
@@ -163,7 +168,7 @@ def verify_split(pipeline, split, args: argparse.Namespace) -> dict:
 
 
 def find_source_child(client: MlflowClient, parent_id: str):
-    """Locate the one source run containing the actual Stage C.4 model."""
+    """Locate the unique saved optimized dual RF child within Stage D.1."""
     parent = client.get_run(parent_id)
     child_runs = client.search_runs(
         experiment_ids=[parent.info.experiment_id],
@@ -177,20 +182,25 @@ def find_source_child(client: MlflowClient, parent_id: str):
     ]
     if len(matching) != 1:
         raise ValueError(
-            f"Expected one Stage C.4 child named {SOURCE_CHILD_NAME!r}; "
+            f"Expected one Stage D.1 child named {SOURCE_CHILD_NAME!r}; "
             f"found {len(matching)}"
         )
     return parent, matching[0]
 
 
-def load_original_c4_model(
+def load_stage_d1_model(
     client: MlflowClient, parent, child, pipeline, split, bank, directory: Path
 ) -> tuple[SigmoidDualCalibration, dict[str, str]]:
-    """Load original saved model; independently reproduce its calibration scores.
+    """Load trusted D.1 model; reproduce its frozen calibration predictions.
 
-    Joblib is executable serialization. Load only the known trusted C.4 run.
+    Joblib files can execute code. Load only the trusted D.1 MLflow run.
     """
     parent_params = parent.data.params
+    parent_tags = parent.data.tags
+    if parent_tags.get("milestone") != "M2.2_stage_D1":
+        raise ValueError("Expected a Stage D.1 source MLflow run")
+    if parent_tags.get("optuna_source_parent_run_id") != OPTUNA_SOURCE_PARENT_RUN_ID:
+        raise ValueError("Source model is not linked to the corrected Optuna run")
     expected = {
         "dataset_sha256": pipeline.data.dataset_sha256,
         "manifest_sha256": pipeline.data.manifest_sha256,
@@ -199,19 +209,35 @@ def load_original_c4_model(
         "seed": str(split.seed_used),
         "rf_seed": "714",
         "rf_trees": "200",
+        "rf_max_depth": "20",
+        "rf_min_samples_leaf": "2",
+        "rf_min_samples_split": "4",
+        "rf_max_features": "sqrt",
+        "optuna_selected_trial": str(OPTUNA_SELECTED_TRIAL),
+        "optuna_source_run_id": OPTUNA_SOURCE_PARENT_RUN_ID,
+        "optuna_study_name": OPTUNA_DUAL_STUDY,
     }
     for key, value in expected.items():
         if parent_params.get(key) != value:
-            raise ValueError(f"Stage C.4 source run differs: {key}")
+            raise ValueError(f"Stage D.1 source run differs: {key}")
 
     config_path = Path(client.download_artifacts(parent.info.run_id, SOURCE_CONFIG_PATH, str(directory)))
     config = RFConfig(**json.loads(config_path.read_text(encoding="utf-8")))
-    if config != RFConfig(n_estimators=200, n_jobs=config.n_jobs, seed=714):
-        raise ValueError("Stage C.4 reference RF config has unexpected settings")
+    expected_config = RFConfig(
+        n_estimators=200,
+        max_depth=20,
+        min_samples_leaf=2,
+        min_samples_split=4,
+        max_features="sqrt",
+        seed=714,
+        n_jobs=config.n_jobs,
+    )
+    if config != expected_config:
+        raise ValueError("Stage D.1 RF configuration differs from Optuna Trial 18")
     if config.n_jobs == 0 or (
         config.radius, config.n_bits, config.include_chirality
     ) != (bank.radius, bank.n_bits, bank.include_chirality):
-        raise ValueError("Stage C.4 fingerprint or worker config mismatch")
+        raise ValueError("Stage D.1 fingerprint or worker config mismatch")
 
     forest_path = Path(client.download_artifacts(child.info.run_id, SOURCE_FOREST_PATH, str(directory)))
     sigmoid_path = Path(client.download_artifacts(child.info.run_id, SOURCE_SIGMOID_PATH, str(directory)))
@@ -223,9 +249,9 @@ def load_original_c4_model(
     if not isinstance(forest, RandomForestClassifier) or not isinstance(
         sigmoid, LogisticRegression
     ):
-        raise TypeError("Unexpected fitted model types in Stage C.4 artifacts")
+        raise TypeError("Unexpected fitted model types in Stage D.1 artifacts")
     if list(forest.classes_) != [0, 1] or list(sigmoid.classes_) != [0, 1]:
-        raise ValueError("Stage C.4 models must contain both binary classes")
+        raise ValueError("Stage D.1 models must contain both binary classes")
     params = forest.get_params()
     if any(
         params[name] != expected_value
@@ -238,7 +264,7 @@ def load_original_c4_model(
             "random_state": config.seed,
         }.items()
     ):
-        raise ValueError("Saved Stage C.4 forest parameters differ from config")
+        raise ValueError("Saved Stage D.1 forest parameters differ from config")
 
     calibration = _make_paired_examples(split.calibration, bank)
     raw = forest.predict_proba(calibration.features)[:, 1]
@@ -249,7 +275,7 @@ def load_original_c4_model(
         "raw_probability", "calibrated_probability",
     )
     if any(c not in original_csv.columns for c in required_columns):
-        raise ValueError("Stage C.4 saved prediction CSV is missing required columns")
+        raise ValueError("Stage D.1 saved prediction CSV is missing required columns")
     if (
         tuple(original_csv["molecule_id"].astype(str)) != calibration.molecule_ids
         or tuple(original_csv["scaffold_id"].astype(str)) != calibration.scaffold_ids
@@ -266,7 +292,7 @@ def load_original_c4_model(
             calibrated, rtol=1e-9, atol=1e-12,
         )
     ):
-        raise ValueError("Loaded C.4 model does not reproduce stored calibration predictions")
+        raise ValueError("Loaded D.1 model does not reproduce stored calibration predictions")
 
     calibration_scores = _scores_from_probabilities(calibration, raw, calibrated)
     model = SigmoidDualCalibration(
@@ -325,7 +351,7 @@ def plot_threshold_curves(selection: DualThresholdSelection) -> plt.Figure:
     ax.set(
         xlabel="Raw RF probability cutoff (score ≥ threshold)",
         ylabel="Score",
-        title="Stage C threshold subset — F1 selected without validation labels",
+        title="Frozen Stage C threshold role — F1 selected without validation labels",
         xlim=(0, 1), ylim=(0, 1.05),
     )
     ax.legend(loc="best")
@@ -400,7 +426,7 @@ def log_outputs(
     selection: DualThresholdSelection,
     validation: ThresholdPredictions,
     source_hashes: dict[str, str],
-    source_c4_id: str,
+    source_d1_id: str,
     source_child_id: str,
 ) -> None:
     """Log complete, reproducible evidence within the current MLflow run."""
@@ -440,17 +466,21 @@ def log_outputs(
         "validation_metrics": asdict(validation.metrics),
         "default_0_5_threshold_metrics": asdict(baseline_t),
         "default_0_5_validation_metrics": asdict(baseline_v),
-        "c4_source_parent_run": source_c4_id,
-        "c4_source_child_run": source_child_id,
+        "d1_source_parent_run": source_d1_id,
+        "d1_source_child_run": source_child_id,
+        "optuna_parent_run": OPTUNA_SOURCE_PARENT_RUN_ID,
+        "optuna_study": OPTUNA_DUAL_STUDY,
+        "optuna_selected_trial": OPTUNA_SELECTED_TRIAL,
         "source_artifact_hashes": source_hashes,
         "protocol_notes": [
-            "Threshold selected using original M2.1 training molecules only.",
+            "Threshold selected using the 164 paired Stage C threshold-role labels only.",
             "Development-validation labels used only after threshold frozen.",
-            "No RF or sigmoid refitting in Stage C.6; exact C.4 forest reloaded.",
+            "No RF or sigmoid refitting in Stage D.2; exact D.1 forest reloaded.",
             (
-                "Raw scores selected after reviewing Stage C.4 development-validation results; "
-                "therefore model-selection uncertainty remains."
+                "Raw scores favored after reviewing Stage D.1 development-validation results; "
+                "hence final model-selection performance is exploratory."
             ),
+            "Stage C seed 719 was selected after observing label balance.",
             "F1 is prevalence-dependent and may not align with screening costs.",
             "Final M2.1 test labels were not accessed.",
         ],
@@ -497,9 +527,9 @@ def main() -> None:
 
     configure_mlflow(args)
     client = MlflowClient()
-    source_parent, source_child = find_source_child(client, args.stage_c4_run_id)
+    source_parent, source_child = find_source_child(client, args.stage_d1_run_id)
     with TemporaryDirectory() as folder:
-        model, source_hashes = load_original_c4_model(
+        model, source_hashes = load_stage_d1_model(
             client, source_parent, source_child, pipeline, split,
             train_bank, Path(folder),
         )
@@ -514,7 +544,7 @@ def main() -> None:
         ):
             raise ValueError("Stage C validation fingerprint config mismatch")
 
-        # Both calculations use tested, pure Stage C.6 functions. Neither can
+        # Both calculations use tested, pure threshold utilities. Neither can
         # change the source forest, its sigmoid, or the frozen original labels.
         selection = select_dual_threshold(
             model, pipeline, split, train_bank,
@@ -525,11 +555,15 @@ def main() -> None:
             selection, model, pipeline, validation_bank
         )
 
-        print("STAGE C.6 — DUAL RF DECISION-THRESHOLD OPTIMIZATION")
+        print("STAGE D.2 — OPTIMIZED DUAL RF DECISION-THRESHOLD SELECTION")
         print(f"Assignment SHA-256: {split.assignment_sha256}")
-        print(f"Original Stage C.4 MLflow parent: {source_parent.info.run_id}")
-        print(f"Original Stage C.4 MLflow child: {source_child.info.run_id}")
-        print(f"Training molecules: {len(pipeline.data.train)}")
+        print(f"Stage D.1 source MLflow parent: {source_parent.info.run_id}")
+        print(f"Stage D.1 source MLflow child: {source_child.info.run_id}")
+        print(f"Original training partition: {len(pipeline.data.train)} molecules")
+        print(f"RF fitting subset: {len(split.fit)} molecules")
+        print(f"RF fitting paired labels: {split.fit_audit.paired_labels}")
+        print(f"Calibration paired labels: {split.calibration_audit.paired_labels}")
+        print(f"Threshold-selection paired labels: {split.threshold_audit.paired_labels}")
         print(f"Paired fit={split.fit_audit.paired_labels}; "
               f"calibration={split.calibration_audit.paired_labels}; "
               f"threshold selection={split.threshold_audit.paired_labels}; "
@@ -547,12 +581,14 @@ def main() -> None:
         with mlflow.start_run(run_name=args.run_name) as parent:
             commit, dirty = git_state()
             mlflow.set_tags({
-                "milestone": "M2.2_Stage_C6",
+                "milestone": "M2.2_stage_D2",
                 "task": "dual_activity_thresholding",
                 "selection_objective": "f1",
                 "score_kind": "raw",
-                "source_c4_parent_run_id": source_parent.info.run_id,
-                "source_c4_child_run_id": source_child.info.run_id,
+                "source_d1_parent_run_id": source_parent.info.run_id,
+                "source_d1_child_run_id": source_child.info.run_id,
+                "optuna_source_parent_run_id": OPTUNA_SOURCE_PARENT_RUN_ID,
+                "optuna_study_name": OPTUNA_DUAL_STUDY,
                 "stage_b_parent_run_id": STAGE_B_RUN_ID,
                 "stage_c_split_audit_run_id": STAGE_C_AUDIT_RUN_ID,
                 "validation_used_for_threshold_selection": "false",
@@ -571,8 +607,12 @@ def main() -> None:
                 "split_audit_sha256": sha256_file(args.split_audit),
                 "curation_summary_sha256": sha256_file(args.summary),
             })
-            for role in ("train", "validation"):
-                records = getattr(pipeline.data, role)
+            for role, records in (
+                ("fit", split.fit),
+                ("calibration", split.calibration),
+                ("threshold", split.threshold),
+                ("validation", pipeline.data.validation),
+            ):
                 identities = pd.DataFrame({
                     "molecule_id": [r.structure_id for r in records],
                     "scaffold_id": [r.scaffold_group_id for r in records],
@@ -581,9 +621,8 @@ def main() -> None:
                     mlflow.data.from_pandas(
                         identities,
                         name=f"M2_1_{role}_identities_C6",
-                        source=args.dataset.resolve().as_uri(),
                     ),
-                    context=role,
+                    context="training" if role == "fit" else role,
                 )
             mlflow.log_artifact(str(args.split_manifest), artifact_path="provenance")
             mlflow.log_artifact(str(args.split_audit), artifact_path="provenance")
@@ -596,14 +635,20 @@ def main() -> None:
                 "c3_audit_counts": audit.get("audits"),
                 "source_artifact_hashes": source_hashes,
                 "model_loaded_from_mlflow_not_refitted": True,
-            }, "provenance/stage_c6_protocol.json")
+                "optuna_parent_run": OPTUNA_SOURCE_PARENT_RUN_ID,
+                "optuna_study": OPTUNA_DUAL_STUDY,
+                "optuna_selected_trial": OPTUNA_SELECTED_TRIAL,
+                "score_kind": "raw",
+                "development_validation_previously_explored": True,
+                "stage_c_seed_selected_after_label_balance_inspection": True,
+            }, "provenance/stage_d2_protocol.json")
 
             with mlflow.start_run(
-                run_name="Reference_RF_200tree_Raw_F1_Threshold", nested=True
+                run_name="Optimized_RF_200tree_Raw_F1_Threshold", nested=True
             ):
                 mlflow.set_tags({
                     "task": "dual",
-                    "source_stage": "C4_reference_RF",
+                    "source_stage": "D1_fit_only_optuna_optimized_RF",
                     "threshold_selected_on": "C3_threshold_role",
                     "threshold_applied_to": "M2_1_development_validation",
                 })
@@ -618,7 +663,7 @@ def main() -> None:
                 "validation_precision": validation.metrics.precision,
                 "validation_recall": validation.metrics.recall,
             })
-            print(f"\nStage C.6 parent MLflow run: {parent.info.run_id}")
+            print(f"\nStage D.2 parent MLflow run: {parent.info.run_id}")
             print("Plots: child run / Artifacts / plots")
             print("Threshold frozen before validation. No final test labels loaded.")
 
