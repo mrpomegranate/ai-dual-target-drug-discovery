@@ -75,6 +75,7 @@ mlflow.db
 !/artifacts/generated_molecules/
 /artifacts/generated_molecules/*
 !/artifacts/generated_molecules/README*
+/assignment10_A4420A_capstone
 
 # Audit outputs
 /reports/audits/*.parquet
@@ -85,6 +86,14 @@ mlflow.db
 *.swp
 *.swo
 *~
+
+# Optuna SQLite experiment storage
+reports/optuna/*.db
+reports/optuna/*.db-shm
+reports/optuna/*.db-wal
+
+# Local backup files
+*.before_fit_only.bak
 
 # Operating system files
 .DS_Store
