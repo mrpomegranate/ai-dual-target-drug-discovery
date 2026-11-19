@@ -1,0 +1,184 @@
+{
+  "analysis": "post_hoc_frozen_locked_test_scaffold_level_audit",
+  "bootstrap_seed": 714,
+  "bootstrap_reps": 6000,
+  "resampling": "paired scaffold cluster bootstrap; resample scaffold IDs with replacement, carry all labeled molecules",
+  "metrics": [
+    {
+      "target": "egfr",
+      "comparison": "GINE minus Morgan RF",
+      "metric": "MAE delta (pIC50)",
+      "n": 902,
+      "n_scaffolds": 330,
+      "point": 0.07681470628617967,
+      "ci_lo": 0.015073112936685762,
+      "ci_hi": 0.14819007874261575,
+      "bootstrap_replicates": 6000,
+      "resampling_unit": "scaffold_group_id",
+      "negative_is_better": true
+    },
+    {
+      "target": "egfr",
+      "comparison": "RF 75% + GINE 25% minus Morgan RF",
+      "metric": "MAE delta (pIC50)",
+      "n": 902,
+      "n_scaffolds": 330,
+      "point": -0.009112768618693801,
+      "ci_lo": -0.03145862184236782,
+      "ci_hi": 0.014125418817196221,
+      "bootstrap_replicates": 6000,
+      "resampling_unit": "scaffold_group_id",
+      "negative_is_better": true
+    },
+    {
+      "target": "her2",
+      "comparison": "GINE minus Morgan RF",
+      "metric": "MAE delta (pIC50)",
+      "n": 321,
+      "n_scaffolds": 120,
+      "point": 0.008286101886781885,
+      "ci_lo": -0.041204664204364985,
+      "ci_hi": 0.06035818451373694,
+      "bootstrap_replicates": 6000,
+      "resampling_unit": "scaffold_group_id",
+      "negative_is_better": true
+    },
+    {
+      "target": "her2",
+      "comparison": "RF 75% + GINE 25% minus Morgan RF",
+      "metric": "MAE delta (pIC50)",
+      "n": 321,
+      "n_scaffolds": 120,
+      "point": -0.022291137460285992,
+      "ci_lo": -0.034165169883945155,
+      "ci_hi": -0.008659693734801856,
+      "bootstrap_replicates": 6000,
+      "resampling_unit": "scaffold_group_id",
+      "negative_is_better": true
+    },
+    {
+      "target": "paired_dual_activity",
+      "comparison": "RF 75% + GINE 25% minus Morgan RF",
+      "metric": "AP delta",
+      "n": 136,
+      "n_scaffolds": 58,
+      "point": 0.023059719625429853,
+      "ci_lo": -0.01409769610936692,
+      "ci_hi": 0.060100617138535026,
+      "bootstrap_replicates": 6000,
+      "resampling_unit": "scaffold_group_id",
+      "negative_is_better": false
+    },
+    {
+      "target": "paired_dual_activity",
+      "comparison": "GINE minus Morgan RF",
+      "metric": "AP delta",
+      "n": 136,
+      "n_scaffolds": 58,
+      "point": -0.005867211243304915,
+      "ci_lo": -0.1274127119806989,
+      "ci_hi": 0.085421871685652,
+      "bootstrap_replicates": 6000,
+      "resampling_unit": "scaffold_group_id",
+      "negative_is_better": false
+    }
+  ],
+  "coverage": [
+    {
+      "target": "egfr",
+      "model": "rf",
+      "n": 902,
+      "n_covered": 783,
+      "n_missed": 119,
+      "coverage": 0.8680709534368071,
+      "interval_width": 2.8733513909825206,
+      "bootstrap95_lo": 0.7862704248366013,
+      "bootstrap95_hi": 0.9343267268706071
+    },
+    {
+      "target": "egfr",
+      "model": "gine",
+      "n": 902,
+      "n_covered": 819,
+      "n_missed": 83,
+      "coverage": 0.9079822616407982,
+      "interval_width": 3.6445603837541967,
+      "bootstrap95_lo": 0.8660804202497417,
+      "bootstrap95_hi": 0.9484023462706912
+    },
+    {
+      "target": "egfr",
+      "model": "rf75_gine25",
+      "n": 902,
+      "n_covered": 792,
+      "n_missed": 110,
+      "coverage": 0.8780487804878049,
+      "interval_width": 2.904970558452824,
+      "bootstrap95_lo": 0.8044986534577282,
+      "bootstrap95_hi": 0.9385548011009556
+    },
+    {
+      "target": "her2",
+      "model": "rf",
+      "n": 321,
+      "n_covered": 267,
+      "n_missed": 54,
+      "coverage": 0.8317757009345794,
+      "interval_width": 1.943163763437548,
+      "bootstrap95_lo": 0.7682529170608641,
+      "bootstrap95_hi": 0.8900027472527472
+    },
+    {
+      "target": "her2",
+      "model": "gine",
+      "n": 321,
+      "n_covered": 290,
+      "n_missed": 31,
+      "coverage": 0.9034267912772586,
+      "interval_width": 2.4303659953662944,
+      "bootstrap95_lo": 0.8503383171450398,
+      "bootstrap95_hi": 0.9498210882151976
+    },
+    {
+      "target": "her2",
+      "model": "rf75_gine25",
+      "n": 321,
+      "n_covered": 273,
+      "n_missed": 48,
+      "coverage": 0.8504672897196262,
+      "interval_width": 1.9457110946252048,
+      "bootstrap95_lo": 0.7879855861698797,
+      "bootstrap95_hi": 0.9041672904191617
+    }
+  ],
+  "individual_model_complementarity": [
+    {
+      "target": "egfr",
+      "n": 902,
+      "ensemble_beats_rf_n": 458,
+      "ensemble_beats_rf_rate": 0.5077605321507761,
+      "gine_beats_rf_n": 385,
+      "rf_gine_signed_error_pearson": 0.786479588215192,
+      "rf_gine_abs_error_pearson": 0.6371192112322778
+    },
+    {
+      "target": "her2",
+      "n": 321,
+      "ensemble_beats_rf_n": 189,
+      "ensemble_beats_rf_rate": 0.5887850467289719,
+      "gine_beats_rf_n": 166,
+      "rf_gine_signed_error_pearson": 0.8122571892508197,
+      "rf_gine_abs_error_pearson": 0.7429866537040011
+    }
+  ],
+  "paired_dual_n": 136,
+  "paired_dual_positive": 95,
+  "paired_dual_n_scaffolds": 58,
+  "paired_dual_ap": {
+    "rf": 0.8677756451123031,
+    "gine": 0.8619084338689982,
+    "rf75_gine25": 0.890835364737733
+  },
+  "protocol_hash": "54b706b783eebbb999780805ffe355b5cc35a027dd0d6a418164ccd2bf690fbd",
+  "locked_test_run_id": "3cb6ed73b086444097ca4bfd69bb348f"
+}

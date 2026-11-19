@@ -1,0 +1,153 @@
+{
+  "purpose": "independent_frozen_development_validation_no_test",
+  "evaluation_role": "development_validation",
+  "molecules": 1087,
+  "models": [
+    "rf",
+    "gine",
+    "rf75_gine25"
+  ],
+  "nominal_marginal_coverage": 0.9,
+  "model_metrics": [
+    {
+      "target": "egfr",
+      "model": "rf",
+      "n_labeled": 902,
+      "n_scaffolds": 334,
+      "mae": 0.6155590160931932,
+      "spearman": 0.7848500612436853,
+      "nominal_coverage": 0.9,
+      "empirical_coverage": 0.9068736141906873,
+      "interval_half_width_pic50": 1.4366756954912603,
+      "mean_interval_width_pic50": 2.8733513909825206
+    },
+    {
+      "target": "egfr",
+      "model": "gine",
+      "n_labeled": 902,
+      "n_scaffolds": 334,
+      "mae": 0.805614891248935,
+      "spearman": 0.6375476949520824,
+      "nominal_coverage": 0.9,
+      "empirical_coverage": 0.9035476718403548,
+      "interval_half_width_pic50": 1.8222801918770983,
+      "mean_interval_width_pic50": 3.6445603837541967
+    },
+    {
+      "target": "egfr",
+      "model": "rf75_gine25",
+      "n_labeled": 902,
+      "n_scaffolds": 334,
+      "mae": 0.6418423602286474,
+      "spearman": 0.7716858671137844,
+      "nominal_coverage": 0.9,
+      "empirical_coverage": 0.8991130820399114,
+      "interval_half_width_pic50": 1.452485279226412,
+      "mean_interval_width_pic50": 2.904970558452824
+    },
+    {
+      "target": "her2",
+      "model": "rf",
+      "n_labeled": 320,
+      "n_scaffolds": 122,
+      "mae": 0.5731263654823829,
+      "spearman": 0.7707398094833025,
+      "nominal_coverage": 0.9,
+      "empirical_coverage": 0.840625,
+      "interval_half_width_pic50": 0.971581881718774,
+      "mean_interval_width_pic50": 1.943163763437548
+    },
+    {
+      "target": "her2",
+      "model": "gine",
+      "n_labeled": 320,
+      "n_scaffolds": 122,
+      "mae": 0.7108103002365255,
+      "spearman": 0.5871719680161579,
+      "nominal_coverage": 0.9,
+      "empirical_coverage": 0.815625,
+      "interval_half_width_pic50": 1.2151829976831472,
+      "mean_interval_width_pic50": 2.4303659953662944
+    },
+    {
+      "target": "her2",
+      "model": "rf75_gine25",
+      "n_labeled": 320,
+      "n_scaffolds": 122,
+      "mae": 0.5833161066278617,
+      "spearman": 0.7489434948233274,
+      "nominal_coverage": 0.9,
+      "empirical_coverage": 0.834375,
+      "interval_half_width_pic50": 0.9728555473126024,
+      "mean_interval_width_pic50": 1.9457110946252048
+    }
+  ],
+  "dual_activity": {
+    "rf": {
+      "paired_n": 135,
+      "dual_active_n": 83,
+      "prevalence": 0.6148148148148148,
+      "regression_min_pic50_ap": 0.8865493204982404
+    },
+    "gine": {
+      "paired_n": 135,
+      "dual_active_n": 83,
+      "prevalence": 0.6148148148148148,
+      "regression_min_pic50_ap": 0.8920649111239951
+    },
+    "rf75_gine25": {
+      "paired_n": 135,
+      "dual_active_n": 83,
+      "prevalence": 0.6148148148148148,
+      "regression_min_pic50_ap": 0.9071117799188647
+    }
+  },
+  "paired_joint_interval_coverage_descriptive": {
+    "rf": {
+      "paired_n": 135,
+      "observed_simultaneous_interval_coverage": 0.7777777777777778,
+      "joint_coverage_guaranteed": false
+    },
+    "gine": {
+      "paired_n": 135,
+      "observed_simultaneous_interval_coverage": 0.762962962962963,
+      "joint_coverage_guaranteed": false
+    },
+    "rf75_gine25": {
+      "paired_n": 135,
+      "observed_simultaneous_interval_coverage": 0.7555555555555555,
+      "joint_coverage_guaranteed": false
+    }
+  },
+  "scaffold_diagnostics": {
+    "minimum_n_for_ranking": 10,
+    "note": "Subgroup coverage is descriptive, not guaranteed by marginal conformal calibration.",
+    "group_counts": {
+      "egfr": 334,
+      "her2": 122
+    },
+    "reportable_counts": {
+      "egfr": 15,
+      "her2": 4
+    }
+  },
+  "provenance": {
+    "dataset_sha256": "83a64d02e45ccd9a6310947efcd5cdef9bddc9603edcd55e1d207eb1cafc18b8",
+    "outer_manifest_sha256": "05968ca1ed2a16ca8165e8a28ececa0f361fc9e61a64ac2e69abb1e0e4b7423a",
+    "stage_c_assignment_sha256": "2b99214bce37d30e1eed8f6e22984242492560b2999bb174a8d378604de9171c",
+    "m3_7b_calibrator_report_sha256": "d56876ac54571f7296747d0e493c94b537abf1ac0fefabb772bad1eaf22598ad",
+    "model_file_sha256": {
+      "egfr_rf": "5140788bcf3f08a796961a448dce7bc076aabf743d52d6b6b6f095250c820de6",
+      "her2_rf": "2dc5aafeb21225c88b57c4eca46f74d6757d25339c7798daef08b82b5d44c279",
+      "gine": "2d05fd4143ae5abfa6b3b9d869148c9ede86c8a45fb0d158a4434822ad87f7f9"
+    },
+    "m3_7b_mlflow_run_id": "38b189b1eeef4df99bf0ca183bb55aae"
+  },
+  "fit_scored": false,
+  "calibration_scored": false,
+  "threshold_scored": false,
+  "development_validation_scored": true,
+  "locked_test_scored": false,
+  "caveat": "Previously adapted RF hyperparameters used original training CV; no conditional or arbitrary scaffold-shift interval coverage guarantee. Do not adjust models or calibrators using this development-validation report.",
+  "mlflow_run_id": "a5ead1359880473699fbed6335e9cdc8"
+}

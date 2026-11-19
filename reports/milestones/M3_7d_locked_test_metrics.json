@@ -1,0 +1,169 @@
+{
+  "purpose": "one_time_locked_test_scaffold_heldout_RF_vs_GINE_vs_ensemble",
+  "evaluation_role": "locked_test",
+  "molecules": 1087,
+  "models": [
+    "rf",
+    "gine",
+    "rf75_gine25"
+  ],
+  "nominal_marginal_coverage": 0.9,
+  "model_metrics": [
+    {
+      "target": "egfr",
+      "model": "rf",
+      "n_labeled": 902,
+      "n_scaffolds": 330,
+      "mae": 0.7334912504515702,
+      "spearman": 0.8259652919194291,
+      "nominal_coverage": 0.9,
+      "empirical_coverage": 0.8680709534368071,
+      "interval_half_width_pic50": 1.4366756954912603,
+      "mean_interval_width_pic50": 2.8733513909825206
+    },
+    {
+      "target": "egfr",
+      "model": "gine",
+      "n_labeled": 902,
+      "n_scaffolds": 330,
+      "mae": 0.8103059567377499,
+      "spearman": 0.7375127464733098,
+      "nominal_coverage": 0.9,
+      "empirical_coverage": 0.9079822616407982,
+      "interval_half_width_pic50": 1.8222801918770983,
+      "mean_interval_width_pic50": 3.6445603837541967
+    },
+    {
+      "target": "egfr",
+      "model": "rf75_gine25",
+      "n_labeled": 902,
+      "n_scaffolds": 330,
+      "mae": 0.7243784818328763,
+      "spearman": 0.828375028604119,
+      "nominal_coverage": 0.9,
+      "empirical_coverage": 0.8780487804878049,
+      "interval_half_width_pic50": 1.452485279226412,
+      "mean_interval_width_pic50": 2.904970558452824
+    },
+    {
+      "target": "her2",
+      "model": "rf",
+      "n_labeled": 321,
+      "n_scaffolds": 120,
+      "mae": 0.5465540827721941,
+      "spearman": 0.6493469824536386,
+      "nominal_coverage": 0.9,
+      "empirical_coverage": 0.8317757009345794,
+      "interval_half_width_pic50": 0.971581881718774,
+      "mean_interval_width_pic50": 1.943163763437548
+    },
+    {
+      "target": "her2",
+      "model": "gine",
+      "n_labeled": 321,
+      "n_scaffolds": 120,
+      "mae": 0.554840184658976,
+      "spearman": 0.6718921823944997,
+      "nominal_coverage": 0.9,
+      "empirical_coverage": 0.9034267912772586,
+      "interval_half_width_pic50": 1.2151829976831472,
+      "mean_interval_width_pic50": 2.4303659953662944
+    },
+    {
+      "target": "her2",
+      "model": "rf75_gine25",
+      "n_labeled": 321,
+      "n_scaffolds": 120,
+      "mae": 0.5242629453119081,
+      "spearman": 0.6888481698617558,
+      "nominal_coverage": 0.9,
+      "empirical_coverage": 0.8504672897196262,
+      "interval_half_width_pic50": 0.9728555473126024,
+      "mean_interval_width_pic50": 1.9457110946252048
+    }
+  ],
+  "dual_activity": {
+    "rf": {
+      "paired_n": 136,
+      "dual_active_n": 95,
+      "prevalence": 0.6985294117647058,
+      "regression_min_pic50_ap": 0.8677756451123031
+    },
+    "gine": {
+      "paired_n": 136,
+      "dual_active_n": 95,
+      "prevalence": 0.6985294117647058,
+      "regression_min_pic50_ap": 0.8619084338689982
+    },
+    "rf75_gine25": {
+      "paired_n": 136,
+      "dual_active_n": 95,
+      "prevalence": 0.6985294117647058,
+      "regression_min_pic50_ap": 0.890835364737733
+    }
+  },
+  "paired_joint_interval_coverage_descriptive": {
+    "rf": {
+      "paired_n": 136,
+      "observed_simultaneous_interval_coverage": 0.7205882352941176,
+      "joint_coverage_guaranteed": false
+    },
+    "gine": {
+      "paired_n": 136,
+      "observed_simultaneous_interval_coverage": 0.8161764705882353,
+      "joint_coverage_guaranteed": false
+    },
+    "rf75_gine25": {
+      "paired_n": 136,
+      "observed_simultaneous_interval_coverage": 0.75,
+      "joint_coverage_guaranteed": false
+    }
+  },
+  "scaffold_diagnostics": {
+    "minimum_n_for_ranking": 10,
+    "note": "Only descriptive; no scaffold-conditional coverage guarantee.",
+    "group_counts": {
+      "egfr": 330,
+      "her2": 120
+    },
+    "reportable_counts": {
+      "egfr": 15,
+      "her2": 6
+    }
+  },
+  "provenance": {
+    "dataset_sha256": "83a64d02e45ccd9a6310947efcd5cdef9bddc9603edcd55e1d207eb1cafc18b8",
+    "outer_manifest_sha256": "05968ca1ed2a16ca8165e8a28ececa0f361fc9e61a64ac2e69abb1e0e4b7423a",
+    "audit_summary_sha256": "f13a782e36421734255b996afaa8137e1882d8dfb708cd7f365974cbf92a0536",
+    "calibrator_report_sha256": "d56876ac54571f7296747d0e493c94b537abf1ac0fefabb772bad1eaf22598ad",
+    "dev_validation_metrics_sha256": "9cd883c6d7927ece908c51febf17063657c3c80f8a37f6ea44b1d84f1c7a6731",
+    "model_file_sha256": {
+      "egfr_rf": "5140788bcf3f08a796961a448dce7bc076aabf743d52d6b6b6f095250c820de6",
+      "her2_rf": "2dc5aafeb21225c88b57c4eca46f74d6757d25339c7798daef08b82b5d44c279",
+      "gine": "2d05fd4143ae5abfa6b3b9d869148c9ede86c8a45fb0d158a4434822ad87f7f9"
+    },
+    "code_sha256": {
+      "test_driver": "011608d3e72a10ba9bc96f2faf3dfe29194fe242aa18bdf514a6defaa37612ca",
+      "test_loader": "518d5be98f469f218d729a6561e5ab0dca16d0abfd065286b5c18f485ef601ac",
+      "scoring": "8e86ec2ff78043e6971440a5d6e712992f154928e34dfbd6ef2428a90f5a937b",
+      "development_driver": "7f0711d2d6dee6a5384523c4dd5f8cf913d3b055bb02823373fcb62280144a83",
+      "m2_dataset_loader": "04d914b3420ef2c56411b5cdf99096f4e93cb13cd361f01ad99314dbc05d5738",
+      "m2_pipeline": "3afa5cb79b1c23e0db767cb7080d43ffca97f0b14cd678f5f613cf4f8ee6d6f3",
+      "graph_features": "d01ae49178cae402bfe01369611a77796cd1f8147e2c506ec38d972c0d2c7761",
+      "graph_loader": "42feb3529c63d670915504c72d2ea23d7e0f02f294564caa62d57855653589fb",
+      "gine_model": "e79726648253f4b8c6c6af119f7312e57ba615bf43fb151e6c60296d4a8dbcaa",
+      "morgan_features": "6f65fc7347768edabb090802357cf6c439dcf1cdbee293a98512203c694731ec",
+      "stage_c_split": "aa3aeee6fb76235531c859ba70e92b1063dfc6bc1006e9fee70ce0c122aff1ef"
+    },
+    "frozen_protocol_sha256": "54b706b783eebbb999780805ffe355b5cc35a027dd0d6a418164ccd2bf690fbd",
+    "m3_7b_mlflow_run_id": "38b189b1eeef4df99bf0ca183bb55aae",
+    "m3_7c_mlflow_run_id": "a5ead1359880473699fbed6335e9cdc8"
+  },
+  "fit_scored": false,
+  "calibration_scored": false,
+  "threshold_scored": false,
+  "development_validation_scored": false,
+  "locked_test_scored": true,
+  "mlflow_run_id": "3cb6ed73b086444097ca4bfd69bb348f",
+  "limitation": "No model, ensemble, thresholds, or intervals updated on test. Scaffold-shift/exchangeability caveat remains; previous RF model-selection and calibration partition reuse limits unconditional conformal coverage guarantees."
+}

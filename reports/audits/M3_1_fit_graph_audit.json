@@ -1,0 +1,176 @@
+{
+  "passed": true,
+  "schema_version": "m3_molecular_graph_v1",
+  "atom_features": [
+    "atomic_number",
+    "degree",
+    "formal_charge",
+    "total_hydrogens",
+    "hybridization",
+    "aromatic",
+    "in_ring",
+    "chiral_tag",
+    "cip_code"
+  ],
+  "bond_features": [
+    "bond_type",
+    "conjugated",
+    "in_ring",
+    "stereo"
+  ],
+  "label_counts": {
+    "molecules": 5364,
+    "egfr_labels": 4465,
+    "her2_labels": 1596,
+    "paired_labels": 697,
+    "dual_active": 438,
+    "not_dual_active": 259
+  },
+  "expected_count_mismatches": [],
+  "graphs_converted": 5364,
+  "graphs_failed": 0,
+  "failure_examples_first_25": [],
+  "atom_count_distribution": {
+    "min": 10,
+    "median": 35.0,
+    "mean": 34.553,
+    "p95_nearest_rank": 45,
+    "max": 103
+  },
+  "bond_count_distribution": {
+    "min": 10,
+    "median": 39.0,
+    "mean": 38.19,
+    "p95_nearest_rank": 50,
+    "max": 110
+  },
+  "single_atom_graphs": 0,
+  "edgeless_graphs": 0,
+  "total_atoms": 185340,
+  "total_directed_edges": 409704,
+  "atomic_number_counts": {
+    "1": 9,
+    "5": 5,
+    "6": 134085,
+    "7": 30324,
+    "8": 13539,
+    "9": 3241,
+    "15": 64,
+    "16": 1240,
+    "17": 2121,
+    "34": 16,
+    "35": 684,
+    "53": 12
+  },
+  "atom_other_counts": {
+    "chiral_tag": 0,
+    "cip_code": 0,
+    "degree": 0,
+    "formal_charge": 0,
+    "hybridization": 0,
+    "total_hydrogens": 0
+  },
+  "bond_other_counts": {
+    "bond_type": 0,
+    "stereo": 0
+  },
+  "atom_other_rates": {
+    "chiral_tag": 0.0,
+    "cip_code": 0.0,
+    "degree": 0.0,
+    "formal_charge": 0.0,
+    "hybridization": 0.0,
+    "total_hydrogens": 0.0
+  },
+  "bond_other_rates": {
+    "bond_type": 0.0,
+    "stereo": 0.0
+  },
+  "provenance": {
+    "dataset_sha256": "83a64d02e45ccd9a6310947efcd5cdef9bddc9603edcd55e1d207eb1cafc18b8",
+    "outer_manifest_sha256": "05968ca1ed2a16ca8165e8a28ececa0f361fc9e61a64ac2e69abb1e0e4b7423a",
+    "stage_c_assignment_sha256": "2b99214bce37d30e1eed8f6e22984242492560b2999bb174a8d378604de9171c",
+    "stage_c_seed": 719,
+    "fit_only_cv_folds": 5,
+    "pytorch_version": "2.10.0+cu130",
+    "pyg_version": "2.8.0",
+    "rdkit_version": "2026.09.1"
+  },
+  "fit_only_cv_folds": [
+    {
+      "fold": 0,
+      "fit_molecules": 4291,
+      "holdout_molecules": 1073,
+      "fit_scaffolds": 1520,
+      "holdout_scaffolds": 349,
+      "audit": {
+        "molecules": 1073,
+        "egfr_labels": 947,
+        "her2_labels": 257,
+        "paired_labels": 131,
+        "dual_active": 93,
+        "not_dual_active": 38
+      }
+    },
+    {
+      "fold": 1,
+      "fit_molecules": 4291,
+      "holdout_molecules": 1073,
+      "fit_scaffolds": 1490,
+      "holdout_scaffolds": 379,
+      "audit": {
+        "molecules": 1073,
+        "egfr_labels": 915,
+        "her2_labels": 242,
+        "paired_labels": 84,
+        "dual_active": 54,
+        "not_dual_active": 30
+      }
+    },
+    {
+      "fold": 2,
+      "fit_molecules": 4291,
+      "holdout_molecules": 1073,
+      "fit_scaffolds": 1489,
+      "holdout_scaffolds": 380,
+      "audit": {
+        "molecules": 1073,
+        "egfr_labels": 841,
+        "her2_labels": 393,
+        "paired_labels": 161,
+        "dual_active": 79,
+        "not_dual_active": 82
+      }
+    },
+    {
+      "fold": 3,
+      "fit_molecules": 4291,
+      "holdout_molecules": 1073,
+      "fit_scaffolds": 1488,
+      "holdout_scaffolds": 381,
+      "audit": {
+        "molecules": 1073,
+        "egfr_labels": 873,
+        "her2_labels": 357,
+        "paired_labels": 157,
+        "dual_active": 127,
+        "not_dual_active": 30
+      }
+    },
+    {
+      "fold": 4,
+      "fit_molecules": 4292,
+      "holdout_molecules": 1072,
+      "fit_scaffolds": 1489,
+      "holdout_scaffolds": 380,
+      "audit": {
+        "molecules": 1072,
+        "egfr_labels": 889,
+        "her2_labels": 347,
+        "paired_labels": 164,
+        "dual_active": 85,
+        "not_dual_active": 79
+      }
+    }
+  ]
+}

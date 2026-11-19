@@ -1,0 +1,7 @@
+target,comparison,metric,n,n_scaffolds,point,ci_lo,ci_hi,bootstrap_replicates,resampling_unit,negative_is_better
+egfr,GINE minus Morgan RF,MAE delta (pIC50),902,330,0.07681470628617967,0.015073112936685762,0.14819007874261575,6000,scaffold_group_id,True
+egfr,RF 75% + GINE 25% minus Morgan RF,MAE delta (pIC50),902,330,-0.009112768618693801,-0.03145862184236782,0.014125418817196221,6000,scaffold_group_id,True
+her2,GINE minus Morgan RF,MAE delta (pIC50),321,120,0.008286101886781885,-0.041204664204364985,0.06035818451373694,6000,scaffold_group_id,True
+her2,RF 75% + GINE 25% minus Morgan RF,MAE delta (pIC50),321,120,-0.022291137460285992,-0.034165169883945155,-0.008659693734801856,6000,scaffold_group_id,True
+paired_dual_activity,RF 75% + GINE 25% minus Morgan RF,AP delta,136,58,0.023059719625429853,-0.01409769610936692,0.060100617138535026,6000,scaffold_group_id,False
+paired_dual_activity,GINE minus Morgan RF,AP delta,136,58,-0.005867211243304915,-0.1274127119806989,0.085421871685652,6000,scaffold_group_id,False

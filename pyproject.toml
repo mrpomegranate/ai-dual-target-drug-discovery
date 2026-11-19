@@ -13,6 +13,17 @@ dependencies = [
     "rdkit>=2025.3,<2027",
 ]
 
+[tool.pytest.ini_options]
+pythonpath = ["."]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu130" }
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
 [project.scripts]
 dual-target = "dual_target.cli:main"
 
@@ -21,6 +32,10 @@ dev = [
     "matplotlib>=3.11.2",
     "pytest>=8.3,<10",
     "ruff>=0.12,<1",
+]
+gnn = [
+    "torch==2.10.0+cu130",
+    "torch-geometric==2.8.0",
 ]
 
 [build-system]
