@@ -1,0 +1,45 @@
+{
+  "purpose": "fit_only_oof_scaffold_diagnostics_no_calibration_labels",
+  "molecules": 5364,
+  "scaffold_groups": 1869,
+  "calibration_scored": false,
+  "threshold_scored": false,
+  "development_validation_scored": false,
+  "locked_test_scored": false,
+  "ranking_is_exploratory": true,
+  "targets": {
+    "egfr": {
+      "n_labeled": 4465,
+      "scaffold_groups_with_labels": 1582,
+      "reportable_scaffolds": 69,
+      "reportable_molecules": 1877,
+      "minimum_scaffold_n": 10,
+      "pooled_mae": {
+        "rf": 0.7000342914047135,
+        "gine": 0.8314310130476432,
+        "gatv2": 0.840049224836277,
+        "rf75_gine25": 0.7068305129135625
+      }
+    },
+    "her2": {
+      "n_labeled": 1596,
+      "scaffold_groups_with_labels": 554,
+      "reportable_scaffolds": 25,
+      "reportable_molecules": 624,
+      "minimum_scaffold_n": 10,
+      "pooled_mae": {
+        "rf": 0.560837023077934,
+        "gine": 0.6525929901693837,
+        "gatv2": 0.6669358278257507,
+        "rf75_gine25": 0.5568596622724195
+      }
+    }
+  },
+  "input_oof_sha256": "4a962c694fcec3a4164062c0e9e378a57b92fcd65be318a1cbd836ab0edac4b1",
+  "ranking": {
+    "by": "rf_mae",
+    "minimum_n": 10,
+    "top_k": 12
+  },
+  "mlflow_run_id": "663a4103f8764e4ea41e64a323642149"
+}

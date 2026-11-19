@@ -1,0 +1,67 @@
+{
+  "purpose": "one_time_frozen_scaffold_heldout_test_comparison",
+  "stage": "M3.7d",
+  "expected_test_molecules": 1087,
+  "models": [
+    "rf",
+    "gine",
+    "rf75_gine25"
+  ],
+  "targets": [
+    "egfr",
+    "her2"
+  ],
+  "model_configuration": {
+    "rf_models": "M3.7b frozen EGFR and HER2 regression checkpoints",
+    "gine": {
+      "architecture": "gine",
+      "hidden_dim": 128,
+      "num_layers": 3,
+      "dropout": 0.1,
+      "refit_epochs": 47
+    },
+    "ensemble_rf_weight": 0.75
+  },
+  "evaluation": {
+    "pIC50": [
+      "mae",
+      "spearman"
+    ],
+    "paired_activity": "AP(min(predicted_EGFR_pIC50,predicted_HER2_pIC50)); both measured; both >6",
+    "conformal": "frozen individual-target 90% symmetric split-conformal q",
+    "joint_coverage": "descriptive only; no 90% joint guarantee",
+    "potency_bins": [
+      "<6",
+      "6\u2013<7",
+      "7\u2013<8",
+      "\u22658"
+    ],
+    "minimum_scaffold_n": 10,
+    "no_model_selection_from_test": true
+  },
+  "provenance": {
+    "dataset_sha256": "83a64d02e45ccd9a6310947efcd5cdef9bddc9603edcd55e1d207eb1cafc18b8",
+    "outer_manifest_sha256": "05968ca1ed2a16ca8165e8a28ececa0f361fc9e61a64ac2e69abb1e0e4b7423a",
+    "audit_summary_sha256": "f13a782e36421734255b996afaa8137e1882d8dfb708cd7f365974cbf92a0536",
+    "calibrator_report_sha256": "d56876ac54571f7296747d0e493c94b537abf1ac0fefabb772bad1eaf22598ad",
+    "dev_validation_metrics_sha256": "9cd883c6d7927ece908c51febf17063657c3c80f8a37f6ea44b1d84f1c7a6731",
+    "model_file_sha256": {
+      "egfr_rf": "5140788bcf3f08a796961a448dce7bc076aabf743d52d6b6b6f095250c820de6",
+      "her2_rf": "2dc5aafeb21225c88b57c4eca46f74d6757d25339c7798daef08b82b5d44c279",
+      "gine": "2d05fd4143ae5abfa6b3b9d869148c9ede86c8a45fb0d158a4434822ad87f7f9"
+    },
+    "code_sha256": {
+      "test_driver": "011608d3e72a10ba9bc96f2faf3dfe29194fe242aa18bdf514a6defaa37612ca",
+      "test_loader": "518d5be98f469f218d729a6561e5ab0dca16d0abfd065286b5c18f485ef601ac",
+      "scoring": "8e86ec2ff78043e6971440a5d6e712992f154928e34dfbd6ef2428a90f5a937b",
+      "development_driver": "7f0711d2d6dee6a5384523c4dd5f8cf913d3b055bb02823373fcb62280144a83",
+      "m2_dataset_loader": "04d914b3420ef2c56411b5cdf99096f4e93cb13cd361f01ad99314dbc05d5738",
+      "m2_pipeline": "3afa5cb79b1c23e0db767cb7080d43ffca97f0b14cd678f5f613cf4f8ee6d6f3",
+      "graph_features": "d01ae49178cae402bfe01369611a77796cd1f8147e2c506ec38d972c0d2c7761",
+      "graph_loader": "42feb3529c63d670915504c72d2ea23d7e0f02f294564caa62d57855653589fb",
+      "gine_model": "e79726648253f4b8c6c6af119f7312e57ba615bf43fb151e6c60296d4a8dbcaa",
+      "morgan_features": "6f65fc7347768edabb090802357cf6c439dcf1cdbee293a98512203c694731ec",
+      "stage_c_split": "aa3aeee6fb76235531c859ba70e92b1063dfc6bc1006e9fee70ce0c122aff1ef"
+    }
+  }
+}

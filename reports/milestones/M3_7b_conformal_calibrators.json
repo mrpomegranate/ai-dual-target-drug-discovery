@@ -1,0 +1,130 @@
+{
+  "purpose": "fit_role_refit_and_frozen_stage_c_conformal_calibration",
+  "n_fit": 5364,
+  "n_calibration": 1658,
+  "n_threshold_unscored": 1670,
+  "ensemble_rf_weight": 0.75,
+  "alpha": 0.1,
+  "training": {
+    "gine_epochs": 47,
+    "gine_reference_cv_sha256": "3ef2cbc6c9f2bcbd94002574be3988f0a0046f47987e5a99ce987db4b6e66c17",
+    "rf_optuna_configs": {
+      "egfr": {
+        "radius": 2,
+        "n_bits": 2048,
+        "include_chirality": true,
+        "n_estimators": 200,
+        "max_depth": null,
+        "min_samples_leaf": 2,
+        "min_samples_split": 3,
+        "max_features": 0.5,
+        "seed": 714,
+        "n_jobs": 6
+      },
+      "her2": {
+        "radius": 2,
+        "n_bits": 2048,
+        "include_chirality": true,
+        "n_estimators": 200,
+        "max_depth": null,
+        "min_samples_leaf": 1,
+        "min_samples_split": 2,
+        "max_features": "sqrt",
+        "seed": 714,
+        "n_jobs": 6
+      }
+    }
+  },
+  "provenance": {
+    "dataset_sha256": "83a64d02e45ccd9a6310947efcd5cdef9bddc9603edcd55e1d207eb1cafc18b8",
+    "outer_manifest_sha256": "05968ca1ed2a16ca8165e8a28ececa0f361fc9e61a64ac2e69abb1e0e4b7423a",
+    "stage_c_assignment_sha256": "2b99214bce37d30e1eed8f6e22984242492560b2999bb174a8d378604de9171c",
+    "graph_schema_version": "m3_molecular_graph_v1",
+    "model_file_sha256": {
+      "egfr_rf": "5140788bcf3f08a796961a448dce7bc076aabf743d52d6b6b6f095250c820de6",
+      "her2_rf": "2dc5aafeb21225c88b57c4eca46f74d6757d25339c7798daef08b82b5d44c279",
+      "gine": "2d05fd4143ae5abfa6b3b9d869148c9ede86c8a45fb0d158a4434822ad87f7f9"
+    }
+  },
+  "calibrators": {
+    "rf": {
+      "egfr": {
+        "model_name": "rf",
+        "target": "egfr",
+        "alpha": 0.1,
+        "absolute_error_quantile": 1.4366756954912603,
+        "n_labels": 1382,
+        "n_scaffolds": 525,
+        "stage_c_assignment_sha256": "2b99214bce37d30e1eed8f6e22984242492560b2999bb174a8d378604de9171c",
+        "dataset_sha256": "83a64d02e45ccd9a6310947efcd5cdef9bddc9603edcd55e1d207eb1cafc18b8",
+        "outer_manifest_sha256": "05968ca1ed2a16ca8165e8a28ececa0f361fc9e61a64ac2e69abb1e0e4b7423a"
+      },
+      "her2": {
+        "model_name": "rf",
+        "target": "her2",
+        "alpha": 0.1,
+        "absolute_error_quantile": 0.971581881718774,
+        "n_labels": 499,
+        "n_scaffolds": 199,
+        "stage_c_assignment_sha256": "2b99214bce37d30e1eed8f6e22984242492560b2999bb174a8d378604de9171c",
+        "dataset_sha256": "83a64d02e45ccd9a6310947efcd5cdef9bddc9603edcd55e1d207eb1cafc18b8",
+        "outer_manifest_sha256": "05968ca1ed2a16ca8165e8a28ececa0f361fc9e61a64ac2e69abb1e0e4b7423a"
+      }
+    },
+    "gine": {
+      "egfr": {
+        "model_name": "gine",
+        "target": "egfr",
+        "alpha": 0.1,
+        "absolute_error_quantile": 1.8222801918770983,
+        "n_labels": 1382,
+        "n_scaffolds": 525,
+        "stage_c_assignment_sha256": "2b99214bce37d30e1eed8f6e22984242492560b2999bb174a8d378604de9171c",
+        "dataset_sha256": "83a64d02e45ccd9a6310947efcd5cdef9bddc9603edcd55e1d207eb1cafc18b8",
+        "outer_manifest_sha256": "05968ca1ed2a16ca8165e8a28ececa0f361fc9e61a64ac2e69abb1e0e4b7423a"
+      },
+      "her2": {
+        "model_name": "gine",
+        "target": "her2",
+        "alpha": 0.1,
+        "absolute_error_quantile": 1.2151829976831472,
+        "n_labels": 499,
+        "n_scaffolds": 199,
+        "stage_c_assignment_sha256": "2b99214bce37d30e1eed8f6e22984242492560b2999bb174a8d378604de9171c",
+        "dataset_sha256": "83a64d02e45ccd9a6310947efcd5cdef9bddc9603edcd55e1d207eb1cafc18b8",
+        "outer_manifest_sha256": "05968ca1ed2a16ca8165e8a28ececa0f361fc9e61a64ac2e69abb1e0e4b7423a"
+      }
+    },
+    "rf75_gine25": {
+      "egfr": {
+        "model_name": "rf75_gine25",
+        "target": "egfr",
+        "alpha": 0.1,
+        "absolute_error_quantile": 1.452485279226412,
+        "n_labels": 1382,
+        "n_scaffolds": 525,
+        "stage_c_assignment_sha256": "2b99214bce37d30e1eed8f6e22984242492560b2999bb174a8d378604de9171c",
+        "dataset_sha256": "83a64d02e45ccd9a6310947efcd5cdef9bddc9603edcd55e1d207eb1cafc18b8",
+        "outer_manifest_sha256": "05968ca1ed2a16ca8165e8a28ececa0f361fc9e61a64ac2e69abb1e0e4b7423a"
+      },
+      "her2": {
+        "model_name": "rf75_gine25",
+        "target": "her2",
+        "alpha": 0.1,
+        "absolute_error_quantile": 0.9728555473126024,
+        "n_labels": 499,
+        "n_scaffolds": 199,
+        "stage_c_assignment_sha256": "2b99214bce37d30e1eed8f6e22984242492560b2999bb174a8d378604de9171c",
+        "dataset_sha256": "83a64d02e45ccd9a6310947efcd5cdef9bddc9603edcd55e1d207eb1cafc18b8",
+        "outer_manifest_sha256": "05968ca1ed2a16ca8165e8a28ececa0f361fc9e61a64ac2e69abb1e0e4b7423a"
+      }
+    }
+  },
+  "fit_scored": false,
+  "calibration_residuals_used": true,
+  "threshold_scored": false,
+  "development_validation_scored": false,
+  "locked_test_scored": false,
+  "caveat": "Stage C calibration groups participated in earlier full-train Optuna model selection. Nominal exchangeability coverage is not guaranteed under scaffold shift.",
+  "mlflow_run_id": "38b189b1eeef4df99bf0ca183bb55aae"
+}

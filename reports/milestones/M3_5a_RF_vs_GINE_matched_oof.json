@@ -1,0 +1,289 @@
+{
+  "purpose": "matched_fit_only_rf_vs_gine_oof_no_reserved_labels",
+  "pooled": {
+    "rf": {
+      "molecules": 5364,
+      "egfr_n": 4465,
+      "egfr_mae": 0.7000342914047135,
+      "egfr_spearman": 0.7502932959337455,
+      "her2_n": 1596,
+      "her2_mae": 0.560837023077934,
+      "her2_spearman": 0.7049834842727432,
+      "paired_n": 697,
+      "dual_active_n": 438,
+      "dual_inactive_n": 259,
+      "dual_prevalence": 0.6284074605451937,
+      "dual_min_prediction_ap": 0.9228982594680958,
+      "balanced_mae": 0.6304356572413238
+    },
+    "gnn": {
+      "molecules": 5364,
+      "egfr_n": 4465,
+      "egfr_mae": 0.8314310130476432,
+      "egfr_spearman": 0.6458138931097568,
+      "her2_n": 1596,
+      "her2_mae": 0.6525929901693837,
+      "her2_spearman": 0.5823611516045316,
+      "paired_n": 697,
+      "dual_active_n": 438,
+      "dual_inactive_n": 259,
+      "dual_prevalence": 0.6284074605451937,
+      "dual_min_prediction_ap": 0.8816192621716645,
+      "balanced_mae": 0.7420120016085134
+    },
+    "gnn_minus_rf": {
+      "egfr_mae": 0.1313967216429297,
+      "her2_mae": 0.09175596709144962,
+      "balanced_mae": 0.11157634436718966,
+      "dual_min_prediction_ap": -0.04127899729643125
+    }
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "rf": {
+        "molecules": 1073,
+        "egfr_n": 947,
+        "egfr_mae": 0.8092277281906806,
+        "egfr_spearman": 0.6242973495353462,
+        "her2_n": 257,
+        "her2_mae": 0.6515306524618054,
+        "her2_spearman": 0.5459639286724952,
+        "paired_n": 131,
+        "dual_active_n": 93,
+        "dual_inactive_n": 38,
+        "dual_prevalence": 0.7099236641221374,
+        "dual_min_prediction_ap": 0.8735946292199888,
+        "balanced_mae": 0.730379190326243
+      },
+      "gnn": {
+        "molecules": 1073,
+        "egfr_n": 947,
+        "egfr_mae": 0.9078316418614836,
+        "egfr_spearman": 0.515619562756229,
+        "her2_n": 257,
+        "her2_mae": 0.7402400405507608,
+        "her2_spearman": 0.35556758181638076,
+        "paired_n": 131,
+        "dual_active_n": 93,
+        "dual_inactive_n": 38,
+        "dual_prevalence": 0.7099236641221374,
+        "dual_min_prediction_ap": 0.8257636297269149,
+        "balanced_mae": 0.8240358412061222
+      },
+      "gnn_minus_rf": {
+        "egfr_mae": 0.09860391367080301,
+        "her2_mae": 0.08870938808895534,
+        "balanced_mae": 0.09365665087987918,
+        "dual_min_prediction_ap": -0.0478309994930739
+      }
+    },
+    {
+      "fold": 1,
+      "rf": {
+        "molecules": 1073,
+        "egfr_n": 915,
+        "egfr_mae": 0.7137615292154056,
+        "egfr_spearman": 0.7571551632864492,
+        "her2_n": 242,
+        "her2_mae": 0.5876730050688455,
+        "her2_spearman": 0.7942641152350474,
+        "paired_n": 84,
+        "dual_active_n": 54,
+        "dual_inactive_n": 30,
+        "dual_prevalence": 0.6428571428571429,
+        "dual_min_prediction_ap": 0.8499705210602784,
+        "balanced_mae": 0.6507172671421255
+      },
+      "gnn": {
+        "molecules": 1073,
+        "egfr_n": 915,
+        "egfr_mae": 0.821026653523539,
+        "egfr_spearman": 0.7100591658541423,
+        "her2_n": 242,
+        "her2_mae": 0.704020387725294,
+        "her2_spearman": 0.6801940991579789,
+        "paired_n": 84,
+        "dual_active_n": 54,
+        "dual_inactive_n": 30,
+        "dual_prevalence": 0.6428571428571429,
+        "dual_min_prediction_ap": 0.8869235041732494,
+        "balanced_mae": 0.7625235206244165
+      },
+      "gnn_minus_rf": {
+        "egfr_mae": 0.1072651243081334,
+        "her2_mae": 0.1163473826564485,
+        "balanced_mae": 0.11180625348229101,
+        "dual_min_prediction_ap": 0.036952983112971016
+      }
+    },
+    {
+      "fold": 2,
+      "rf": {
+        "molecules": 1073,
+        "egfr_n": 841,
+        "egfr_mae": 0.6349049494762886,
+        "egfr_spearman": 0.7759060233646417,
+        "her2_n": 393,
+        "her2_mae": 0.49420448084239355,
+        "her2_spearman": 0.7641762914199199,
+        "paired_n": 161,
+        "dual_active_n": 79,
+        "dual_inactive_n": 82,
+        "dual_prevalence": 0.4906832298136646,
+        "dual_min_prediction_ap": 0.926253154890476,
+        "balanced_mae": 0.5645547151593411
+      },
+      "gnn": {
+        "molecules": 1073,
+        "egfr_n": 841,
+        "egfr_mae": 0.8444581839907588,
+        "egfr_spearman": 0.6615785056542525,
+        "her2_n": 393,
+        "her2_mae": 0.7010321719997299,
+        "her2_spearman": 0.6138014871401781,
+        "paired_n": 161,
+        "dual_active_n": 79,
+        "dual_inactive_n": 82,
+        "dual_prevalence": 0.4906832298136646,
+        "dual_min_prediction_ap": 0.9164490916249896,
+        "balanced_mae": 0.7727451779952443
+      },
+      "gnn_minus_rf": {
+        "egfr_mae": 0.20955323451447017,
+        "her2_mae": 0.20682769115733635,
+        "balanced_mae": 0.20819046283590326,
+        "dual_min_prediction_ap": -0.00980406326548644
+      }
+    },
+    {
+      "fold": 3,
+      "rf": {
+        "molecules": 1073,
+        "egfr_n": 873,
+        "egfr_mae": 0.6535260372811921,
+        "egfr_spearman": 0.7686881238929337,
+        "her2_n": 357,
+        "her2_mae": 0.547495553225706,
+        "her2_spearman": 0.6197983615302456,
+        "paired_n": 157,
+        "dual_active_n": 127,
+        "dual_inactive_n": 30,
+        "dual_prevalence": 0.8089171974522293,
+        "dual_min_prediction_ap": 0.967386605460783,
+        "balanced_mae": 0.600510795253449
+      },
+      "gnn": {
+        "molecules": 1073,
+        "egfr_n": 873,
+        "egfr_mae": 0.8108541387224245,
+        "egfr_spearman": 0.6327935680255644,
+        "her2_n": 357,
+        "her2_mae": 0.6113523024731691,
+        "her2_spearman": 0.49432114624995754,
+        "paired_n": 157,
+        "dual_active_n": 127,
+        "dual_inactive_n": 30,
+        "dual_prevalence": 0.8089171974522293,
+        "dual_min_prediction_ap": 0.9064835478705928,
+        "balanced_mae": 0.7111032205977967
+      },
+      "gnn_minus_rf": {
+        "egfr_mae": 0.15732810144123244,
+        "her2_mae": 0.0638567492474631,
+        "balanced_mae": 0.11059242534434777,
+        "dual_min_prediction_ap": -0.06090305759019021
+      }
+    },
+    {
+      "fold": 4,
+      "rf": {
+        "molecules": 1072,
+        "egfr_n": 889,
+        "egfr_mae": 0.6768721712455973,
+        "egfr_spearman": 0.792719248835209,
+        "her2_n": 347,
+        "her2_mae": 0.5641422779550445,
+        "her2_spearman": 0.7121784819251012,
+        "paired_n": 164,
+        "dual_active_n": 85,
+        "dual_inactive_n": 79,
+        "dual_prevalence": 0.5182926829268293,
+        "dual_min_prediction_ap": 0.9289087238527329,
+        "balanced_mae": 0.6205072246003209
+      },
+      "gnn": {
+        "molecules": 1072,
+        "egfr_n": 889,
+        "egfr_mae": 0.7686372605173899,
+        "egfr_spearman": 0.7122671568968078,
+        "her2_n": 347,
+        "her2_mae": 0.5393814768889177,
+        "her2_spearman": 0.7462272206548802,
+        "paired_n": 164,
+        "dual_active_n": 85,
+        "dual_inactive_n": 79,
+        "dual_prevalence": 0.5182926829268293,
+        "dual_min_prediction_ap": 0.9241866494660522,
+        "balanced_mae": 0.6540093687031538
+      },
+      "gnn_minus_rf": {
+        "egfr_mae": 0.09176508927179261,
+        "her2_mae": -0.02476080106612677,
+        "balanced_mae": 0.03350214410283292,
+        "dual_min_prediction_ap": -0.004722074386680708
+      }
+    }
+  ],
+  "provenance": {
+    "dataset_sha256": "83a64d02e45ccd9a6310947efcd5cdef9bddc9603edcd55e1d207eb1cafc18b8",
+    "outer_manifest_sha256": "05968ca1ed2a16ca8165e8a28ececa0f361fc9e61a64ac2e69abb1e0e4b7423a",
+    "stage_c_assignment_sha256": "2b99214bce37d30e1eed8f6e22984242492560b2999bb174a8d378604de9171c",
+    "fold_assignments_sha256": "590b09a3774a22ae669fef284b2c727d0dbb7f6fe9c39a979dba0226a3dc7bfd",
+    "fingerprint_sha256": "a37b7e82697de92bb2f2c38384b5669f5a65d791dee2a8d46b222dadd7980ab5",
+    "gnn_oof_sha256": "389032184c82d87ebc38c5d7d7ce33a948f5b92918a1565b031b5dc4c219b1ea",
+    "optuna_studies": {
+      "egfr": {
+        "name": "M2_2_fit_only_reffirst_200trees_egfr_200trees_5folds",
+        "best_trial": 13,
+        "best_cv_mean_mae": 0.6976584830818329,
+        "config": {
+          "radius": 2,
+          "n_bits": 2048,
+          "include_chirality": true,
+          "n_estimators": 200,
+          "max_depth": null,
+          "min_samples_leaf": 2,
+          "min_samples_split": 3,
+          "max_features": 0.5,
+          "seed": 714,
+          "n_jobs": 6
+        }
+      },
+      "her2": {
+        "name": "M2_2_fit_only_reffirst_200trees_her2_200trees_5folds",
+        "best_trial": 0,
+        "best_cv_mean_mae": 0.5690091939107589,
+        "config": {
+          "radius": 2,
+          "n_bits": 2048,
+          "include_chirality": true,
+          "n_estimators": 200,
+          "max_depth": null,
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "max_features": "sqrt",
+          "seed": 714,
+          "n_jobs": 6
+        }
+      }
+    },
+    "rf_selectors_from_fit_only_cv": true,
+    "cv_development_not_independent_post_selection_test": true,
+    "calibration_scored": false,
+    "threshold_scored": false,
+    "development_validation_scored": false,
+    "locked_test_scored": false
+  },
+  "mlflow_run_id": "0af0d67a55574f8899e2e18c7620d397"
+}

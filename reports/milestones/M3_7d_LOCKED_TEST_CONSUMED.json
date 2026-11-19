@@ -1,0 +1,8 @@
+{
+  "stage": "M3.7d",
+  "status": "test_unlock_started_do_not_rerun",
+  "protocol_sha256": "54b706b783eebbb999780805ffe355b5cc35a027dd0d6a418164ccd2bf690fbd",
+  "mlflow_run_id": "3cb6ed73b086444097ca4bfd69bb348f",
+  "timestamp_utc": "2026-11-14T21:57:32.244717+00:00",
+  "notes": "Marker created before reading test labels. Never delete for score retries."
+}
